@@ -25,12 +25,11 @@ jobs:
       - uses: astral-sh/setup-uv@v6
       - run: uv sync --locked --no-dev
 
+      # Keyword analysis only: this workflow runs on a schedule and must never spend
+      # API credit, so it gets no API key and no model budget.
       - name: Collect postings and rebuild the report
         if: github.event_name != 'push'
-        env:
-          # optional: without it, postings are analyzed with keyword rules only
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: uv run jobpulse run
+        run: uv run jobpulse run --max-model-calls 0
 
       - name: Commit data
         if: github.event_name != 'push'

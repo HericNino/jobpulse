@@ -11,7 +11,7 @@ GitHub Actions, daily
   └─ jobpulse run
        ├─ fetch      Arbeitnow and Remotive public APIs
        ├─ filter     tech roles only (title or at least three concrete skills)
-       ├─ analyze    new postings only: keyword rules, or Claude if a key is set
+       ├─ analyze    new postings only, with keyword rules (Claude only when run by hand)
        ├─ store      data/postings.jsonl (committed, one line per posting)
        └─ report     dbt build on DuckDB (models + data tests) → data/report.json
   └─ publish site/ + report.json to GitHub Pages
@@ -20,7 +20,7 @@ GitHub Actions, daily
 - **No server, no database to host.** The data lives in the repository as JSON Lines, sorted, so each day's commit is a readable diff of what changed.
 - **Transformations in dbt.** `transform/` is a dbt project that reads the JSON Lines file with DuckDB: staging models type and clean it, marts compute the dashboard's numbers (top skills, weekly trends, skill pairs, pay quartiles). 18 data tests (uniqueness, accepted values, relationships, ranges) run on every build, and a failing test stops the report instead of publishing bad numbers.
 - **Facts, not copies.** Posting descriptions are read once in memory and never stored. The repo keeps title, company, link, dates and the extracted fields; the original stays on its job board.
-- **Two analyzers, one vocabulary.** A keyword matcher (`src/jobpulse/skills.py`) handles aliases ("Postgres" → PostgreSQL) and awkward names (C++, .NET, Node.js) without mistaking "Java" in "JavaScript". With `ANTHROPIC_API_KEY` set, new postings are analyzed by Claude instead, using structured output, which also catches seniority, work mode and stated salaries. The number of model calls per run is capped, and after repeated failures it falls back to keywords for the rest of the run.
+- **Two analyzers, one vocabulary.** A keyword matcher (`src/jobpulse/skills.py`) handles aliases ("Postgres" → PostgreSQL) and awkward names (C++, .NET, Node.js) without mistaking "Java" in "JavaScript". Claude can analyze new postings instead, using structured output, which also catches seniority, work mode and stated salaries. That only happens when asked for explicitly (`--max-model-calls N` with `ANTHROPIC_API_KEY` set); the scheduled run never uses it, so nothing automated spends API credit. Calls are capped per run, and after repeated failures it falls back to keywords.
 - **Polite collection.** One run a day, a descriptive User-Agent, and only sources that publish an API for this purpose.
 
 ## Running locally
@@ -29,8 +29,8 @@ Requires [uv](https://docs.astral.sh/uv/).
 
 ```bash
 uv sync
-uv run jobpulse run                      # fetch, analyze, write data/
-uv run jobpulse run --max-model-calls 0  # keywords only, no API key needed
+uv run jobpulse run                       # fetch, analyze with keywords, write data/
+uv run jobpulse run --max-model-calls 50  # also let Claude analyze up to 50 new postings (needs ANTHROPIC_API_KEY)
 uv run jobpulse report                   # rebuild data/report.json from stored postings
 
 uv run pytest
@@ -64,7 +64,7 @@ uv run jobpulse eval --variant claude --reps 2      # needs ANTHROPIC_API_KEY
 uv run jobpulse compare evals/runs/keywords evals/runs/claude-opus-5-5
 ```
 
-The Claude run also exists as a manual GitHub Action (**Actions → Evaluate analyzers → Run workflow**), which uses the repository secret and puts the comparison in the run summary.
+The Claude run also exists as a GitHub Action (**Actions → Evaluate analyzers → Run workflow**) that only runs when started by hand. It reads the key from the `ANTHROPIC_API_KEY` repository secret and puts the comparison in the run summary.
 
 Keyword baseline:
 
@@ -81,8 +81,9 @@ The keyword matcher is already strong on skills in clean text but misses Croatia
 ## Setting up the daily run
 
 1. **Settings → Pages → Source:** GitHub Actions.
-2. Optional: add an `ANTHROPIC_API_KEY` repository secret (Settings → Secrets and variables → Actions) for model-based analysis. Without it everything still works with keyword rules.
-3. Run **Actions → Collect and publish → Run workflow** once, or wait for the next scheduled run.
+2. Run **Actions → Collect and publish → Run workflow** once, or wait for the next scheduled run.
+
+The daily run uses keyword rules only. An `ANTHROPIC_API_KEY` repository secret is used by one workflow, **Evaluate analyzers**, which runs only when started by hand.
 
 ## Layout
 

@@ -48,7 +48,7 @@ def collect(data_dir: Path, sources: list[str], pages: int, max_model_calls: int
 
         analyzer = ClaudeAnalyzer().analyze
     else:
-        log.info("no ANTHROPIC_API_KEY or model budget: using keyword analysis only")
+        log.info("keyword analysis only (pass --max-model-calls N with ANTHROPIC_API_KEY set to use Claude)")
 
     pruned = prune(postings)
     stats = merge(postings, dedupe(fetched), date.today().isoformat(), analyzer, max_model_calls)
@@ -81,7 +81,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--data", type=Path, default=Path("data"), help="data directory (default: data)")
     parser.add_argument("--sources", default=",".join(SOURCES), help=f"comma separated, from: {', '.join(SOURCES)}")
     parser.add_argument("--pages", type=int, default=3, help="pages per paginated source")
-    parser.add_argument("--max-model-calls", type=int, default=150, help="cap on Claude calls per run (0 = keywords only)")
+    parser.add_argument(
+        "--max-model-calls",
+        type=int,
+        default=0,
+        help="analyze up to this many new postings with Claude (needs ANTHROPIC_API_KEY; default 0 = keywords only)",
+    )
     parser.add_argument("--variant", choices=["keywords", "claude"], default="keywords", help="eval: which analyzer")
     parser.add_argument("--model", help="eval: Claude model (default: JOBPULSE_MODEL or claude-opus-5-5)")
     parser.add_argument("--reps", type=int, default=1, help="eval: repetitions per case")
