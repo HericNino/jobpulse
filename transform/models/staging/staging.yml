@@ -1,7 +1,6 @@
 version: 2
 
-# data/postings.jsonl is read directly by DuckDB in stg_postings;
-# this file documents and tests the staging layer built on top of it.
+# data/postings.jsonl is read directly by DuckDB in stg_postings.
 models:
   - name: stg_postings
     description: One row per posting, typed. Source of truth is data/postings.jsonl.

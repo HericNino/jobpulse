@@ -8,3 +8,4 @@ dist/
 .dbt/
 transform/target/
 transform/logs/
+transform/.user.yml

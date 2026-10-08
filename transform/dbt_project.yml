@@ -7,6 +7,9 @@ seed-paths: ["seeds"]
 test-paths: ["tests"]
 packages-install-path: "../.dbt/packages"
 
+flags:
+  send_anonymous_usage_stats: false
+
 vars:
   postings_path: "../data/postings.jsonl"
   active_days: 14
