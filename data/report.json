@@ -1,7 +1,598 @@
 {
- "as_of": null,
- "generated_at": "2026-10-08T18:53:51+00:00",
+ "as_of": "2026-10-08",
+ "generated_at": "2026-10-08T18:54:35+00:00",
+ "active_days": 14,
  "summary": {
-  "active": 0
- }
+  "active": 371,
+  "new_this_week": 371,
+  "companies": 179,
+  "remote_share": 0.1132,
+  "salary_share": 0.0,
+  "all_time": 371
+ },
+ "top_skills": [
+  {
+   "skill": "Python",
+   "postings": 149,
+   "share": 0.4016,
+   "category": "Languages"
+  },
+  {
+   "skill": "LLMs",
+   "postings": 83,
+   "share": 0.2237,
+   "category": "AI"
+  },
+  {
+   "skill": "CI/CD",
+   "postings": 82,
+   "share": 0.221,
+   "category": "Cloud & DevOps"
+  },
+  {
+   "skill": "AWS",
+   "postings": 79,
+   "share": 0.2129,
+   "category": "Cloud & DevOps"
+  },
+  {
+   "skill": "GCP",
+   "postings": 67,
+   "share": 0.1806,
+   "category": "Cloud & DevOps"
+  },
+  {
+   "skill": "Kubernetes",
+   "postings": 62,
+   "share": 0.1671,
+   "category": "Cloud & DevOps"
+  },
+  {
+   "skill": "Docker",
+   "postings": 49,
+   "share": 0.1321,
+   "category": "Cloud & DevOps"
+  },
+  {
+   "skill": "SQL",
+   "postings": 47,
+   "share": 0.1267,
+   "category": "Languages"
+  },
+  {
+   "skill": "TypeScript",
+   "postings": 46,
+   "share": 0.124,
+   "category": "Languages"
+  },
+  {
+   "skill": "React",
+   "postings": 45,
+   "share": 0.1213,
+   "category": "Frontend"
+  },
+  {
+   "skill": "Java",
+   "postings": 44,
+   "share": 0.1186,
+   "category": "Languages"
+  },
+  {
+   "skill": "Terraform",
+   "postings": 43,
+   "share": 0.1159,
+   "category": "Cloud & DevOps"
+  },
+  {
+   "skill": "Agile",
+   "postings": 42,
+   "share": 0.1132,
+   "category": "Practice"
+  },
+  {
+   "skill": "C++",
+   "postings": 41,
+   "share": 0.1105,
+   "category": "Languages"
+  },
+  {
+   "skill": "Azure",
+   "postings": 40,
+   "share": 0.1078,
+   "category": "Cloud & DevOps"
+  },
+  {
+   "skill": "Machine Learning",
+   "postings": 36,
+   "share": 0.097,
+   "category": "AI"
+  },
+  {
+   "skill": "JavaScript",
+   "postings": 33,
+   "share": 0.0889,
+   "category": "Languages"
+  },
+  {
+   "skill": "Linux",
+   "postings": 33,
+   "share": 0.0889,
+   "category": "Cloud & DevOps"
+  },
+  {
+   "skill": "dbt",
+   "postings": 33,
+   "share": 0.0889,
+   "category": "Data"
+  },
+  {
+   "skill": "Snowflake",
+   "postings": 29,
+   "share": 0.0782,
+   "category": "Data"
+  },
+  {
+   "skill": "C#",
+   "postings": 26,
+   "share": 0.0701,
+   "category": "Languages"
+  },
+  {
+   "skill": "Git",
+   "postings": 25,
+   "share": 0.0674,
+   "category": "Practice"
+  },
+  {
+   "skill": "Node.js",
+   "postings": 24,
+   "share": 0.0647,
+   "category": "Backend"
+  },
+  {
+   "skill": "Android",
+   "postings": 21,
+   "share": 0.0566,
+   "category": "Mobile"
+  },
+  {
+   "skill": "Microservices",
+   "postings": 21,
+   "share": 0.0566,
+   "category": "Backend"
+  },
+  {
+   "skill": "PostgreSQL",
+   "postings": 21,
+   "share": 0.0566,
+   "category": "Data"
+  },
+  {
+   "skill": "Testing",
+   "postings": 21,
+   "share": 0.0566,
+   "category": "Practice"
+  },
+  {
+   "skill": "iOS",
+   "postings": 19,
+   "share": 0.0512,
+   "category": "Mobile"
+  },
+  {
+   "skill": "Spring",
+   "postings": 18,
+   "share": 0.0485,
+   "category": "Backend"
+  },
+  {
+   "skill": "Kotlin",
+   "postings": 17,
+   "share": 0.0458,
+   "category": "Languages"
+  }
+ ],
+ "trend": {
+  "weeks": [],
+  "series": []
+ },
+ "pairs": [
+  {
+   "a": "AWS",
+   "b": "GCP",
+   "postings": 53
+  },
+  {
+   "a": "AWS",
+   "b": "Python",
+   "postings": 46
+  },
+  {
+   "a": "LLMs",
+   "b": "Python",
+   "postings": 44
+  },
+  {
+   "a": "CI/CD",
+   "b": "Python",
+   "postings": 43
+  },
+  {
+   "a": "GCP",
+   "b": "Python",
+   "postings": 40
+  },
+  {
+   "a": "AWS",
+   "b": "LLMs",
+   "postings": 39
+  },
+  {
+   "a": "Python",
+   "b": "SQL",
+   "postings": 39
+  },
+  {
+   "a": "Docker",
+   "b": "Kubernetes",
+   "postings": 37
+  },
+  {
+   "a": "AWS",
+   "b": "CI/CD",
+   "postings": 36
+  },
+  {
+   "a": "GCP",
+   "b": "LLMs",
+   "postings": 36
+  },
+  {
+   "a": "CI/CD",
+   "b": "Kubernetes",
+   "postings": 35
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Python",
+   "postings": 34
+  },
+  {
+   "a": "C++",
+   "b": "Python",
+   "postings": 32
+  },
+  {
+   "a": "AWS",
+   "b": "Kubernetes",
+   "postings": 31
+  },
+  {
+   "a": "AWS",
+   "b": "Terraform",
+   "postings": 31
+  },
+  {
+   "a": "CI/CD",
+   "b": "Docker",
+   "postings": 31
+  },
+  {
+   "a": "Docker",
+   "b": "Python",
+   "postings": 30
+  },
+  {
+   "a": "CI/CD",
+   "b": "Terraform",
+   "postings": 28
+  },
+  {
+   "a": "GCP",
+   "b": "Kubernetes",
+   "postings": 28
+  },
+  {
+   "a": "CI/CD",
+   "b": "LLMs",
+   "postings": 27
+  },
+  {
+   "a": "Machine Learning",
+   "b": "Python",
+   "postings": 26
+  },
+  {
+   "a": "React",
+   "b": "TypeScript",
+   "postings": 26
+  },
+  {
+   "a": "Snowflake",
+   "b": "dbt",
+   "postings": 26
+  },
+  {
+   "a": "AWS",
+   "b": "Snowflake",
+   "postings": 25
+  },
+  {
+   "a": "AWS",
+   "b": "dbt",
+   "postings": 25
+  },
+  {
+   "a": "CI/CD",
+   "b": "GCP",
+   "postings": 25
+  },
+  {
+   "a": "GCP",
+   "b": "Snowflake",
+   "postings": 25
+  },
+  {
+   "a": "GCP",
+   "b": "dbt",
+   "postings": 25
+  },
+  {
+   "a": "Java",
+   "b": "Python",
+   "postings": 25
+  },
+  {
+   "a": "Kubernetes",
+   "b": "LLMs",
+   "postings": 25
+  },
+  {
+   "a": "AWS",
+   "b": "Docker",
+   "postings": 24
+  },
+  {
+   "a": "Docker",
+   "b": "GCP",
+   "postings": 24
+  },
+  {
+   "a": "Python",
+   "b": "dbt",
+   "postings": 24
+  },
+  {
+   "a": "Azure",
+   "b": "Python",
+   "postings": 23
+  },
+  {
+   "a": "Docker",
+   "b": "LLMs",
+   "postings": 23
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Terraform",
+   "postings": 23
+  },
+  {
+   "a": "Python",
+   "b": "TypeScript",
+   "postings": 23
+  },
+  {
+   "a": "AWS",
+   "b": "Azure",
+   "postings": 22
+  },
+  {
+   "a": "GCP",
+   "b": "Terraform",
+   "postings": 22
+  },
+  {
+   "a": "Python",
+   "b": "Terraform",
+   "postings": 22
+  },
+  {
+   "a": "JavaScript",
+   "b": "Python",
+   "postings": 21
+  },
+  {
+   "a": "JavaScript",
+   "b": "TypeScript",
+   "postings": 21
+  },
+  {
+   "a": "AWS",
+   "b": "SQL",
+   "postings": 20
+  },
+  {
+   "a": "Java",
+   "b": "TypeScript",
+   "postings": 20
+  },
+  {
+   "a": "Python",
+   "b": "React",
+   "postings": 20
+  },
+  {
+   "a": "Python",
+   "b": "Snowflake",
+   "postings": 20
+  },
+  {
+   "a": "Android",
+   "b": "iOS",
+   "postings": 19
+  },
+  {
+   "a": "CI/CD",
+   "b": "Java",
+   "postings": 19
+  },
+  {
+   "a": "JavaScript",
+   "b": "React",
+   "postings": 19
+  },
+  {
+   "a": "LLMs",
+   "b": "React",
+   "postings": 19
+  },
+  {
+   "a": "SQL",
+   "b": "dbt",
+   "postings": 19
+  },
+  {
+   "a": "AWS",
+   "b": "Agile",
+   "postings": 18
+  },
+  {
+   "a": "Agile",
+   "b": "Python",
+   "postings": 18
+  },
+  {
+   "a": "Azure",
+   "b": "GCP",
+   "postings": 18
+  },
+  {
+   "a": "GCP",
+   "b": "SQL",
+   "postings": 18
+  },
+  {
+   "a": "Java",
+   "b": "React",
+   "postings": 18
+  },
+  {
+   "a": "Java",
+   "b": "Spring",
+   "postings": 18
+  },
+  {
+   "a": "LLMs",
+   "b": "Snowflake",
+   "postings": 18
+  },
+  {
+   "a": "LLMs",
+   "b": "dbt",
+   "postings": 18
+  },
+  {
+   "a": "C#",
+   "b": "Python",
+   "postings": 17
+  }
+ ],
+ "seniority": [
+  {
+   "key": "unknown",
+   "postings": 192
+  },
+  {
+   "key": "senior",
+   "postings": 98
+  },
+  {
+   "key": "lead",
+   "postings": 58
+  },
+  {
+   "key": "intern",
+   "postings": 20
+  },
+  {
+   "key": "junior",
+   "postings": 3
+  }
+ ],
+ "work_mode": [
+  {
+   "key": "onsite",
+   "postings": 325
+  },
+  {
+   "key": "remote",
+   "postings": 42
+  },
+  {
+   "key": "hybrid",
+   "postings": 4
+  }
+ ],
+ "companies": [
+  {
+   "company": "SFEIR",
+   "postings": 42
+  },
+  {
+   "company": "Trusteq Gmbh",
+   "postings": 12
+  },
+  {
+   "company": "Workidentity",
+   "postings": 11
+  },
+  {
+   "company": "Olo",
+   "postings": 10
+  },
+  {
+   "company": "Jobgether",
+   "postings": 8
+  },
+  {
+   "company": "Maibornwolff",
+   "postings": 7
+  },
+  {
+   "company": "Attio",
+   "postings": 6
+  },
+  {
+   "company": "Elevenlabs",
+   "postings": 6
+  },
+  {
+   "company": "BBHT Beratungsgesellschaft mbH & Co. KG",
+   "postings": 5
+  },
+  {
+   "company": "Deliveroo",
+   "postings": 5
+  },
+  {
+   "company": "Harmattan Ai",
+   "postings": 5
+  },
+  {
+   "company": "Lemon.io",
+   "postings": 5
+  }
+ ],
+ "sources": [
+  {
+   "source": "arbeitnow",
+   "postings": 357
+  },
+  {
+   "source": "remotive",
+   "postings": 14
+  }
+ ],
+ "salaries": {}
 }
