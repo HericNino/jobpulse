@@ -19,7 +19,8 @@ vars:
 models:
   jobpulse:
     staging:
-      +materialized: view
+      # tables, not views: the warehouse file must not depend on postings.jsonl at query time
+      +materialized: table
     marts:
       +materialized: table
 

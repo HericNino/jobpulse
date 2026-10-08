@@ -15,7 +15,8 @@ from pathlib import Path
 
 import duckdb
 
-TRANSFORM_DIR = Path(__file__).resolve().parents[2] / "transform"
+# the dbt project; overridable for installs where the package isn't next to the repo (e.g. Docker)
+TRANSFORM_DIR = Path(os.environ.get("JOBPULSE_TRANSFORM_DIR", Path(__file__).resolve().parents[2] / "transform"))
 ACTIVE_DAYS = 14
 
 

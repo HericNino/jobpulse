@@ -7,12 +7,21 @@ authors = [
     { name = "Nino Heric" }
 ]
 requires-python = ">=3.12"
+# the API image installs only the core and `api`; collecting and reporting need `pipeline`
 dependencies = [
+    "duckdb>=1.5.6",
+    "pydantic>=2.14.0",
+]
+
+[project.optional-dependencies]
+pipeline = [
     "anthropic>=1.12.1",
     "dbt-duckdb>=1.11.0",
-    "duckdb>=1.5.6",
     "httpx>=0.28.1",
-    "pydantic>=2.14.0",
+]
+api = [
+    "fastapi>=0.143.0",
+    "uvicorn[standard]>=0.54.0",
 ]
 
 [build-system]

@@ -28,7 +28,7 @@ GitHub Actions, daily
 Requires [uv](https://docs.astral.sh/uv/).
 
 ```bash
-uv sync
+uv sync --all-extras
 uv run jobpulse run                       # fetch, analyze with keywords, write data/
 uv run jobpulse run --max-model-calls 50  # also let Claude analyze up to 50 new postings (needs ANTHROPIC_API_KEY)
 uv run jobpulse report                   # rebuild data/report.json from stored postings
@@ -80,6 +80,37 @@ The first keyword baseline missed Croatian word endings ("Reactu", "TypeScriptom
 
 With ten cases the intervals are wide (±10 to ±33 points), so this shows the rules generalize rather than measuring them precisely. The two remaining misses are left in on purpose: "PySpark" isn't read as Python, and "learn Go" isn't read as the language. The main set now scores 100% on everything, which says little since it was used for tuning. New postings get the improved analysis; stored ones keep what they had, because descriptions aren't kept.
 
+## API
+
+A small read-only HTTP API serves the same numbers (FastAPI, interactive docs at `/docs`):
+
+| Endpoint | What it returns |
+|---|---|
+| `GET /health` | status, data date, number of active postings |
+| `GET /summary` | the headline numbers |
+| `GET /skills?limit=&category=` | skills by demand, with how many companies ask for each |
+| `GET /skills/{name}` | one skill (aliases work: `/skills/k8s`): what it's paired with, weekly trend, median pay |
+| `GET /companies?limit=` | companies with the most open postings |
+| `GET /postings?skill=&seniority=&work_mode=&limit=&offset=` | active postings with links to the originals |
+
+It reads a DuckDB file built from the dbt models and opens it read-only, so it never touches the source data or the network.
+
+```bash
+uv sync --all-extras
+uv run jobpulse warehouse                                   # builds .dbt/warehouse.duckdb
+uv run uvicorn jobpulse.api:create_app --factory --reload   # http://localhost:8000/docs
+```
+
+### Docker
+
+```bash
+docker compose up --build      # http://localhost:8000/docs
+```
+
+The image is built in two stages. The first installs the pipeline dependencies and builds the warehouse from `data/postings.jsonl`; the second keeps only a separate environment with what the API imports, plus the warehouse file. That takes it from 748 MB (one environment with dbt and the Anthropic SDK) to 321 MB. It runs as a non-root user, works with a read-only filesystem, and has a health check.
+
+The **Image** workflow builds it, starts the container and checks the endpoints, then publishes it to GitHub Container Registry (`ghcr.io/hericnino/jobpulse`, tagged `latest`, the commit and the date). It also runs after each daily collection, so the published image always has the latest data.
+
 ## Setting up the daily run
 
 1. **Settings → Pages → Source:** GitHub Actions.
@@ -98,6 +129,8 @@ src/jobpulse/
   store.py      JSONL storage
   report.py     runs dbt and shapes the marts into report.json
   evals.py      grading and running the analyzer evaluation
+  salary.py     finding stated pay in posting text
+  api.py        the read-only HTTP API
   cli.py
 transform/
   models/staging/   typed views over data/postings.jsonl
@@ -115,7 +148,7 @@ tests/          pytest, with saved API responses as fixtures
 - Salary normalization across currencies
 - Incremental dbt models once the history grows
 - Per-country views
-- An API (FastAPI) on top of the same marts
+- Deploy the API image to a cloud host with Terraform
 - Use the Message Batches API for model analysis, which halves the cost
 
 ## License

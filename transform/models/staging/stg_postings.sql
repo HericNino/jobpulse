@@ -4,6 +4,7 @@ select
     id as posting_id,
     source,
     title,
+    nullif(url, '') as url,
     nullif(company, '') as company,
     nullif(country, '') as country,
     remote as work_mode,

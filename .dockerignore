@@ -1,0 +1,10 @@
+# allowlist: only what the image needs
+*
+!pyproject.toml
+!uv.lock
+!README.md
+!src/
+!transform/
+!data/postings.jsonl
+**/__pycache__
+transform/.user.yml
