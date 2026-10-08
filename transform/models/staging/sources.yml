@@ -1,0 +1,41 @@
+version: 2
+
+# data/postings.jsonl is read directly by DuckDB in stg_postings;
+# this file documents and tests the staging layer built on top of it.
+models:
+  - name: stg_postings
+    description: One row per posting, typed. Source of truth is data/postings.jsonl.
+    columns:
+      - name: posting_id
+        data_tests: [unique, not_null]
+      - name: source
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: [arbeitnow, remotive]
+      - name: work_mode
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [remote, hybrid, onsite, unknown]
+      - name: seniority
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: [intern, junior, mid, senior, lead, unknown]
+      - name: first_seen
+        data_tests: [not_null]
+      - name: last_seen
+        data_tests: [not_null]
+
+  - name: stg_posting_skills
+    description: One row per (posting, skill).
+    columns:
+      - name: posting_id
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_postings')
+                field: posting_id

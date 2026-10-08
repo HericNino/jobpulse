@@ -1,0 +1,7 @@
+jobpulse:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('JOBPULSE_WAREHOUSE', '../.dbt/warehouse.duckdb') }}"
+      threads: 4

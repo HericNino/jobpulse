@@ -1,0 +1,64 @@
+skill,category
+Python,Languages
+JavaScript,Languages
+TypeScript,Languages
+Java,Languages
+Kotlin,Languages
+C#,Languages
+C++,Languages
+Go,Languages
+Rust,Languages
+PHP,Languages
+Ruby,Languages
+Swift,Languages
+Scala,Languages
+SQL,Languages
+React,Frontend
+Next.js,Frontend
+Vue,Frontend
+Angular,Frontend
+Svelte,Frontend
+CSS,Frontend
+React Native,Mobile
+Flutter,Mobile
+iOS,Mobile
+Android,Mobile
+Node.js,Backend
+Django,Backend
+FastAPI,Backend
+Flask,Backend
+Spring,Backend
+.NET,Backend
+Rails,Backend
+Laravel,Backend
+GraphQL,Backend
+REST APIs,Backend
+Microservices,Backend
+PostgreSQL,Data
+MySQL,Data
+MongoDB,Data
+Redis,Data
+Elasticsearch,Data
+Kafka,Data
+Spark,Data
+Airflow,Data
+dbt,Data
+Snowflake,Data
+Pandas,Data
+Power BI,Data
+Tableau,Data
+AWS,Cloud & DevOps
+Azure,Cloud & DevOps
+GCP,Cloud & DevOps
+Docker,Cloud & DevOps
+Kubernetes,Cloud & DevOps
+Terraform,Cloud & DevOps
+CI/CD,Cloud & DevOps
+Linux,Cloud & DevOps
+Machine Learning,AI
+LLMs,AI
+PyTorch,AI
+TensorFlow,AI
+Testing,Practice
+Agile,Practice
+Git,Practice

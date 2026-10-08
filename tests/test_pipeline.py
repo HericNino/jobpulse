@@ -10,6 +10,12 @@ from jobpulse.sources import arbeitnow, remotive
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
+def build_report(postings, tmp_path):
+    path = tmp_path / "postings.jsonl"
+    store.save(path, postings)
+    return report.build(path)
+
+
 def fetched() -> list[RawPosting]:
     return [
         *arbeitnow.parse(json.loads((FIXTURES / "arbeitnow.json").read_text())),
@@ -73,12 +79,12 @@ def test_jsonl_round_trip_is_sorted_and_stable(tmp_path):
     assert "description" not in first  # we never store posting texts
 
 
-def test_report_aggregates():
+def test_report_aggregates(tmp_path):
     postings = {}
     merge(postings, fetched(), "2026-09-20")  # all four first seen three weeks ago
     merge(postings, fetched()[:2], "2026-10-08")  # only the arbeitnow two are still listed
 
-    result = report.build(store.to_sqlite(postings.values()))
+    result = build_report(postings, tmp_path)
     assert result["as_of"] == "2026-10-08"
     assert result["summary"]["active"] == 2
     assert result["summary"]["all_time"] == 4
@@ -92,7 +98,7 @@ def test_report_aggregates():
     assert {(r["key"], r["postings"]) for r in result["seniority"]} == {("senior", 1), ("junior", 1)}
 
 
-def test_salary_quartiles_need_three_postings():
+def test_salary_quartiles_need_three_postings(tmp_path):
     postings = {}
     raws = fetched()
     for i, raw in enumerate(raws):
@@ -112,14 +118,14 @@ def test_salary_quartiles_need_three_postings():
             ),
             max_model_calls=1,
         )
-    salaries = report.build(store.to_sqlite(postings.values()))["salaries"]
+    salaries = build_report(postings, tmp_path)["salaries"]
     assert salaries["EUR"]["postings"] == 4
     assert salaries["EUR"]["median"] == 85_000
     assert salaries["EUR"]["by_skill"] == [{"skill": "Python", "postings": 4, "median": 85_000}]
 
 
-def test_empty_report():
-    assert report.build(store.to_sqlite([]))["summary"] == {"active": 0}
+def test_empty_report(tmp_path):
+    assert build_report({}, tmp_path)["summary"] == {"active": 0}
 
 
 def test_model_is_dropped_after_repeated_failures():
@@ -136,11 +142,11 @@ def test_model_is_dropped_after_repeated_failures():
     assert stats.new == 10 and stats.analyzed_by_model == 0
 
 
-def test_trend_leaves_out_the_unfinished_week():
+def test_trend_leaves_out_the_unfinished_week(tmp_path):
     postings = {}
     merge(postings, fetched()[:2], "2026-09-30")  # Wednesday, week of 28 Sep (finished by 8 Oct)
     merge(postings, fetched()[2:], "2026-10-08")  # Thursday, week of 5 Oct (still running)
-    weeks = report.build(store.to_sqlite(postings.values()))["trend"]["weeks"]
+    weeks = build_report(postings, tmp_path)["trend"]["weeks"]
     assert weeks == [{"week": "2026-09-28", "total": 2}]
 
 

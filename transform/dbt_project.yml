@@ -1,0 +1,28 @@
+name: jobpulse
+version: "1.0"
+profile: jobpulse
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+packages-install-path: "../.dbt/packages"
+
+vars:
+  postings_path: "../data/postings.jsonl"
+  active_days: 14
+  trend_skills: 8
+  trend_weeks: 12
+
+models:
+  jobpulse:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+
+seeds:
+  jobpulse:
+    skill_categories:
+      +column_types:
+        skill: varchar
+        category: varchar

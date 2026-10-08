@@ -1,13 +1,11 @@
-"""Storage: data/postings.jsonl is the source of truth (one posting per line,
-sorted by id, so daily git diffs stay small and readable). For reporting it is
-loaded into an in-memory SQLite database.
+"""Storage: data/postings.jsonl is the source of truth, one posting per line,
+sorted by id so daily git diffs stay small and readable. Reporting reads the
+same file with DuckDB (see transform/).
 """
 
 from __future__ import annotations
 
 import json
-import sqlite3
-from collections.abc import Iterable
 from pathlib import Path
 
 from .extract import Analysis
@@ -52,57 +50,3 @@ def new_posting(raw: RawPosting, analysis: Analysis, today: str) -> Posting:
         salary_period=analysis.salary_period,
         analyzed_by=analysis.analyzed_by,
     )
-
-
-SCHEMA = """
-create table postings (
-  id text primary key,
-  source text not null,
-  title text not null,
-  company text,
-  country text,
-  remote text,
-  seniority text,
-  posted_at text,
-  first_seen text not null,
-  last_seen text not null,
-  salary_min integer,
-  salary_max integer,
-  salary_currency text,
-  salary_period text
-);
-create table posting_skills (
-  posting_id text not null references postings(id),
-  skill text not null,
-  primary key (posting_id, skill)
-);
-create index posting_skills_skill on posting_skills(skill);
-"""
-
-
-def to_sqlite(postings: Iterable[Posting]) -> sqlite3.Connection:
-    db = sqlite3.connect(":memory:")
-    db.row_factory = sqlite3.Row
-    db.executescript(SCHEMA)
-    for p in postings:
-        db.execute(
-            "insert into postings values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-            (
-                p.id,
-                p.source,
-                p.title,
-                p.company,
-                p.country,
-                p.remote,
-                p.seniority,
-                p.posted_at,
-                p.first_seen,
-                p.last_seen,
-                p.salary_min,
-                p.salary_max,
-                p.salary_currency,
-                p.salary_period,
-            ),
-        )
-        db.executemany("insert into posting_skills values (?, ?)", [(p.id, s) for s in set(p.skills)])
-    return db

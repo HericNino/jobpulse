@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: active_postings
+    description: Postings still listed in the last `active_days` days of data.
+  - name: mart_summary
+    description: Headline numbers for the dashboard. Exactly one row.
+    data_tests:
+      - exactly_one_row
+  - name: mart_top_skills
+    description: Skills by number of active postings, with how many companies ask for them.
+    columns:
+      - name: skill
+        data_tests: [unique, not_null]
+      - name: share
+        data_tests:
+          - share_between_0_and_1
+  - name: mart_skill_pairs
+    description: Pairs of skills requested together (a < b alphabetically).
+  - name: mart_weekly_trend
+    description: Weekly share of new postings mentioning each top skill; complete weeks only.
+    columns:
+      - name: share
+        data_tests:
+          - share_between_0_and_1
+  - name: mart_breakdowns
+    description: Active postings by seniority, work mode and source.
+  - name: mart_companies
+    description: Companies with the most active postings.
+  - name: int_salaries
+    description: Yearly pay per posting, where a salary is stated.
+  - name: mart_salaries
+    description: Pay quartiles per currency (at least 3 postings).
+  - name: mart_salaries_by_skill
+    description: Median pay per skill and currency (at least 3 postings).

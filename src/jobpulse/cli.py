@@ -63,8 +63,10 @@ def collect(data_dir: Path, sources: list[str], pages: int, max_model_calls: int
 
 
 def write_report(data_dir: Path) -> None:
-    postings = store.load(data_dir / "postings.jsonl")
-    result = report.build(store.to_sqlite(postings.values()))
+    postings_path = data_dir / "postings.jsonl"
+    if not postings_path.exists():
+        postings_path.touch()
+    result = report.build(postings_path)
     (data_dir / "report.json").write_text(json.dumps(result, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     log.info("report: %s active postings as of %s", result["summary"]["active"], result["as_of"])
 

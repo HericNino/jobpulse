@@ -1,181 +1,128 @@
-"""Aggregates for the dashboard, computed with SQL over the in-memory database.
+"""Builds data/report.json.
 
-"Active" postings are the ones still listed in the last ACTIVE_DAYS days.
+The numbers are defined as dbt models in transform/ (SQL, run on DuckDB, with
+data tests). This module runs `dbt build` against data/postings.jsonl and
+reshapes the resulting tables into the JSON the dashboard reads.
 """
 
 from __future__ import annotations
 
-import sqlite3
-import statistics
-from collections import defaultdict
+import json
+import os
+import tempfile
 from datetime import UTC, date, datetime
+from pathlib import Path
 
-from .skills import CATEGORY
+import duckdb
 
+TRANSFORM_DIR = Path(__file__).resolve().parents[2] / "transform"
 ACTIVE_DAYS = 14
-TREND_SKILLS = 8
-TREND_WEEKS = 12
 
 
-def _rows(db: sqlite3.Connection, sql: str, *params) -> list[dict]:
-    return [dict(row) for row in db.execute(sql, params)]
+class DbtError(RuntimeError):
+    pass
 
 
-def build(db: sqlite3.Connection) -> dict:
-    as_of = db.execute("select max(last_seen) from postings").fetchone()[0]
+def run_dbt(postings_path: Path, warehouse: Path, active_days: int = ACTIVE_DAYS) -> None:
+    """Run `dbt build` (models and data tests). Raises DbtError if anything fails."""
+    from dbt.cli.main import dbtRunner  # imported lazily: dbt is slow to import
+
+    state = warehouse.parent / "dbt"
+    args = [
+        "build",
+        "--project-dir",
+        str(TRANSFORM_DIR),
+        "--profiles-dir",
+        str(TRANSFORM_DIR),
+        "--target-path",
+        str(state / "target"),
+        "--log-path",
+        str(state / "logs"),
+        "--vars",
+        json.dumps({"postings_path": str(postings_path.resolve()), "active_days": active_days}),
+        "--quiet",
+    ]
+    previous = os.environ.get("JOBPULSE_WAREHOUSE")
+    os.environ["JOBPULSE_WAREHOUSE"] = str(warehouse)  # read by transform/profiles.yml
+    try:
+        result = dbtRunner().invoke(args)
+    finally:
+        if previous is None:
+            os.environ.pop("JOBPULSE_WAREHOUSE", None)
+        else:
+            os.environ["JOBPULSE_WAREHOUSE"] = previous
+    if not result.success:
+        raise DbtError(f"dbt build failed: {result.exception or 'see the dbt output above'}")
+
+
+def build(postings_path: Path, active_days: int = ACTIVE_DAYS) -> dict:
+    with tempfile.TemporaryDirectory() as tmp:
+        warehouse = Path(tmp) / "warehouse.duckdb"
+        run_dbt(postings_path, warehouse, active_days)
+        with duckdb.connect(str(warehouse)) as db:  # same config as the dbt connection in this process
+            return _assemble(db, active_days)
+
+
+def _rows(db: duckdb.DuckDBPyConnection, sql: str, params: list | None = None) -> list[dict]:
+    cursor = db.execute(sql, params or [])
+    names = [d[0] for d in cursor.description]
+    return [dict(zip(names, row, strict=True)) for row in cursor.fetchall()]
+
+
+def _assemble(db: duckdb.DuckDBPyConnection, active_days: int) -> dict:
+    summary = _rows(db, "select * from mart_summary")[0]
+    as_of = summary.pop("as_of")
     if as_of is None:
         return {"as_of": None, "generated_at": _now(), "summary": {"active": 0}}
 
-    date.fromisoformat(as_of)  # guard: it's interpolated into the view below
-    db.execute("drop view if exists active")
-    db.execute(f"create temp view active as select * from postings where last_seen >= date('{as_of}', '-{ACTIVE_DAYS} days')")
-    active = db.execute("select count(*) from active").fetchone()[0]
+    for key in ("remote_share", "salary_share"):
+        summary[key] = round(summary[key], 4)
 
-    summary = {
-        "active": active,
-        "new_this_week": db.execute("select count(*) from postings where first_seen > date(?, '-7 days')", (as_of,)).fetchone()[0],
-        "companies": db.execute("select count(distinct company) from active").fetchone()[0],
-        "remote_share": _share(db, "select count(*) from active where remote = 'remote'", active),
-        "salary_share": _share(db, "select count(*) from active where salary_min is not null", active),
-        "all_time": db.execute("select count(*) from postings").fetchone()[0],
-    }
-
-    top_skills = _rows(
-        db,
-        """
-        select ps.skill, count(*) as postings, count(distinct a.company) as companies
-        from posting_skills ps join active a on a.id = ps.posting_id
-        group by ps.skill
-        order by postings desc, ps.skill
-        limit 30
-        """,
-    )
+    top_skills = _rows(db, "select skill, postings, companies, share, category from mart_top_skills limit 30")
     for row in top_skills:
-        row["share"] = round(row["postings"] / active, 4) if active else 0
-        row["category"] = CATEGORY.get(row["skill"], "Other")
+        row["share"] = round(row["share"], 4)
+
+    trend_rows = _rows(db, "select week, total, skill, share from mart_weekly_trend order by rank, week")
+    weeks = sorted({(r["week"], r["total"]) for r in trend_rows})
+    series: dict[str, list[float]] = {}
+    for r in trend_rows:
+        series.setdefault(r["skill"], []).append(round(r["share"], 4))
+
+    breakdowns = _rows(db, "select dimension, key, postings from mart_breakdowns order by postings desc, key")
+
+    def breakdown(dimension: str, name: str = "key") -> list[dict]:
+        return [{name: r["key"], "postings": r["postings"]} for r in breakdowns if r["dimension"] == dimension]
+
+    salaries = {}
+    for row in _rows(db, "select currency, postings, p25, median, p75 from mart_salaries order by currency"):
+        currency = row.pop("currency")
+        by_skill = _rows(db, "select skill, postings, median from mart_salaries_by_skill where currency = ?", [currency])
+        salaries[currency] = {
+            **{k: int(v) for k, v in row.items()},
+            "by_skill": [{"skill": r["skill"], "postings": r["postings"], "median": int(r["median"])} for r in by_skill],
+        }
 
     return {
-        "as_of": as_of,
+        "as_of": _iso(as_of),
         "generated_at": _now(),
-        "active_days": ACTIVE_DAYS,
+        "active_days": active_days,
         "summary": summary,
         "top_skills": top_skills,
-        "trend": _trend(db, [r["skill"] for r in top_skills[:TREND_SKILLS]], as_of),
-        "pairs": _rows(
-            db,
-            """
-            select a.skill as a, b.skill as b, count(*) as postings
-            from posting_skills a
-            join posting_skills b on a.posting_id = b.posting_id and a.skill < b.skill
-            join active p on p.id = a.posting_id
-            group by a.skill, b.skill
-            having count(*) >= 2
-            order by postings desc
-            limit 600
-            """,
-        ),
-        "seniority": _rows(db, "select seniority as key, count(*) as postings from active group by seniority order by postings desc"),
-        "work_mode": _rows(db, "select remote as key, count(*) as postings from active group by remote order by postings desc"),
-        "companies": _rows(
-            db,
-            """
-            select company, count(*) as postings from active where company != ''
-            group by company order by postings desc, company limit 12
-            """,
-        ),
-        "sources": _rows(db, "select source, count(*) as postings from active group by source order by postings desc"),
-        "salaries": _salaries(db),
+        "trend": {
+            "weeks": [{"week": _iso(w), "total": t} for w, t in weeks],
+            "series": [{"skill": skill, "share": shares} for skill, shares in series.items()],
+        },
+        "pairs": _rows(db, "select a, b, postings from mart_skill_pairs limit 600"),
+        "seniority": breakdown("seniority"),
+        "work_mode": breakdown("work_mode"),
+        "companies": _rows(db, "select company, postings from mart_companies limit 12"),
+        "sources": breakdown("source", "source"),
+        "salaries": salaries,
     }
 
 
-def _trend(db: sqlite3.Connection, skills: list[str], as_of: str) -> dict:
-    """Weekly share of new postings mentioning each skill, for complete weeks (Monday to Sunday)."""
-    weeks = _rows(
-        db,
-        """
-        select date(first_seen, 'weekday 0', '-6 days') as week, count(*) as total
-        from postings
-        where first_seen > date(?, ?)
-        group by week
-        having date(week, '+6 days') <= ?  -- only finished weeks
-        order by week
-        """,
-        as_of,
-        f"-{(TREND_WEEKS + 1) * 7} days",
-        as_of,
-    )
-    if not skills or not weeks:
-        return {"weeks": [], "series": []}
-    marks = ",".join("?" * len(skills))
-    counts = {
-        (r["week"], r["skill"]): r["n"]
-        for r in _rows(
-            db,
-            f"""
-            select date(p.first_seen, 'weekday 0', '-6 days') as week, ps.skill, count(*) as n
-            from postings p join posting_skills ps on ps.posting_id = p.id
-            where ps.skill in ({marks})
-            group by week, ps.skill
-            """,
-            *skills,
-        )
-    }
-    return {
-        "weeks": [{"week": w["week"], "total": w["total"]} for w in weeks],
-        "series": [{"skill": s, "share": [round(counts.get((w["week"], s), 0) / w["total"], 4) for w in weeks]} for s in skills],
-    }
-
-
-def _salaries(db: sqlite3.Connection) -> dict:
-    """Yearly pay where it is stated, per currency, overall and per skill (at least 3 postings)."""
-    rows = _rows(
-        db,
-        """
-        select p.id, p.salary_min, p.salary_max, p.salary_currency, p.salary_period, ps.skill
-        from active p left join posting_skills ps on ps.posting_id = p.id
-        where p.salary_currency is not null and p.salary_period in ('year', 'month')
-          and coalesce(p.salary_min, p.salary_max) is not null
-        """,
-    )
-    overall: dict[str, dict[str, int]] = defaultdict(dict)
-    by_skill: dict[tuple[str, str], list[int]] = defaultdict(list)
-    for r in rows:
-        low = r["salary_min"] or r["salary_max"]
-        high = r["salary_max"] or r["salary_min"]
-        yearly = (low + high) / 2 * (12 if r["salary_period"] == "month" else 1)
-        if not 5_000 <= yearly <= 1_000_000:  # drop obvious parsing mistakes
-            continue
-        overall[r["salary_currency"]][r["id"]] = round(yearly)
-        if r["skill"]:
-            by_skill[(r["salary_currency"], r["skill"])].append(round(yearly))
-
-    result = {}
-    for currency, values in overall.items():
-        mids = sorted(values.values())
-        if len(mids) < 3:
-            continue
-        result[currency] = {
-            "postings": len(mids),
-            **_quartiles(mids),
-            "by_skill": sorted(
-                (
-                    {"skill": s, "postings": len(v), "median": round(statistics.median(v))}
-                    for (c, s), v in by_skill.items()
-                    if c == currency and len(v) >= 3
-                ),
-                key=lambda x: -x["median"],
-            ),
-        }
-    return result
-
-
-def _quartiles(values: list[int]) -> dict:
-    q1, q2, q3 = statistics.quantiles(values, n=4, method="inclusive")
-    return {"p25": round(q1), "median": round(q2), "p75": round(q3)}
-
-
-def _share(db: sqlite3.Connection, sql: str, total: int) -> float:
-    return round(db.execute(sql).fetchone()[0] / total, 4) if total else 0.0
+def _iso(value: date | str) -> str:
+    return value.isoformat() if isinstance(value, date) else str(value)
 
 
 def _now() -> str:
