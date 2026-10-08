@@ -16,7 +16,7 @@ from datetime import date
 from pathlib import Path
 
 from . import report, store
-from .pipeline import dedupe, merge
+from .pipeline import dedupe, merge, prune
 from .sources import SOURCES, make_client
 
 log = logging.getLogger("jobpulse")
@@ -47,9 +47,18 @@ def collect(data_dir: Path, sources: list[str], pages: int, max_model_calls: int
     else:
         log.info("no ANTHROPIC_API_KEY or model budget: using keyword analysis only")
 
+    pruned = prune(postings)
     stats = merge(postings, dedupe(fetched), date.today().isoformat(), analyzer, max_model_calls)
     store.save(postings_path, postings)
-    log.info("seen %d, new %d (%d analyzed by model), total %d", stats.seen, stats.new, stats.analyzed_by_model, len(postings))
+    log.info(
+        "seen %d, new %d (%d analyzed by model), skipped %d non-tech, pruned %d, total %d",
+        stats.seen,
+        stats.new,
+        stats.analyzed_by_model,
+        stats.skipped,
+        pruned,
+        len(postings),
+    )
     return working
 
 

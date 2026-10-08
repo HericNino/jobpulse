@@ -1,6 +1,6 @@
 import pytest
 
-from jobpulse.skills import canonical, guess_remote, guess_seniority, match_skills
+from jobpulse.skills import canonical, guess_remote, guess_seniority, is_tech, match_skills
 
 
 def test_aliases_map_to_one_canonical_name():
@@ -47,3 +47,23 @@ def test_guess_remote():
     assert guess_remote(False, "Engineer", "Berlin (hybrid)") == "hybrid"
     assert guess_remote(False, "Engineer") == "onsite"
     assert guess_remote(None, "Engineer") == "unknown"
+
+
+@pytest.mark.parametrize(
+    ("title", "skills", "expected"),
+    [
+        ("Senior Backend Engineer", [], True),
+        ("Développeur(euse) Java confirmé(e)", ["Java"], True),
+        ("Softwareentwickler (m/w/d)", [], True),
+        ("Account Executive, Early Stage - DACH", [], False),
+        ("Partner Success Manager", ["SQL", "Testing"], False),  # weak signals don't count
+        ("General Interest", ["Python", "C++", "PyTorch"], True),  # three concrete skills do
+    ],
+)
+def test_is_tech(title, skills, expected):
+    assert is_tech(title, skills) is expected
+
+
+def test_plain_word_testing_is_not_a_skill():
+    assert match_skills("Testing new markets and A/B testing campaigns") == []
+    assert match_skills("Unit testing with pytest") == ["Testing"]

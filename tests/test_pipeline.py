@@ -4,7 +4,7 @@ from pathlib import Path
 from jobpulse import report, store
 from jobpulse.extract import Analysis
 from jobpulse.models import RawPosting
-from jobpulse.pipeline import dedupe, merge
+from jobpulse.pipeline import dedupe, merge, prune
 from jobpulse.sources import arbeitnow, remotive
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -128,7 +128,7 @@ def test_model_is_dropped_after_repeated_failures():
         calls.append(raw.id)
         raise RuntimeError("401 invalid key")
 
-    many = [RawPosting("t", str(i), "", f"Job {i}", "Co", "", "2026-10-01", "Python") for i in range(10)]
+    many = [RawPosting("t", str(i), "", f"Python Developer {i}", "Co", "", "2026-10-01", "Python") for i in range(10)]
     postings = {}
     stats = merge(postings, many, "2026-10-06", analyze=broken, max_model_calls=100)
     assert len(calls) == 3
@@ -141,3 +141,23 @@ def test_trend_leaves_out_the_unfinished_week():
     merge(postings, fetched()[2:], "2026-10-08")  # Thursday, week of 5 Oct (still running)
     weeks = report.build(store.to_sqlite(postings.values()))["trend"]["weeks"]
     assert weeks == [{"week": "2026-09-28", "total": 2}]
+
+
+def test_non_tech_postings_are_skipped_and_never_sent_to_the_model():
+    calls = []
+    sales = RawPosting("t", "s", "", "Account Executive, DACH", "Co", "", "2026-10-01", "Sell our SaaS. Salesforce, SQL a plus.")
+    dev = RawPosting("t", "d", "", "Backend Engineer", "Co", "", "2026-10-01", "Go and PostgreSQL")
+    postings = {}
+    stats = merge(postings, [sales, dev], "2026-10-06", analyze=lambda r: calls.append(r.id), max_model_calls=10)
+    assert list(postings) == ["t:d"]
+    assert stats.skipped == 1
+    assert calls == ["t:d"]
+
+
+def test_prune_removes_stored_non_tech_postings():
+    postings = {}
+    merge(postings, fetched(), "2026-10-06")
+    postings["arbeitnow:junior-frontend-engineer-beta-456"].title = "Account Manager"
+    postings["arbeitnow:junior-frontend-engineer-beta-456"].skills = ["SQL"]
+    assert prune(postings) == 1
+    assert len(postings) == 3

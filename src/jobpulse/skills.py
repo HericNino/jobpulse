@@ -90,7 +90,7 @@ CATEGORY = {name: category for name, (category, _) in SKILLS.items()}
 
 # Aliases that are ordinary words or too ambiguous to match in free text.
 # They still count when a source tags a posting with them explicitly.
-_TAG_ONLY = {"go", "ts", "js", "node", "ml", "spring", "swift", "rust", "ruby", "spark", "containers"}
+_TAG_ONLY = {"go", "ts", "js", "node", "ml", "spring", "swift", "rust", "ruby", "spark", "containers", "testing"}
 
 
 def _pattern(alias: str) -> re.Pattern[str]:
@@ -125,6 +125,21 @@ _SENIORITY_RULES: list[tuple[Seniority, re.Pattern[str]]] = [
     ("junior", re.compile(r"\b(junior|jr\.?|entry[- ]level|graduate)\b", re.I)),
     ("mid", re.compile(r"\b(mid|medior|intermediate)\b", re.I)),
 ]
+
+
+_TECH_TITLE = re.compile(
+    r"(engineer|developer|d[eé]velopp|entwickl|programm|devops|\bsre\b|\bdata\b|software|front[- ]?end|back[- ]?end|full[- ]?stack"
+    r"|architect|machine learning|\bml\b|\bai\b|\bki\b|cloud|security|\bqa\b|\btest|administrat|\bit[- ]|informati"
+    r"|platform|mobile|\bios\b|android|\bweb|scientist|analyst|cyber|network|netzwerk|database|\bsystem)",
+    re.IGNORECASE,
+)
+# skills that show up in plenty of non-engineering postings, so they don't count as evidence
+_WEAK_SIGNALS = {"Testing", "Agile", "Git", "LLMs", "Machine Learning", "Power BI", "Tableau", "SQL"}
+
+
+def is_tech(title: str, skills: list[str]) -> bool:
+    """Whether a posting is a tech role: a tech-sounding title, or at least three concrete technical skills."""
+    return bool(_TECH_TITLE.search(title)) or len([s for s in skills if s not in _WEAK_SIGNALS]) >= 3
 
 
 def guess_seniority(title: str) -> Seniority:

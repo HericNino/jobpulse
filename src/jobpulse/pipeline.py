@@ -6,6 +6,7 @@ from dataclasses import dataclass
 
 from .extract import Analysis, analyze_keywords
 from .models import Posting, RawPosting
+from .skills import is_tech
 from .store import new_posting
 
 log = logging.getLogger(__name__)
@@ -17,6 +18,7 @@ MAX_FAILURES_IN_A_ROW = 3
 class MergeStats:
     seen: int = 0
     new: int = 0
+    skipped: int = 0  # not tech roles
     analyzed_by_model: int = 0
 
 
@@ -42,7 +44,8 @@ def merge(
             continue
 
         analysis = None
-        if analyze and stats.analyzed_by_model < max_model_calls:
+        # don't spend model calls on postings that are clearly not tech roles
+        if analyze and stats.analyzed_by_model < max_model_calls and is_tech(raw.title, analyze_keywords(raw).skills):
             try:
                 analysis = analyze(raw)
                 failures_in_a_row = 0
@@ -56,7 +59,11 @@ def merge(
                     analyze = None
             if analysis:
                 stats.analyzed_by_model += 1
-        existing[raw.id] = new_posting(raw, analysis or analyze_keywords(raw), today)
+        keywords = analyze_keywords(raw)
+        if not is_tech(raw.title, (analysis or keywords).skills):
+            stats.skipped += 1
+            continue
+        existing[raw.id] = new_posting(raw, analysis or keywords, today)
         stats.new += 1
     return stats
 
@@ -66,3 +73,11 @@ def dedupe(raws: Iterable[RawPosting]) -> list[RawPosting]:
     for raw in raws:
         seen.setdefault(raw.id, raw)
     return list(seen.values())
+
+
+def prune(postings: dict[str, Posting]) -> int:
+    """Drop stored postings that the current rules no longer count as tech roles."""
+    gone = [key for key, p in postings.items() if not is_tech(p.title, p.skills)]
+    for key in gone:
+        del postings[key]
+    return len(gone)
