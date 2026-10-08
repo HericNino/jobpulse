@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>jobpulse</title>
+    <meta name="description" content="Which tech skills job postings ask for, updated daily." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <p class="eyebrow" id="as-of">Loading…</p>
+        <h1>What tech job postings are asking for</h1>
+        <p class="lede">
+          A daily count of skills, seniority, work arrangements and pay across public job boards. Postings are read once
+          when they first appear; only the facts are kept.
+        </p>
+      </header>
+
+      <section class="kpis" id="kpis" aria-label="Summary"></section>
+
+      <section class="block">
+        <header class="block-head">
+          <h2>Most requested skills</h2>
+          <p class="muted" id="skills-note"></p>
+        </header>
+        <div class="bars" id="top-skills"></div>
+      </section>
+
+      <section class="block">
+        <header class="block-head">
+          <h2>Week by week</h2>
+          <p class="muted">Share of new postings that mention each skill</p>
+        </header>
+        <div class="multiples" id="trend"></div>
+      </section>
+
+      <section class="block">
+        <header class="block-head">
+          <h2>What goes with what</h2>
+          <p class="muted">Pick a skill to see what else the same postings ask for</p>
+        </header>
+        <div class="controls">
+          <label for="pair-skill" class="muted">Postings that mention</label>
+          <select id="pair-skill"></select>
+        </div>
+        <div class="bars" id="pairs"></div>
+      </section>
+
+      <div class="columns">
+        <section class="block">
+          <header class="block-head"><h2>Seniority</h2></header>
+          <div class="bars compact" id="seniority"></div>
+        </section>
+        <section class="block">
+          <header class="block-head"><h2>Where the work happens</h2></header>
+          <div class="bars compact" id="work-mode"></div>
+        </section>
+      </div>
+
+      <section class="block" id="salary-block" hidden>
+        <header class="block-head">
+          <h2>Pay, where it's stated</h2>
+          <p class="muted">Yearly, midpoint of the posted range. Bars run from the 25th to the 75th percentile.</p>
+        </header>
+        <div id="salaries"></div>
+      </section>
+
+      <section class="block">
+        <header class="block-head"><h2>Hiring the most</h2></header>
+        <div class="bars compact" id="companies"></div>
+      </section>
+
+      <footer class="footer">
+        <p id="sources"></p>
+        <p>
+          Raw data: <a href="data/report.json">report.json</a>. Code and method:
+          <a href="https://github.com/HericNino/jobpulse">github.com/HericNino/jobpulse</a>.
+        </p>
+      </footer>
+    </main>
+    <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+  </body>
+</html>

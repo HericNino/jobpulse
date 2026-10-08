@@ -1,0 +1,47 @@
+{
+ "data": [
+  {
+   "slug": "senior-python-developer-acme-berlin-123",
+   "company_name": "Acme GmbH",
+   "title": "Senior Python Developer (m/w/d)",
+   "description": "<p>We build data products with <strong>Python</strong>, FastAPI and PostgreSQL on AWS.</p><ul><li>5+ years experience</li><li>Docker &amp; Kubernetes</li></ul>",
+   "remote": false,
+   "url": "https://www.arbeitnow.com/jobs/companies/acme/senior-python-developer-acme-berlin-123",
+   "tags": [
+    "Software Development",
+    "Python"
+   ],
+   "job_types": [
+    "full time"
+   ],
+   "location": "Berlin",
+   "created_at": 1759740000
+  },
+  {
+   "slug": "junior-frontend-engineer-beta-456",
+   "company_name": "Beta Labs",
+   "title": "Junior Frontend Engineer",
+   "description": "<p>Hybrid role. You'll work with React, TypeScript and Tailwind. Experience with React Native is a plus.</p>",
+   "remote": false,
+   "url": "https://www.arbeitnow.com/jobs/companies/beta/junior-frontend-engineer-beta-456",
+   "tags": [
+    "Frontend"
+   ],
+   "job_types": [
+    "full time"
+   ],
+   "location": "Munich",
+   "created_at": 1759653600
+  },
+  {
+   "slug": "",
+   "title": "Broken entry"
+  }
+ ],
+ "links": {
+  "next": null
+ },
+ "meta": {
+  "current_page": 1
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "job-count": 2,
+ "jobs": [
+  {
+   "id": 1912345,
+   "url": "https://remotive.com/remote-jobs/software-dev/staff-backend-engineer-1912345",
+   "title": "Staff Backend Engineer",
+   "company_name": "Gamma Inc",
+   "category": "Software Development",
+   "tags": [
+    "golang",
+    "kafka",
+    "aws"
+   ],
+   "job_type": "full_time",
+   "publication_date": "2026-10-05T09:12:00",
+   "candidate_required_location": "Europe",
+   "salary": "$150k - $190k",
+   "description": "<p>Design distributed systems in Go. Kafka, PostgreSQL, Terraform.</p>"
+  },
+  {
+   "id": 1912399,
+   "url": "https://remotive.com/remote-jobs/data/data-engineer-1912399",
+   "title": "Data Engineer",
+   "company_name": "Delta Data",
+   "category": "Data",
+   "tags": [
+    "python",
+    "airflow",
+    "dbt"
+   ],
+   "job_type": "contract",
+   "publication_date": "2026-10-04T15:00:00",
+   "candidate_required_location": "Worldwide",
+   "salary": "",
+   "description": "<p>Build pipelines with Airflow, dbt and Snowflake. SQL is essential.</p>"
+  }
+ ]
+}

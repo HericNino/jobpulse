@@ -1,0 +1,37 @@
+[project]
+name = "jobpulse"
+version = "0.1.0"
+description = "Daily snapshot of tech job postings: which skills are in demand, where, and for how much."
+readme = "README.md"
+authors = [
+    { name = "Nino Heric" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=1.12.1",
+    "httpx>=0.28.1",
+    "pydantic>=2.14.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.32,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.10",
+]
+
+[project.scripts]
+jobpulse = "jobpulse.cli:main"
+
+[tool.ruff]
+line-length = 140
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
