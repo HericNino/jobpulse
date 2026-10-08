@@ -43,7 +43,7 @@ def build(db: sqlite3.Connection) -> dict:
     top_skills = _rows(
         db,
         """
-        select ps.skill, count(*) as postings
+        select ps.skill, count(*) as postings, count(distinct a.company) as companies
         from posting_skills ps join active a on a.id = ps.posting_id
         group by ps.skill
         order by postings desc, ps.skill
@@ -71,7 +71,7 @@ def build(db: sqlite3.Connection) -> dict:
             group by a.skill, b.skill
             having count(*) >= 2
             order by postings desc
-            limit 60
+            limit 600
             """,
         ),
         "seniority": _rows(db, "select seniority as key, count(*) as postings from active group by seniority order by postings desc"),

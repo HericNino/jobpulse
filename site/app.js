@@ -224,8 +224,9 @@ function render(report) {
     kpi(num(s.new_this_week), 'new this week'),
     kpi(num(s.companies), 'companies hiring'),
     kpi(pct(s.remote_share), 'fully remote'),
-    kpi(pct(s.salary_share), 'state a salary'),
   )
+  // salaries come from the model-based analysis; without it the share is always 0, so leave it out
+  if (s.salary_share > 0) $('kpis').append(kpi(pct(s.salary_share), 'state a salary'))
 
   $('skills-note').textContent = `Share of ${num(s.active)} open postings`
   bars(
@@ -235,7 +236,8 @@ function render(report) {
       value: r.postings,
       text: pct(r.share),
       tip: `${num(r.postings)} postings`,
-      tipLabel: `${r.skill} (${r.category})`,
+      // one big employer can inflate a skill; the company count shows how broad the demand is
+      tipLabel: `${r.skill}, at ${num(r.companies)} ${r.companies === 1 ? 'company' : 'companies'}`,
     })),
   )
 

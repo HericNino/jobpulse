@@ -85,6 +85,7 @@ def test_report_aggregates():
     assert result["summary"]["new_this_week"] == 0
     top = {row["skill"]: row for row in result["top_skills"]}
     assert top["Python"]["postings"] == 1 and top["Python"]["share"] == 0.5
+    assert top["Python"]["companies"] == 1
     assert top["React"]["category"] == "Frontend"
     assert "Kafka" not in top  # remotive postings are no longer active
     assert result["trend"]["weeks"] == [{"week": "2026-09-14", "total": 4}]
