@@ -1,0 +1,14 @@
+[
+ {
+  "role": "system",
+  "content": "You extract facts from job postings for a labour-market report.\n\nUse only what the posting says. Leave salary fields null unless an amount is stated; never estimate one.\nFor skills, list the technologies and practices the role actually involves, using these canonical names when one applies:\nPython, JavaScript, TypeScript, Java, Kotlin, C#, C++, Go, Rust, PHP, Ruby, Swift, Scala, SQL, React, Next.js, Vue, Angular, Svelte, CSS, React Native, Flutter, iOS, Android, Node.js, Django, FastAPI, Flask, Spring, .NET, Rails, Laravel, GraphQL, REST APIs, Microservices, PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch, Kafka, Spark, Airflow, dbt, Snowflake, Pandas, Power BI, Tableau, AWS, Azure, GCP, Docker, Kubernetes, Terraform, CI/CD, Linux, Machine Learning, LLMs, PyTorch, TensorFlow, Testing, Agile, Git\nOnly add a name outside that list for a clearly technical skill that is central to the role.\nSeniority: infer from title and stated experience (intern, junior <2y, mid 2-5y, senior 5y+,\nlead for leads/principals/staff). Use unknown if there are no clues.\nwork_mode: remote, hybrid, onsite, or unknown."
+ },
+ {
+  "role": "user",
+  "content": "<posting>\nTitle: Backend Engineer (Java)\nCompany: Northgate Insurance\nLocation: Munich\nTags: \nSalary field: none\n\nThis is a pure backend role. You'll write Java with Spring Boot, build event-driven microservices on Kafka, and own REST APIs used by our web app (the frontend team works in JavaScript, but you won't). 3+ years of professional Java experience. Office-based in Munich, five days a week.\n</posting>"
+ },
+ {
+  "role": "assistant",
+  "content": "{\n  \"skills\": [\n    \"Java\",\n    \"JavaScript\",\n    \"Kafka\",\n    \"Microservices\",\n    \"REST APIs\",\n    \"Spring\"\n  ],\n  \"seniority\": \"unknown\",\n  \"remote\": \"onsite\",\n  \"country\": null,\n  \"salary_min\": null,\n  \"salary_max\": null,\n  \"salary_currency\": null,\n  \"salary_period\": null,\n  \"analyzed_by\": \"keywords\"\n}"
+ }
+]

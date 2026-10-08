@@ -3,6 +3,9 @@
 jobpulse collect   fetch sources, analyze new postings, update data/postings.jsonl
 jobpulse report    rebuild data/report.json from data/postings.jsonl
 jobpulse run       both
+jobpulse eval      run an analyzer over evals/cases.jsonl and grade it
+jobpulse compare   paired comparison of two eval runs
+jobpulse cases     write evals/CASES.md, a readable view of the eval cases
 """
 
 from __future__ import annotations
@@ -73,12 +76,21 @@ def write_report(data_dir: Path) -> None:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="jobpulse", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["collect", "report", "run"])
+    parser.add_argument("command", choices=["collect", "report", "run", "eval", "compare", "cases"])
+    parser.add_argument("paths", nargs="*", type=Path, help="compare: two eval run directories")
     parser.add_argument("--data", type=Path, default=Path("data"), help="data directory (default: data)")
     parser.add_argument("--sources", default=",".join(SOURCES), help=f"comma separated, from: {', '.join(SOURCES)}")
     parser.add_argument("--pages", type=int, default=3, help="pages per paginated source")
     parser.add_argument("--max-model-calls", type=int, default=150, help="cap on Claude calls per run (0 = keywords only)")
+    parser.add_argument("--variant", choices=["keywords", "claude"], default="keywords", help="eval: which analyzer")
+    parser.add_argument("--model", help="eval: Claude model (default: JOBPULSE_MODEL or claude-opus-5-5)")
+    parser.add_argument("--reps", type=int, default=1, help="eval: repetitions per case")
+    parser.add_argument("--cases-file", type=Path, default=Path("evals/cases.jsonl"))
+    parser.add_argument("--runs", type=Path, default=Path("evals/runs"), help="eval: where run directories go")
     args = parser.parse_args(argv)
+
+    if args.command in ("eval", "compare", "cases"):
+        return _evals(args, parser)
 
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     sources = [s.strip() for s in args.sources.split(",") if s.strip()]
@@ -93,6 +105,31 @@ def main(argv: list[str] | None = None) -> int:
     if args.command in ("report", "run"):
         write_report(args.data)
     return exit_code
+
+
+def _evals(args: argparse.Namespace, parser: argparse.ArgumentParser) -> int:
+    from . import evals
+
+    if args.command == "cases":
+        out = args.cases_file.with_name("CASES.md")
+        out.write_text(evals.cases_markdown(evals.load_cases(args.cases_file)), encoding="utf-8")
+        print(f"wrote {out}")
+        return 0
+    if args.command == "compare":
+        if len(args.paths) != 2:
+            parser.error("compare needs two run directories")
+        print(evals.compare(*args.paths))
+        return 0
+
+    cases = evals.load_cases(args.cases_file)
+    if args.variant == "keywords":
+        analyze, model, name = evals.keywords_variant, None, "keywords"
+    else:
+        analyze, model = evals.claude_variant(args.model)
+        name = model
+    summary = evals.run(cases, analyze, args.runs / name, expected_model=model, reps=args.reps)
+    print(evals.summary_markdown(summary, name))
+    return 1 if summary["errors"] else 0
 
 
 if __name__ == "__main__":

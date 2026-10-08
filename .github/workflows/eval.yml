@@ -1,0 +1,50 @@
+name: Evaluate analyzers
+
+# Manual only: each run calls the Claude API (roughly 60 calls for 30 cases x 2 reps).
+on:
+  workflow_dispatch:
+    inputs:
+      reps:
+        description: Repetitions per case
+        default: "2"
+      model:
+        description: Claude model
+        default: claude-opus-5-5
+
+permissions:
+  contents: read
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --locked --no-dev
+
+      - name: Keyword baseline
+        run: uv run jobpulse eval --variant keywords --runs runs
+
+      - name: Claude
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::Add an ANTHROPIC_API_KEY repository secret first (Settings > Secrets and variables > Actions)."
+            exit 1
+          fi
+          uv run jobpulse eval --variant claude --model "${{ inputs.model }}" --reps "${{ inputs.reps }}" --runs runs
+
+      - name: Summary
+        if: always()
+        run: |
+          for d in runs/*/; do [ -f "$d/summary.md" ] && cat "$d/summary.md" >> "$GITHUB_STEP_SUMMARY" && echo >> "$GITHUB_STEP_SUMMARY"; done
+          if [ -d "runs/${{ inputs.model }}" ]; then
+            uv run jobpulse compare runs/keywords "runs/${{ inputs.model }}" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-runs
+          path: runs/

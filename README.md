@@ -52,6 +52,32 @@ mkdir -p _site/data && cp site/* _site/ && cp data/report.json _site/data/
 python -m http.server -d _site
 ```
 
+## Evaluation
+
+How good is each analyzer? `evals/cases.jsonl` holds 30 hand-written postings with expected answers, chosen to cover the cases that broke things on real data or are easy to get wrong: German, French and Croatian postings, "Java" next to "JavaScript", "you'll go on-call", "React Native", salaries per hour, per month and as "90-110k", "competitive salary" with no figure, equity instead of pay, and non-tech roles. `evals/CASES.md` shows them in readable form.
+
+Grading is programmatic: recall and precision on skills (only the shared vocabulary is scored), and exact match on seniority, work mode and salary. Each run writes per-case results, full transcripts and an errors file, and reports 95% intervals over cases. Refusals and API errors are counted separately and never scored as wrong answers.
+
+```bash
+uv run jobpulse eval --variant keywords             # free, runs anywhere
+uv run jobpulse eval --variant claude --reps 2      # needs ANTHROPIC_API_KEY
+uv run jobpulse compare evals/runs/keywords evals/runs/claude-opus-5-5
+```
+
+The Claude run also exists as a manual GitHub Action (**Actions → Evaluate analyzers → Run workflow**), which uses the repository secret and puts the comparison in the run summary.
+
+Keyword baseline:
+
+| Metric | Score (95% CI) |
+|---|---|
+| Skill recall | 96% ± 4% |
+| Skill precision | 100% |
+| Seniority | 60% ± 18% |
+| Work mode | 80% ± 15% |
+| Salary | 40% ± 18% |
+
+The keyword matcher is already strong on skills in clean text but misses Croatian word endings ("Reactu", "TypeScriptom"), experience stated in years, work mode mentioned only in the description, and every salary.
+
 ## Setting up the daily run
 
 1. **Settings → Pages → Source:** GitHub Actions.
@@ -68,12 +94,14 @@ src/jobpulse/
   pipeline.py   merging new and known postings, pruning non-tech ones
   store.py      JSONL storage
   report.py     runs dbt and shapes the marts into report.json
+  evals.py      grading and running the analyzer evaluation
   cli.py
 transform/
   models/staging/   typed views over data/postings.jsonl
   models/marts/     the tables behind the dashboard
   seeds/            skill categories (generated from skills.py; a test keeps them in sync)
   tests/            singular and generic data tests
+evals/          evaluation cases and run results
 site/           static dashboard (HTML, CSS, vanilla JS, no build step)
 tests/          pytest, with saved API responses as fixtures
 ```

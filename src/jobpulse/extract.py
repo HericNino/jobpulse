@@ -8,6 +8,7 @@ rules miss. It's used when ANTHROPIC_API_KEY is set, for new postings only.
 from __future__ import annotations
 
 import os
+import time
 from dataclasses import dataclass
 from typing import Literal
 
@@ -72,10 +73,12 @@ class ClaudeAnalyzer:
 
     def analyze(self, raw: RawPosting) -> Analysis | None:
         """Returns None when the model declines, so the caller can fall back to keywords."""
-        prompt = (
-            f"<posting>\nTitle: {raw.title}\nCompany: {raw.company}\nLocation: {raw.location}\n"
-            f"Tags: {', '.join(raw.tags)}\nSalary field: {raw.salary_text or 'none'}\n\n{raw.description}\n</posting>"
-        )
+        return self.analyze_detailed(raw)[0]
+
+    def analyze_detailed(self, raw: RawPosting) -> tuple[Analysis | None, Call]:
+        """Like analyze(), plus what the evaluation needs: prompt, raw output, model, usage."""
+        prompt = build_prompt(raw)
+        started = time.monotonic()
         response = self.client.beta.messages.parse(
             model=self.model,
             max_tokens=16000,
@@ -88,11 +91,25 @@ class ClaudeAnalyzer:
             betas=["server-side-fallback-2026-07-01"],
             fallbacks="default",
         )
-        if response.stop_reason == "refusal" or response.parsed_output is None:
-            return None
         out = response.parsed_output
+        usage = response.usage
+        call = Call(
+            prompt=prompt,
+            output=out.model_dump() if out is not None else None,
+            model=response.model,
+            stop_reason=response.stop_reason,
+            latency_s=round(time.monotonic() - started, 2),
+            usage={
+                "input_tokens": usage.input_tokens,
+                "output_tokens": usage.output_tokens,
+                "cache_read_input_tokens": usage.cache_read_input_tokens or 0,
+                "cache_creation_input_tokens": usage.cache_creation_input_tokens or 0,
+            },
+        )
+        if response.stop_reason == "refusal" or out is None:
+            return None, call
         skills = sorted({canonical(s) or s.strip() for s in out.skills if s.strip()})
-        return Analysis(
+        analysis = Analysis(
             skills=skills,
             seniority=out.seniority,
             remote=out.work_mode,
@@ -103,3 +120,21 @@ class ClaudeAnalyzer:
             salary_period=out.salary_period,
             analyzed_by=response.model,
         )
+        return analysis, call
+
+
+def build_prompt(raw: RawPosting) -> str:
+    return (
+        f"<posting>\nTitle: {raw.title}\nCompany: {raw.company}\nLocation: {raw.location}\n"
+        f"Tags: {', '.join(raw.tags)}\nSalary field: {raw.salary_text or 'none'}\n\n{raw.description}\n</posting>"
+    )
+
+
+@dataclass
+class Call:
+    prompt: str
+    output: dict | None
+    model: str
+    stop_reason: str | None
+    latency_s: float
+    usage: dict

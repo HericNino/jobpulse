@@ -1,0 +1,46 @@
+{
+ "cases": 30,
+ "reps": 1,
+ "rows": 30,
+ "truncated": 0,
+ "errors": 0,
+ "models": [
+  "keywords"
+ ],
+ "metrics": {
+  "skills_recall": {
+   "mean": 0.9591954022988506,
+   "ci95": 0.03923170867108653,
+   "cases": 29
+  },
+  "skills_precision": {
+   "mean": 1.0,
+   "ci95": 0.0,
+   "cases": 29
+  },
+  "seniority": {
+   "mean": 0.6,
+   "ci95": 0.17830465984975807,
+   "cases": 30
+  },
+  "work_mode": {
+   "mean": 0.8,
+   "ci95": 0.14558514513080867,
+   "cases": 30
+  },
+  "salary": {
+   "mean": 0.4,
+   "ci95": 0.17830465984975807,
+   "cases": 30
+  },
+  "refused": {
+   "mean": 0.0,
+   "ci95": 0.0,
+   "cases": 30
+  }
+ },
+ "latency_s_median": null,
+ "output_tokens_mean": null,
+ "cost_usd": 0.0,
+ "off_vocabulary": []
+}
