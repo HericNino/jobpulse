@@ -9,6 +9,6 @@
  },
  {
   "role": "assistant",
-  "content": "{\n  \"skills\": [\n    \"Power BI\",\n    \"Python\",\n    \"SQL\"\n  ],\n  \"seniority\": \"junior\",\n  \"remote\": \"onsite\",\n  \"country\": null,\n  \"salary_min\": null,\n  \"salary_max\": null,\n  \"salary_currency\": null,\n  \"salary_period\": null,\n  \"analyzed_by\": \"keywords\"\n}"
+  "content": "{\n  \"skills\": [\n    \"Power BI\",\n    \"Python\",\n    \"SQL\"\n  ],\n  \"seniority\": \"junior\",\n  \"remote\": \"onsite\",\n  \"country\": null,\n  \"salary_min\": 35000,\n  \"salary_max\": 40000,\n  \"salary_currency\": \"GBP\",\n  \"salary_period\": \"year\",\n  \"analyzed_by\": \"keywords\"\n}"
  }
 ]

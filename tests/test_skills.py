@@ -67,3 +67,13 @@ def test_is_tech(title, skills, expected):
 def test_plain_word_testing_is_not_a_skill():
     assert match_skills("Testing new markets and A/B testing campaigns") == []
     assert match_skills("Unit testing with pytest") == ["Testing"]
+
+
+def test_inflected_and_hyphenated_forms():
+    assert {"React", "TypeScript", "Java", "Kafka"} <= set(match_skills("Radiš u Reactu s TypeScriptom, u Javi i s Kafkom."))
+    assert "Machine Learning" in match_skills("Du baust Machine-Learning-Modelle.")
+
+
+def test_ambiguous_language_names_in_context():
+    assert {"Go", "Rust"} <= set(match_skills("Services in Go, and an engine with Rust and C++."))
+    assert match_skills("You'll go on-call and help with spring cleaning. Go team!") == []

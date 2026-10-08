@@ -93,9 +93,17 @@ CATEGORY = {name: category for name, (category, _) in SKILLS.items()}
 _TAG_ONLY = {"go", "ts", "js", "node", "ml", "spring", "swift", "rust", "ruby", "spark", "containers", "testing"}
 
 
+# Croatian (and other inflected languages) add endings: "u Reactu", "s TypeScriptom", "u Javi".
+_ENDINGS = r"(?:u|om|a|e|i|em|ima|ovi|ove|ju)?"
+
+
 def _pattern(alias: str) -> re.Pattern[str]:
     # \b fails next to symbols ("c++", ".net"), so use explicit look-arounds
-    return re.compile(rf"(?<![\w.+#]){re.escape(alias)}(?![\w+#])", re.IGNORECASE)
+    body = re.escape(alias)
+    if len(alias) >= 4 and alias[-1].isalpha():
+        # words ending in -a drop it before the ending ("Kafka" -> "Kafkom")
+        body = re.escape(alias[:-1]) + r"(?:a|e|i|u|om|ama)" if alias.endswith("a") else body + _ENDINGS
+    return re.compile(rf"(?<![\w.+#]){body}(?![\w+#])", re.IGNORECASE)
 
 
 _TEXT_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
@@ -109,8 +117,16 @@ def canonical(skill: str) -> str | None:
     return _ALIASES.get(skill.strip().lower())
 
 
+# Ambiguous names count in free text only when written as a name in a technical context:
+# "services in Go", "with Rust and C++" - but not "you'll go on-call" or "spring cleaning".
+_NAMED_IN_CONTEXT = re.compile(r"(?:\b(?:in|with|using|and|or)|[,/])\s+(Go|Rust|Ruby|Swift|Spark)\b(?![-'])")
+
+
 def match_skills(text: str, tags: tuple[str, ...] | list[str] = ()) -> list[str]:
+    # "Machine-Learning-Modelle" -> "Machine Learning Modelle", so multi-word names still match
+    text = re.sub(r"(?<=[^\W\d_])-(?=[^\W\d_])", " ", text)
     found = {name for name, pattern in _TEXT_PATTERNS if pattern.search(text)}
+    found.update(m.group(1) for m in _NAMED_IN_CONTEXT.finditer(text))
     found.update(c for tag in tags if (c := canonical(tag)))
     # "React Native" mentions also contain "React"; only count React if it appears on its own
     if "React Native" in found and "React" in found and not re.search(r"react(?!\s+native)", text, re.IGNORECASE):
@@ -119,12 +135,27 @@ def match_skills(text: str, tags: tuple[str, ...] | list[str] = ()) -> list[str]
 
 
 _SENIORITY_RULES: list[tuple[Seniority, re.Pattern[str]]] = [
-    ("intern", re.compile(r"\b(intern|internship|trainee|praktikant|student)\b", re.I)),
+    ("intern", re.compile(r"\b(intern|internship|trainee|praktikant|student|werkstudent\w*|praksa)\b", re.I)),
     ("lead", re.compile(r"\b(lead|principal|staff|head of|architect|director)\b", re.I)),
     ("senior", re.compile(r"\b(senior|sr\.?)\b", re.I)),
     ("junior", re.compile(r"\b(junior|jr\.?|entry[- ]level|graduate)\b", re.I)),
     ("mid", re.compile(r"\b(mid|medior|intermediate)\b", re.I)),
 ]
+
+_WORD_NUMBERS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
+# "5+ years", "3-5 years", "minimalno 4 godine", "3 ans d'expérience", "2 Jahre Erfahrung", "Seven years"
+_YEARS = re.compile(
+    r"\b(\d{1,2}|" + "|".join(_WORD_NUMBERS) + r")\s*\+?\s*(?:(?:-|–|to|do|bis)\s*\d{1,2}\s*\+?\s*)?"
+    r"(?:years?|yrs|jahre?n?|ans|godin[ae]?)\b",
+    re.IGNORECASE,
+)
+_JUNIOR_TEXT = re.compile(
+    r"berufseinsteiger|entry[- ]level|no experience (?:required|needed)|iskustvo nije nužno|graduate programme|graduate program", re.I
+)
+
+
+def _seniority_from_years(years: int) -> Seniority:
+    return "junior" if years < 2 else "mid" if years < 5 else "senior"
 
 
 _TECH_TITLE = re.compile(
@@ -142,19 +173,44 @@ def is_tech(title: str, skills: list[str]) -> bool:
     return bool(_TECH_TITLE.search(title)) or len([s for s in skills if s not in _WEAK_SIGNALS]) >= 3
 
 
-def guess_seniority(title: str) -> Seniority:
+def guess_seniority(title: str, description: str = "") -> Seniority:
+    """From the title first; failing that, from experience stated in the text ("5+ years" -> senior)."""
     for level, pattern in _SENIORITY_RULES:
         if pattern.search(title):
             return level
+    if _JUNIOR_TEXT.search(description):
+        return "junior"
+    if m := _YEARS.search(description):
+        value = m.group(1).lower()
+        return _seniority_from_years(int(value) if value.isdigit() else _WORD_NUMBERS[value])
     return "unknown"
 
 
+_HYBRID = re.compile(
+    r"hybrid|hybride|hibrid|"
+    r"\b\d\s*(?:days?|tage?n?|dana|jours?)\b.{0,30}?(?:office|büro|uredu?|bureau)|"
+    r"(?:two|three|four|\d) (?:office days|days (?:a|per) week in)|"
+    r"télétravail\s+\d|rad od kuće\s+\d|remote[- ]anteil\s*\d+\s*%",
+    re.IGNORECASE,
+)
+_REMOTE = re.compile(
+    r"\b(?:fully remote|remote[- ]first|100\s*%\s*(?:remote|télétravail)|work from anywhere|remote within|remote contract)\b"
+    r"|\bremote\b(?![- ]anteil)",
+    re.IGNORECASE,
+)
+_ONSITE = re.compile(
+    r"on-site|onsite|office-based|in-person|in person|vor ort|im büro|u uredu|five days a week|rad u uredu|sur site",
+    re.IGNORECASE,
+)
+
+
 def guess_remote(flag: bool | None, *texts: str) -> Remote:
-    joined = " ".join(texts).lower()
-    if "hybrid" in joined:
+    """Hybrid wins over remote, remote over on-site; the source's own flag decides when the text says nothing."""
+    joined = " ".join(texts)
+    if _HYBRID.search(joined):
         return "hybrid"
-    if flag or re.search(r"\b(fully remote|remote[- ]first|100% remote|work from anywhere)\b", joined):
+    if flag or _REMOTE.search(joined):
         return "remote"
-    if flag is False:
+    if flag is False or _ONSITE.search(joined):
         return "onsite"
     return "unknown"

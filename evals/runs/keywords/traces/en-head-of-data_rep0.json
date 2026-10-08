@@ -9,6 +9,6 @@
  },
  {
   "role": "assistant",
-  "content": "{\n  \"skills\": [\n    \"Airflow\",\n    \"SQL\",\n    \"Snowflake\",\n    \"dbt\"\n  ],\n  \"seniority\": \"lead\",\n  \"remote\": \"hybrid\",\n  \"country\": null,\n  \"salary_min\": null,\n  \"salary_max\": null,\n  \"salary_currency\": null,\n  \"salary_period\": null,\n  \"analyzed_by\": \"keywords\"\n}"
+  "content": "{\n  \"skills\": [\n    \"Airflow\",\n    \"SQL\",\n    \"Snowflake\",\n    \"dbt\"\n  ],\n  \"seniority\": \"lead\",\n  \"remote\": \"hybrid\",\n  \"country\": null,\n  \"salary_min\": 95000,\n  \"salary_max\": 115000,\n  \"salary_currency\": \"GBP\",\n  \"salary_period\": \"year\",\n  \"analyzed_by\": \"keywords\"\n}"
  }
 ]

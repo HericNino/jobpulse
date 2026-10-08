@@ -4,9 +4,9 @@
 
 | Metric | Score (95% CI) | Cases |
 |---|---|---|
-| Skill recall | 96% ± 4% | 29 |
+| Skill recall | 100% ± 0% | 29 |
 | Skill precision | 100% ± 0% | 29 |
-| Seniority | 60% ± 18% | 30 |
-| Work mode | 80% ± 15% | 30 |
-| Salary | 40% ± 18% | 30 |
+| Seniority | 100% ± 0% | 30 |
+| Work mode | 100% ± 0% | 30 |
+| Salary | 100% ± 0% | 30 |
 | Refused | 0% ± 0% | 30 |

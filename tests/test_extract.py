@@ -39,7 +39,7 @@ def test_keyword_analysis():
     assert analysis.skills == ["Airflow", "PostgreSQL", "dbt"]
     assert analysis.seniority == "senior"
     assert analysis.remote == "hybrid"
-    assert analysis.salary_min is None
+    assert (analysis.salary_min, analysis.salary_max, analysis.salary_currency, analysis.salary_period) == (45000, 60000, "EUR", "year")
 
 
 def test_claude_analysis_normalizes_output():

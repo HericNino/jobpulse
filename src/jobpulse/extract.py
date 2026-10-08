@@ -16,6 +16,7 @@ import anthropic
 from pydantic import BaseModel, Field
 
 from .models import RawPosting, Remote, Seniority
+from .salary import parse_salary
 from .skills import SKILLS, canonical, guess_remote, guess_seniority, match_skills
 
 DEFAULT_MODEL = "claude-opus-5-5"
@@ -35,10 +36,15 @@ class Analysis:
 
 
 def analyze_keywords(raw: RawPosting) -> Analysis:
+    salary = parse_salary(raw.salary_text) or parse_salary(raw.description)
     return Analysis(
         skills=match_skills(f"{raw.title}\n{raw.description}", raw.tags),
-        seniority=guess_seniority(raw.title),
-        remote=guess_remote(raw.remote, raw.title, raw.location),
+        seniority=guess_seniority(raw.title, raw.description),
+        remote=guess_remote(raw.remote, raw.title, raw.location, raw.description),
+        salary_min=salary.min if salary else None,
+        salary_max=salary.max if salary else None,
+        salary_currency=salary.currency if salary else None,
+        salary_period=salary.period if salary else None,
     )
 
 

@@ -66,17 +66,19 @@ uv run jobpulse compare evals/runs/keywords evals/runs/claude-opus-5-5
 
 The Claude run also exists as a GitHub Action (**Actions → Evaluate analyzers → Run workflow**) that only runs when started by hand. It reads the key from the `ANTHROPIC_API_KEY` repository secret and puts the comparison in the run summary.
 
-Keyword baseline:
+### Improving the keyword analyzer against the eval
 
-| Metric | Score (95% CI) |
-|---|---|
-| Skill recall | 96% ± 4% |
-| Skill precision | 100% |
-| Seniority | 60% ± 18% |
-| Work mode | 80% ± 15% |
-| Salary | 40% ± 18% |
+The first keyword baseline missed Croatian word endings ("Reactu", "TypeScriptom"), experience stated in years, work mode mentioned only in the description, and every salary. Before changing anything, I wrote 10 more cases (`evals/holdout.jsonl`) and set them aside, then improved the rules using only the main 30: a salary parser (`src/jobpulse/salary.py`), experience-based seniority, multilingual work-mode phrases, inflected and hyphenated skill names, and context rules for ambiguous names like Go and Rust. The held-out set was scored once, at the end:
 
-The keyword matcher is already strong on skills in clean text but misses Croatian word endings ("Reactu", "TypeScriptom"), experience stated in years, work mode mentioned only in the description, and every salary.
+| Held-out cases (10) | Before | After |
+|---|---|---|
+| Skill recall | 76% | 93% |
+| Skill precision | 100% | 100% |
+| Seniority | 50% | 100% |
+| Work mode | 80% | 100% |
+| Salary | 20% | 100% |
+
+With ten cases the intervals are wide (±10 to ±33 points), so this shows the rules generalize rather than measuring them precisely. The two remaining misses are left in on purpose: "PySpark" isn't read as Python, and "learn Go" isn't read as the language. The main set now scores 100% on everything, which says little since it was used for tuning. New postings get the improved analysis; stored ones keep what they had, because descriptions aren't kept.
 
 ## Setting up the daily run
 
