@@ -1,225 +1,225 @@
 {
- "as_of": "2026-10-13",
- "generated_at": "2026-10-13T12:49:01+00:00",
+ "as_of": "2026-10-14",
+ "generated_at": "2026-10-14T10:22:00+00:00",
  "active_days": 14,
  "summary": {
-  "active": 1489,
-  "new_this_week": 1489,
-  "companies": 707,
-  "remote_share": 0.1981,
-  "salary_share": 0.094,
-  "all_time": 1489
+  "active": 1809,
+  "new_this_week": 1809,
+  "companies": 807,
+  "remote_share": 0.2018,
+  "salary_share": 0.1017,
+  "all_time": 1809
  },
  "top_skills": [
   {
    "skill": "Python",
-   "postings": 544,
-   "companies": 308,
-   "share": 0.3653,
+   "postings": 660,
+   "companies": 352,
+   "share": 0.3648,
    "category": "Languages"
   },
   {
    "skill": "Scala",
-   "postings": 434,
-   "companies": 247,
-   "share": 0.2915,
+   "postings": 563,
+   "companies": 283,
+   "share": 0.3112,
    "category": "Languages"
   },
   {
    "skill": "LLMs",
-   "postings": 299,
-   "companies": 178,
-   "share": 0.2008,
+   "postings": 357,
+   "companies": 209,
+   "share": 0.1973,
    "category": "AI"
   },
   {
    "skill": "CI/CD",
-   "postings": 286,
-   "companies": 197,
-   "share": 0.1921,
+   "postings": 356,
+   "companies": 233,
+   "share": 0.1968,
    "category": "Cloud & DevOps"
   },
   {
    "skill": "AWS",
-   "postings": 283,
-   "companies": 176,
-   "share": 0.1901,
+   "postings": 333,
+   "companies": 203,
+   "share": 0.1841,
+   "category": "Cloud & DevOps"
+  },
+  {
+   "skill": "Kubernetes",
+   "postings": 278,
+   "companies": 165,
+   "share": 0.1537,
    "category": "Cloud & DevOps"
   },
   {
    "skill": "SQL",
-   "postings": 226,
-   "companies": 150,
-   "share": 0.1518,
+   "postings": 268,
+   "companies": 169,
+   "share": 0.1481,
    "category": "Languages"
   },
   {
-   "skill": "Kubernetes",
-   "postings": 220,
-   "companies": 146,
-   "share": 0.1478,
-   "category": "Cloud & DevOps"
-  },
-  {
    "skill": "TypeScript",
-   "postings": 202,
-   "companies": 142,
-   "share": 0.1357,
+   "postings": 240,
+   "companies": 163,
+   "share": 0.1327,
    "category": "Languages"
   },
   {
    "skill": "Azure",
-   "postings": 182,
-   "companies": 128,
-   "share": 0.1222,
+   "postings": 210,
+   "companies": 143,
+   "share": 0.1161,
    "category": "Cloud & DevOps"
   },
   {
    "skill": "Docker",
-   "postings": 170,
-   "companies": 118,
-   "share": 0.1142,
-   "category": "Cloud & DevOps"
-  },
-  {
-   "skill": "GCP",
-   "postings": 162,
-   "companies": 94,
-   "share": 0.1088,
+   "postings": 199,
+   "companies": 136,
+   "share": 0.11,
    "category": "Cloud & DevOps"
   },
   {
    "skill": "React",
-   "postings": 161,
-   "companies": 118,
-   "share": 0.1081,
+   "postings": 195,
+   "companies": 139,
+   "share": 0.1078,
    "category": "Frontend"
   },
   {
+   "skill": "GCP",
+   "postings": 187,
+   "companies": 110,
+   "share": 0.1034,
+   "category": "Cloud & DevOps"
+  },
+  {
    "skill": "Agile",
-   "postings": 155,
-   "companies": 106,
-   "share": 0.1041,
+   "postings": 180,
+   "companies": 121,
+   "share": 0.0995,
    "category": "Practice"
   },
   {
    "skill": "Machine Learning",
-   "postings": 152,
-   "companies": 106,
-   "share": 0.1021,
+   "postings": 177,
+   "companies": 121,
+   "share": 0.0978,
    "category": "AI"
   },
   {
-   "skill": "Java",
-   "postings": 135,
-   "companies": 86,
-   "share": 0.0907,
-   "category": "Languages"
-  },
-  {
    "skill": "Linux",
-   "postings": 135,
-   "companies": 94,
-   "share": 0.0907,
+   "postings": 168,
+   "companies": 112,
+   "share": 0.0929,
    "category": "Cloud & DevOps"
   },
   {
+   "skill": "Java",
+   "postings": 166,
+   "companies": 103,
+   "share": 0.0918,
+   "category": "Languages"
+  },
+  {
    "skill": "Terraform",
-   "postings": 135,
-   "companies": 92,
-   "share": 0.0907,
+   "postings": 163,
+   "companies": 109,
+   "share": 0.0901,
    "category": "Cloud & DevOps"
   },
   {
    "skill": "JavaScript",
-   "postings": 131,
-   "companies": 89,
-   "share": 0.088,
-   "category": "Languages"
-  },
-  {
-   "skill": "C++",
-   "postings": 129,
-   "companies": 74,
-   "share": 0.0866,
+   "postings": 158,
+   "companies": 107,
+   "share": 0.0873,
    "category": "Languages"
   },
   {
    "skill": "Git",
-   "postings": 125,
-   "companies": 97,
-   "share": 0.0839,
+   "postings": 153,
+   "companies": 112,
+   "share": 0.0846,
    "category": "Practice"
   },
   {
+   "skill": "C++",
+   "postings": 152,
+   "companies": 82,
+   "share": 0.084,
+   "category": "Languages"
+  },
+  {
    "skill": "PostgreSQL",
-   "postings": 109,
-   "companies": 85,
-   "share": 0.0732,
+   "postings": 141,
+   "companies": 103,
+   "share": 0.0779,
    "category": "Data"
   },
   {
    "skill": "Go",
-   "postings": 94,
-   "companies": 70,
-   "share": 0.0631,
+   "postings": 120,
+   "companies": 80,
+   "share": 0.0663,
    "category": "Languages"
   },
   {
    "skill": "Node.js",
-   "postings": 87,
-   "companies": 64,
-   "share": 0.0584,
+   "postings": 102,
+   "companies": 72,
+   "share": 0.0564,
    "category": "Backend"
   },
   {
    "skill": "Testing",
-   "postings": 71,
-   "companies": 55,
-   "share": 0.0477,
+   "postings": 90,
+   "companies": 67,
+   "share": 0.0498,
    "category": "Practice"
   },
   {
-   "skill": "dbt",
-   "postings": 65,
-   "companies": 31,
-   "share": 0.0437,
-   "category": "Data"
+   "skill": "REST APIs",
+   "postings": 74,
+   "companies": 60,
+   "share": 0.0409,
+   "category": "Backend"
   },
   {
    "skill": "Snowflake",
-   "postings": 64,
-   "companies": 30,
-   "share": 0.043,
+   "postings": 74,
+   "companies": 35,
+   "share": 0.0409,
+   "category": "Data"
+  },
+  {
+   "skill": "dbt",
+   "postings": 73,
+   "companies": 36,
+   "share": 0.0404,
+   "category": "Data"
+  },
+  {
+   "skill": "Kafka",
+   "postings": 72,
+   "companies": 46,
+   "share": 0.0398,
    "category": "Data"
   },
   {
    "skill": "Microservices",
-   "postings": 63,
+   "postings": 71,
+   "companies": 51,
+   "share": 0.0392,
+   "category": "Backend"
+  },
+  {
+   "skill": "PyTorch",
+   "postings": 64,
    "companies": 43,
-   "share": 0.0423,
-   "category": "Backend"
-  },
-  {
-   "skill": "REST APIs",
-   "postings": 61,
-   "companies": 52,
-   "share": 0.041,
-   "category": "Backend"
-  },
-  {
-   "skill": "Kafka",
-   "postings": 56,
-   "companies": 34,
-   "share": 0.0376,
-   "category": "Data"
-  },
-  {
-   "skill": "C#",
-   "postings": 54,
-   "companies": 37,
-   "share": 0.0363,
-   "category": "Languages"
+   "share": 0.0354,
+   "category": "AI"
   }
  ],
  "trend": {
@@ -261,15 +261,15 @@
     ]
    },
    {
-    "skill": "SQL",
-    "share": [
-     0.1535
-    ]
-   },
-   {
     "skill": "Kubernetes",
     "share": [
      0.1657
+    ]
+   },
+   {
+    "skill": "SQL",
+    "share": [
+     0.1535
     ]
    },
    {
@@ -284,1547 +284,1842 @@
   {
    "a": "Python",
    "b": "Scala",
-   "postings": 181
-  },
-  {
-   "a": "AWS",
-   "b": "Python",
-   "postings": 168
+   "postings": 237
   },
   {
    "a": "LLMs",
    "b": "Python",
-   "postings": 166
+   "postings": 198
+  },
+  {
+   "a": "AWS",
+   "b": "Python",
+   "postings": 192
+  },
+  {
+   "a": "CI/CD",
+   "b": "Python",
+   "postings": 185
   },
   {
    "a": "Python",
    "b": "SQL",
-   "postings": 150
-  },
-  {
-   "a": "CI/CD",
-   "b": "Python",
-   "postings": 149
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Python",
-   "postings": 129
+   "postings": 175
   },
   {
    "a": "AWS",
    "b": "CI/CD",
-   "postings": 125
+   "postings": 152
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Python",
+   "postings": 152
   },
   {
    "a": "AWS",
    "b": "GCP",
-   "postings": 125
+   "postings": 145
   },
   {
    "a": "AWS",
    "b": "Azure",
-   "postings": 120
+   "postings": 142
   },
   {
    "a": "CI/CD",
    "b": "Kubernetes",
-   "postings": 112
+   "postings": 142
   },
   {
    "a": "React",
    "b": "TypeScript",
-   "postings": 111
+   "postings": 136
   },
   {
    "a": "LLMs",
    "b": "Scala",
-   "postings": 110
+   "postings": 131
   },
   {
    "a": "AWS",
    "b": "Kubernetes",
-   "postings": 108
-  },
-  {
-   "a": "Docker",
-   "b": "Kubernetes",
-   "postings": 107
-  },
-  {
-   "a": "Machine Learning",
-   "b": "Python",
-   "postings": 106
+   "postings": 130
   },
   {
    "a": "AWS",
    "b": "Scala",
-   "postings": 104
+   "postings": 126
+  },
+  {
+   "a": "Docker",
+   "b": "Kubernetes",
+   "postings": 125
+  },
+  {
+   "a": "CI/CD",
+   "b": "Scala",
+   "postings": 124
+  },
+  {
+   "a": "CI/CD",
+   "b": "Docker",
+   "postings": 119
   },
   {
    "a": "Python",
    "b": "TypeScript",
-   "postings": 102
+   "postings": 119
+  },
+  {
+   "a": "Machine Learning",
+   "b": "Python",
+   "postings": 118
   },
   {
    "a": "Docker",
    "b": "Python",
+   "postings": 116
+  },
+  {
+   "a": "AWS",
+   "b": "Terraform",
+   "postings": 115
+  },
+  {
+   "a": "Azure",
+   "b": "Python",
+   "postings": 111
+  },
+  {
+   "a": "C++",
+   "b": "Python",
+   "postings": 111
+  },
+  {
+   "a": "GCP",
+   "b": "Python",
+   "postings": 109
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Scala",
+   "postings": 108
+  },
+  {
+   "a": "AWS",
+   "b": "LLMs",
+   "postings": 100
+  },
+  {
+   "a": "Azure",
+   "b": "GCP",
+   "postings": 100
+  },
+  {
+   "a": "Python",
+   "b": "Terraform",
    "postings": 100
   },
   {
    "a": "AWS",
+   "b": "Docker",
+   "postings": 98
+  },
+  {
+   "a": "CI/CD",
    "b": "Terraform",
    "postings": 97
   },
   {
-   "a": "C++",
-   "b": "Python",
-   "postings": 97
+   "a": "Kubernetes",
+   "b": "Terraform",
+   "postings": 94
   },
   {
    "a": "CI/CD",
-   "b": "Docker",
-   "postings": 97
-  },
-  {
-   "a": "Azure",
-   "b": "Python",
-   "postings": 96
-  },
-  {
-   "a": "GCP",
-   "b": "Python",
-   "postings": 95
-  },
-  {
-   "a": "CI/CD",
-   "b": "Scala",
+   "b": "LLMs",
    "postings": 93
-  },
-  {
-   "a": "AWS",
-   "b": "LLMs",
-   "postings": 88
-  },
-  {
-   "a": "Azure",
-   "b": "GCP",
-   "postings": 84
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Scala",
-   "postings": 84
-  },
-  {
-   "a": "AWS",
-   "b": "Docker",
-   "postings": 83
-  },
-  {
-   "a": "CI/CD",
-   "b": "Terraform",
-   "postings": 82
-  },
-  {
-   "a": "Python",
-   "b": "Terraform",
-   "postings": 80
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Terraform",
-   "postings": 77
-  },
-  {
-   "a": "CI/CD",
-   "b": "LLMs",
-   "postings": 76
   },
   {
    "a": "SQL",
    "b": "Scala",
-   "postings": 76
-  },
-  {
-   "a": "JavaScript",
-   "b": "Python",
-   "postings": 75
+   "postings": 90
   },
   {
    "a": "CI/CD",
    "b": "TypeScript",
-   "postings": 74
+   "postings": 89
   },
   {
-   "a": "AWS",
-   "b": "SQL",
-   "postings": 72
-  },
-  {
-   "a": "Azure",
-   "b": "CI/CD",
-   "postings": 71
-  },
-  {
-   "a": "GCP",
-   "b": "Kubernetes",
-   "postings": 70
-  },
-  {
-   "a": "Java",
+   "a": "JavaScript",
    "b": "Python",
-   "postings": 70
-  },
-  {
-   "a": "Python",
-   "b": "React",
-   "postings": 70
-  },
-  {
-   "a": "Node.js",
-   "b": "TypeScript",
-   "postings": 69
+   "postings": 89
   },
   {
    "a": "CI/CD",
    "b": "Git",
-   "postings": 68
-  },
-  {
-   "a": "Go",
-   "b": "Python",
-   "postings": 67
-  },
-  {
-   "a": "JavaScript",
-   "b": "TypeScript",
-   "postings": 67
-  },
-  {
-   "a": "Scala",
-   "b": "TypeScript",
-   "postings": 67
-  },
-  {
-   "a": "CI/CD",
-   "b": "GCP",
-   "postings": 66
+   "postings": 87
   },
   {
    "a": "Git",
    "b": "Python",
-   "postings": 65
+   "postings": 85
   },
   {
    "a": "Linux",
    "b": "Python",
-   "postings": 65
+   "postings": 85
+  },
+  {
+   "a": "Azure",
+   "b": "CI/CD",
+   "postings": 84
+  },
+  {
+   "a": "Java",
+   "b": "Python",
+   "postings": 84
+  },
+  {
+   "a": "Node.js",
+   "b": "TypeScript",
+   "postings": 83
   },
   {
    "a": "Go",
+   "b": "Python",
+   "postings": 80
+  },
+  {
+   "a": "JavaScript",
+   "b": "TypeScript",
+   "postings": 80
+  },
+  {
+   "a": "Scala",
+   "b": "TypeScript",
+   "postings": 80
+  },
+  {
+   "a": "GCP",
+   "b": "Scala",
+   "postings": 79
+  },
+  {
+   "a": "Python",
+   "b": "React",
+   "postings": 79
+  },
+  {
+   "a": "GCP",
+   "b": "Kubernetes",
+   "postings": 78
+  },
+  {
+   "a": "PostgreSQL",
+   "b": "Python",
+   "postings": 78
+  },
+  {
+   "a": "CI/CD",
+   "b": "GCP",
+   "postings": 77
+  },
+  {
+   "a": "AWS",
+   "b": "SQL",
+   "postings": 76
+  },
+  {
+   "a": "Go",
+   "b": "Scala",
+   "postings": 76
+  },
+  {
+   "a": "CI/CD",
+   "b": "Linux",
+   "postings": 72
+  },
+  {
+   "a": "AWS",
+   "b": "PostgreSQL",
+   "postings": 71
+  },
+  {
+   "a": "AWS",
+   "b": "TypeScript",
+   "postings": 71
+  },
+  {
+   "a": "LLMs",
+   "b": "TypeScript",
+   "postings": 70
+  },
+  {
+   "a": "LLMs",
+   "b": "Machine Learning",
+   "postings": 69
+  },
+  {
+   "a": "LLMs",
+   "b": "SQL",
+   "postings": 69
+  },
+  {
+   "a": "Kubernetes",
+   "b": "LLMs",
+   "postings": 68
+  },
+  {
+   "a": "Azure",
+   "b": "Kubernetes",
+   "postings": 67
+  },
+  {
+   "a": "Azure",
+   "b": "Scala",
+   "postings": 66
+  },
+  {
+   "a": "CI/CD",
+   "b": "React",
+   "postings": 66
+  },
+  {
+   "a": "JavaScript",
+   "b": "React",
+   "postings": 65
+  },
+  {
+   "a": "LLMs",
+   "b": "React",
+   "postings": 65
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Linux",
+   "postings": 64
+  },
+  {
+   "a": "Agile",
+   "b": "CI/CD",
+   "postings": 63
+  },
+  {
+   "a": "Machine Learning",
    "b": "Scala",
    "postings": 63
   },
   {
-   "a": "LLMs",
-   "b": "Machine Learning",
-   "postings": 61
+   "a": "CI/CD",
+   "b": "Java",
+   "postings": 62
   },
   {
-   "a": "LLMs",
-   "b": "TypeScript",
-   "postings": 61
+   "a": "GCP",
+   "b": "LLMs",
+   "postings": 62
   },
   {
-   "a": "PostgreSQL",
+   "a": "Kubernetes",
+   "b": "PostgreSQL",
+   "postings": 62
+  },
+  {
+   "a": "Agile",
    "b": "Python",
    "postings": 61
   },
   {
+   "a": "Azure",
+   "b": "Terraform",
+   "postings": 61
+  },
+  {
+   "a": "CI/CD",
+   "b": "PostgreSQL",
+   "postings": 61
+  },
+  {
+   "a": "Go",
+   "b": "Kubernetes",
+   "postings": 61
+  },
+  {
+   "a": "Java",
+   "b": "Kubernetes",
+   "postings": 61
+  },
+  {
+   "a": "React",
+   "b": "Scala",
+   "postings": 61
+  },
+  {
    "a": "Kubernetes",
-   "b": "LLMs",
+   "b": "TypeScript",
    "postings": 60
   },
   {
-   "a": "AWS",
-   "b": "TypeScript",
+   "a": "CI/CD",
+   "b": "Go",
    "postings": 59
   },
   {
-   "a": "GCP",
-   "b": "Scala",
+   "a": "Docker",
+   "b": "Git",
    "postings": 59
-  },
-  {
-   "a": "CI/CD",
-   "b": "Linux",
-   "postings": 58
-  },
-  {
-   "a": "GCP",
-   "b": "LLMs",
-   "postings": 58
-  },
-  {
-   "a": "LLMs",
-   "b": "SQL",
-   "postings": 58
-  },
-  {
-   "a": "Azure",
-   "b": "Kubernetes",
-   "postings": 57
-  },
-  {
-   "a": "CI/CD",
-   "b": "React",
-   "postings": 56
-  },
-  {
-   "a": "LLMs",
-   "b": "React",
-   "postings": 56
-  },
-  {
-   "a": "Machine Learning",
-   "b": "Scala",
-   "postings": 55
-  },
-  {
-   "a": "AWS",
-   "b": "PostgreSQL",
-   "postings": 54
-  },
-  {
-   "a": "JavaScript",
-   "b": "React",
-   "postings": 53
-  },
-  {
-   "a": "Azure",
-   "b": "Scala",
-   "postings": 52
   },
   {
    "a": "Docker",
    "b": "LLMs",
-   "postings": 52
+   "postings": 59
+  },
+  {
+   "a": "JavaScript",
+   "b": "Scala",
+   "postings": 59
+  },
+  {
+   "a": "PostgreSQL",
+   "b": "TypeScript",
+   "postings": 59
+  },
+  {
+   "a": "Node.js",
+   "b": "React",
+   "postings": 58
   },
   {
    "a": "AWS",
    "b": "Agile",
-   "postings": 50
+   "postings": 57
   },
   {
-   "a": "Agile",
-   "b": "CI/CD",
-   "postings": 50
+   "a": "Azure",
+   "b": "Docker",
+   "postings": 57
   },
   {
-   "a": "Agile",
-   "b": "Python",
-   "postings": 50
+   "a": "Java",
+   "b": "TypeScript",
+   "postings": 57
   },
   {
    "a": "Docker",
    "b": "GCP",
-   "postings": 50
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Linux",
-   "postings": 50
-  },
-  {
-   "a": "React",
-   "b": "Scala",
-   "postings": 50
-  },
-  {
-   "a": "Azure",
-   "b": "Terraform",
-   "postings": 49
-  },
-  {
-   "a": "Go",
-   "b": "Kubernetes",
-   "postings": 49
-  },
-  {
-   "a": "Azure",
-   "b": "Docker",
-   "postings": 48
-  },
-  {
-   "a": "Docker",
-   "b": "Git",
-   "postings": 48
-  },
-  {
-   "a": "Java",
-   "b": "Kubernetes",
-   "postings": 48
-  },
-  {
-   "a": "Java",
-   "b": "TypeScript",
-   "postings": 48
-  },
-  {
-   "a": "Kubernetes",
-   "b": "TypeScript",
-   "postings": 48
-  },
-  {
-   "a": "PostgreSQL",
-   "b": "TypeScript",
-   "postings": 48
-  },
-  {
-   "a": "AWS",
-   "b": "React",
-   "postings": 47
-  },
-  {
-   "a": "JavaScript",
-   "b": "Scala",
-   "postings": 47
-  },
-  {
-   "a": "Kubernetes",
-   "b": "PostgreSQL",
-   "postings": 47
-  },
-  {
-   "a": "Node.js",
-   "b": "React",
-   "postings": 47
-  },
-  {
-   "a": "CI/CD",
-   "b": "Java",
-   "postings": 46
-  },
-  {
-   "a": "Docker",
-   "b": "Terraform",
-   "postings": 46
-  },
-  {
-   "a": "PostgreSQL",
-   "b": "React",
-   "postings": 46
-  },
-  {
-   "a": "Azure",
-   "b": "SQL",
-   "postings": 45
-  },
-  {
-   "a": "Docker",
-   "b": "Scala",
-   "postings": 45
-  },
-  {
-   "a": "Python",
-   "b": "dbt",
-   "postings": 45
-  },
-  {
-   "a": "SQL",
-   "b": "dbt",
-   "postings": 45
-  },
-  {
-   "a": "Docker",
-   "b": "Linux",
-   "postings": 44
-  },
-  {
-   "a": "Docker",
-   "b": "TypeScript",
-   "postings": 44
-  },
-  {
-   "a": "AWS",
-   "b": "Snowflake",
-   "postings": 43
-  },
-  {
-   "a": "CI/CD",
-   "b": "PostgreSQL",
-   "postings": 43
-  },
-  {
-   "a": "GCP",
-   "b": "Terraform",
-   "postings": 43
-  },
-  {
-   "a": "JavaScript",
-   "b": "LLMs",
-   "postings": 43
+   "postings": 56
   },
   {
    "a": "Scala",
    "b": "Terraform",
-   "postings": 43
+   "postings": 56
+  },
+  {
+   "a": "AWS",
+   "b": "React",
+   "postings": 54
+  },
+  {
+   "a": "Docker",
+   "b": "Linux",
+   "postings": 54
+  },
+  {
+   "a": "Docker",
+   "b": "Terraform",
+   "postings": 54
+  },
+  {
+   "a": "PostgreSQL",
+   "b": "React",
+   "postings": 54
+  },
+  {
+   "a": "SQL",
+   "b": "dbt",
+   "postings": 53
+  },
+  {
+   "a": "Docker",
+   "b": "TypeScript",
+   "postings": 52
+  },
+  {
+   "a": "Azure",
+   "b": "SQL",
+   "postings": 51
+  },
+  {
+   "a": "C++",
+   "b": "Scala",
+   "postings": 51
+  },
+  {
+   "a": "Docker",
+   "b": "Scala",
+   "postings": 51
   },
   {
    "a": "CI/CD",
-   "b": "Go",
-   "postings": 42
+   "b": "SQL",
+   "postings": 50
   },
   {
    "a": "GCP",
-   "b": "SQL",
-   "postings": 41
-  },
-  {
-   "a": "Java",
-   "b": "Spring",
-   "postings": 41
+   "b": "Terraform",
+   "postings": 50
   },
   {
    "a": "Kubernetes",
    "b": "React",
-   "postings": 41
+   "postings": 50
   },
   {
-   "a": "Snowflake",
+   "a": "Python",
    "b": "dbt",
-   "postings": 41
+   "postings": 50
+  },
+  {
+   "a": "AWS",
+   "b": "Snowflake",
+   "postings": 49
+  },
+  {
+   "a": "CI/CD",
+   "b": "JavaScript",
+   "postings": 49
+  },
+  {
+   "a": "Java",
+   "b": "React",
+   "postings": 49
+  },
+  {
+   "a": "Java",
+   "b": "Scala",
+   "postings": 49
+  },
+  {
+   "a": "PostgreSQL",
+   "b": "Scala",
+   "postings": 49
+  },
+  {
+   "a": "PyTorch",
+   "b": "Python",
+   "postings": 49
+  },
+  {
+   "a": "AWS",
+   "b": "Git",
+   "postings": 47
   },
   {
    "a": "Agile",
    "b": "Docker",
-   "postings": 40
+   "postings": 47
+  },
+  {
+   "a": "Java",
+   "b": "Spring",
+   "postings": 47
+  },
+  {
+   "a": "Kafka",
+   "b": "Python",
+   "postings": 47
+  },
+  {
+   "a": "Python",
+   "b": "Testing",
+   "postings": 47
+  },
+  {
+   "a": "AWS",
+   "b": "Linux",
+   "postings": 46
   },
   {
    "a": "Android",
    "b": "iOS",
-   "postings": 40
+   "postings": 46
   },
   {
-   "a": "C++",
+   "a": "Docker",
+   "b": "Java",
+   "postings": 46
+  },
+  {
+   "a": "GCP",
+   "b": "SQL",
+   "postings": 46
+  },
+  {
+   "a": "Linux",
    "b": "Scala",
-   "postings": 39
-  },
-  {
-   "a": "CI/CD",
-   "b": "JavaScript",
-   "postings": 39
-  },
-  {
-   "a": "Java",
-   "b": "React",
-   "postings": 39
+   "postings": 46
   },
   {
    "a": "Python",
    "b": "Snowflake",
-   "postings": 39
-  },
-  {
-   "a": "AWS",
-   "b": "Git",
-   "postings": 38
-  },
-  {
-   "a": "AWS",
-   "b": "Go",
-   "postings": 38
-  },
-  {
-   "a": "AWS",
-   "b": "Linux",
-   "postings": 38
+   "postings": 46
   },
   {
    "a": "Azure",
    "b": "LLMs",
-   "postings": 38
+   "postings": 45
   },
   {
-   "a": "Docker",
-   "b": "Java",
-   "postings": 38
-  },
-  {
-   "a": "Kafka",
-   "b": "Python",
-   "postings": 38
-  },
-  {
-   "a": "PyTorch",
-   "b": "Python",
-   "postings": 38
-  },
-  {
-   "a": "SQL",
-   "b": "TypeScript",
-   "postings": 38
-  },
-  {
-   "a": "AWS",
-   "b": "Kafka",
-   "postings": 37
-  },
-  {
-   "a": "CI/CD",
-   "b": "SQL",
-   "postings": 37
-  },
-  {
-   "a": "CI/CD",
-   "b": "Testing",
-   "postings": 37
-  },
-  {
-   "a": "Docker",
-   "b": "React",
-   "postings": 37
-  },
-  {
-   "a": "PostgreSQL",
-   "b": "Scala",
-   "postings": 37
-  },
-  {
-   "a": "AWS",
-   "b": "Machine Learning",
-   "postings": 36
-  },
-  {
-   "a": "AWS",
-   "b": "Microservices",
-   "postings": 36
-  },
-  {
-   "a": "AWS",
-   "b": "Node.js",
-   "postings": 36
-  },
-  {
-   "a": "CI/CD",
-   "b": "Microservices",
-   "postings": 36
-  },
-  {
-   "a": "Java",
-   "b": "Scala",
-   "postings": 36
-  },
-  {
-   "a": "LLMs",
-   "b": "Terraform",
-   "postings": 36
+   "a": "JavaScript",
+   "b": "LLMs",
+   "postings": 45
   },
   {
    "a": "Linux",
    "b": "Terraform",
-   "postings": 36
+   "postings": 45
   },
   {
-   "a": "Node.js",
-   "b": "Python",
-   "postings": 36
-  },
-  {
-   "a": "Python",
-   "b": "Testing",
-   "postings": 36
+   "a": "SQL",
+   "b": "TypeScript",
+   "postings": 45
   },
   {
    "a": "AWS",
    "b": "Java",
-   "postings": 35
+   "postings": 44
   },
   {
-   "a": "AWS",
-   "b": "dbt",
-   "postings": 35
+   "a": "CI/CD",
+   "b": "Testing",
+   "postings": 44
   },
   {
    "a": "Docker",
    "b": "PostgreSQL",
-   "postings": 35
+   "postings": 44
   },
   {
    "a": "Java",
    "b": "JavaScript",
-   "postings": 35
+   "postings": 44
+  },
+  {
+   "a": "AWS",
+   "b": "Node.js",
+   "postings": 43
+  },
+  {
+   "a": "CI/CD",
+   "b": "Microservices",
+   "postings": 43
+  },
+  {
+   "a": "Docker",
+   "b": "React",
+   "postings": 43
+  },
+  {
+   "a": "AWS",
+   "b": "Kafka",
+   "postings": 42
+  },
+  {
+   "a": "Kafka",
+   "b": "Kubernetes",
+   "postings": 42
+  },
+  {
+   "a": "LLMs",
+   "b": "Terraform",
+   "postings": 42
+  },
+  {
+   "a": "Node.js",
+   "b": "Python",
+   "postings": 42
+  },
+  {
+   "a": "Snowflake",
+   "b": "dbt",
+   "postings": 42
+  },
+  {
+   "a": "AWS",
+   "b": "Go",
+   "postings": 41
   },
   {
    "a": "AWS",
    "b": "JavaScript",
-   "postings": 34
+   "postings": 41
+  },
+  {
+   "a": "Agile",
+   "b": "Kubernetes",
+   "postings": 41
+  },
+  {
+   "a": "AWS",
+   "b": "Machine Learning",
+   "postings": 40
+  },
+  {
+   "a": "AWS",
+   "b": "Microservices",
+   "postings": 40
   },
   {
    "a": "Agile",
    "b": "Azure",
-   "postings": 34
+   "postings": 40
+  },
+  {
+   "a": "Go",
+   "b": "TypeScript",
+   "postings": 40
   },
   {
    "a": "Airflow",
    "b": "Python",
-   "postings": 34
+   "postings": 39
   },
   {
    "a": "Azure",
    "b": "Git",
-   "postings": 34
-  },
-  {
-   "a": "Go",
-   "b": "TypeScript",
-   "postings": 34
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Microservices",
-   "postings": 34
-  },
-  {
-   "a": "Linux",
-   "b": "Scala",
-   "postings": 34
-  },
-  {
-   "a": "SQL",
-   "b": "Snowflake",
-   "postings": 34
-  },
-  {
-   "a": "Agile",
-   "b": "TypeScript",
-   "postings": 33
-  },
-  {
-   "a": "GCP",
-   "b": "Snowflake",
-   "postings": 33
+   "postings": 39
   },
   {
    "a": "Java",
    "b": "Kotlin",
-   "postings": 33
+   "postings": 39
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Microservices",
+   "postings": 39
+  },
+  {
+   "a": "Agile",
+   "b": "Scala",
+   "postings": 38
+  },
+  {
+   "a": "C++",
+   "b": "Linux",
+   "postings": 38
+  },
+  {
+   "a": "Docker",
+   "b": "SQL",
+   "postings": 38
+  },
+  {
+   "a": "JavaScript",
+   "b": "Kubernetes",
+   "postings": 38
+  },
+  {
+   "a": "Kubernetes",
+   "b": "SQL",
+   "postings": 38
   },
   {
    "a": "Machine Learning",
    "b": "PyTorch",
-   "postings": 33
-  },
-  {
-   "a": "Agile",
-   "b": "Kubernetes",
-   "postings": 32
-  },
-  {
-   "a": "FastAPI",
-   "b": "Python",
-   "postings": 32
-  },
-  {
-   "a": "JavaScript",
-   "b": "Kubernetes",
-   "postings": 32
-  },
-  {
-   "a": "JavaScript",
-   "b": "Node.js",
-   "postings": 32
-  },
-  {
-   "a": "Kafka",
-   "b": "Kubernetes",
-   "postings": 32
+   "postings": 38
   },
   {
    "a": "PostgreSQL",
    "b": "Terraform",
-   "postings": 32
+   "postings": 38
   },
   {
-   "a": "React",
-   "b": "Vue",
-   "postings": 32
+   "a": "FastAPI",
+   "b": "Python",
+   "postings": 37
+  },
+  {
+   "a": "GCP",
+   "b": "Snowflake",
+   "postings": 37
+  },
+  {
+   "a": "Python",
+   "b": "Rust",
+   "postings": 37
+  },
+  {
+   "a": "SQL",
+   "b": "Snowflake",
+   "postings": 37
+  },
+  {
+   "a": "Agile",
+   "b": "TypeScript",
+   "postings": 36
   },
   {
    "a": "Angular",
    "b": "React",
-   "postings": 31
+   "postings": 36
+  },
+  {
+   "a": "CI/CD",
+   "b": "Machine Learning",
+   "postings": 36
+  },
+  {
+   "a": "React",
+   "b": "Vue",
+   "postings": 36
+  },
+  {
+   "a": "AWS",
+   "b": "dbt",
+   "postings": 35
+  },
+  {
+   "a": "Azure",
+   "b": "JavaScript",
+   "postings": 35
+  },
+  {
+   "a": "Docker",
+   "b": "JavaScript",
+   "postings": 35
+  },
+  {
+   "a": "JavaScript",
+   "b": "Node.js",
+   "postings": 35
   },
   {
    "a": "Azure",
    "b": "TypeScript",
-   "postings": 31
+   "postings": 34
+  },
+  {
+   "a": "Git",
+   "b": "Kubernetes",
+   "postings": 34
+  },
+  {
+   "a": "Git",
+   "b": "Linux",
+   "postings": 34
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Machine Learning",
+   "postings": 34
+  },
+  {
+   "a": "Azure",
+   "b": "Linux",
+   "postings": 33
   },
   {
    "a": "C#",
    "b": "Python",
-   "postings": 31
+   "postings": 33
+  },
+  {
+   "a": "CI/CD",
+   "b": "Kafka",
+   "postings": 33
+  },
+  {
+   "a": "GCP",
+   "b": "dbt",
+   "postings": 33
+  },
+  {
+   "a": "Git",
+   "b": "TypeScript",
+   "postings": 33
+  },
+  {
+   "a": "Java",
+   "b": "LLMs",
+   "postings": 33
+  },
+  {
+   "a": "LLMs",
+   "b": "Node.js",
+   "postings": 33
+  },
+  {
+   "a": "Scala",
+   "b": "Testing",
+   "postings": 33
+  },
+  {
+   "a": "CI/CD",
+   "b": "Node.js",
+   "postings": 32
+  },
+  {
+   "a": "CI/CD",
+   "b": "REST APIs",
+   "postings": 32
   },
   {
    "a": "Docker",
+   "b": "Go",
+   "postings": 32
+  },
+  {
+   "a": "Git",
+   "b": "Scala",
+   "postings": 32
+  },
+  {
+   "a": "Go",
+   "b": "Java",
+   "postings": 32
+  },
+  {
+   "a": "Kafka",
+   "b": "Scala",
+   "postings": 32
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Node.js",
+   "postings": 32
+  },
+  {
+   "a": "LLMs",
+   "b": "PostgreSQL",
+   "postings": 32
+  },
+  {
+   "a": "LLMs",
+   "b": "PyTorch",
+   "postings": 32
+  },
+  {
+   "a": "Node.js",
+   "b": "Scala",
+   "postings": 32
+  },
+  {
+   "a": "PostgreSQL",
+   "b": "Redis",
+   "postings": 32
+  },
+  {
+   "a": "Power BI",
+   "b": "SQL",
+   "postings": 32
+  },
+  {
+   "a": "Agile",
+   "b": "Git",
+   "postings": 31
+  },
+  {
+   "a": "C++",
+   "b": "CI/CD",
+   "postings": 31
+  },
+  {
+   "a": "Git",
    "b": "SQL",
    "postings": 31
   },
   {
    "a": "Java",
-   "b": "LLMs",
+   "b": "SQL",
    "postings": 31
   },
   {
-   "a": "Agile",
-   "b": "Scala",
-   "postings": 30
-  },
-  {
-   "a": "C++",
-   "b": "Linux",
-   "postings": 30
-  },
-  {
-   "a": "CI/CD",
-   "b": "Machine Learning",
-   "postings": 30
-  },
-  {
-   "a": "GCP",
-   "b": "dbt",
-   "postings": 30
-  },
-  {
-   "a": "Kubernetes",
-   "b": "SQL",
-   "postings": 30
-  },
-  {
-   "a": "Azure",
-   "b": "JavaScript",
-   "postings": 29
-  },
-  {
-   "a": "Docker",
-   "b": "JavaScript",
-   "postings": 29
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Machine Learning",
-   "postings": 29
-  },
-  {
-   "a": "Node.js",
-   "b": "Scala",
-   "postings": 29
-  },
-  {
-   "a": "Docker",
-   "b": "Go",
-   "postings": 28
-  },
-  {
-   "a": "GCP",
+   "a": "Next.js",
    "b": "TypeScript",
-   "postings": 28
-  },
-  {
-   "a": "Go",
-   "b": "React",
-   "postings": 28
-  },
-  {
-   "a": "LLMs",
-   "b": "Node.js",
-   "postings": 28
+   "postings": 31
   },
   {
    "a": "Terraform",
    "b": "TypeScript",
-   "postings": 28
-  },
-  {
-   "a": "Airflow",
-   "b": "SQL",
-   "postings": 27
-  },
-  {
-   "a": "Azure",
-   "b": "Linux",
-   "postings": 27
-  },
-  {
-   "a": "CI/CD",
-   "b": "Node.js",
-   "postings": 27
-  },
-  {
-   "a": "Git",
-   "b": "Linux",
-   "postings": 27
-  },
-  {
-   "a": "Git",
-   "b": "SQL",
-   "postings": 27
-  },
-  {
-   "a": "LLMs",
-   "b": "PostgreSQL",
-   "postings": 27
-  },
-  {
-   "a": "LLMs",
-   "b": "Snowflake",
-   "postings": 27
-  },
-  {
-   "a": "Next.js",
-   "b": "TypeScript",
-   "postings": 27
-  },
-  {
-   "a": "PostgreSQL",
-   "b": "Redis",
-   "postings": 27
-  },
-  {
-   "a": "Power BI",
-   "b": "SQL",
-   "postings": 27
+   "postings": 31
   },
   {
    "a": ".NET",
    "b": "C#",
-   "postings": 26
+   "postings": 30
   },
   {
    "a": "AWS",
    "b": "Airflow",
-   "postings": 26
-  },
-  {
-   "a": "Agile",
-   "b": "GCP",
-   "postings": 26
+   "postings": 30
   },
   {
    "a": "Agile",
    "b": "Java",
-   "postings": 26
-  },
-  {
-   "a": "Azure",
-   "b": "Machine Learning",
-   "postings": 26
-  },
-  {
-   "a": "Azure",
-   "b": "React",
-   "postings": 26
-  },
-  {
-   "a": "Git",
-   "b": "Kubernetes",
-   "postings": 26
-  },
-  {
-   "a": "Git",
-   "b": "TypeScript",
-   "postings": 26
-  },
-  {
-   "a": "Go",
-   "b": "Java",
-   "postings": 26
-  },
-  {
-   "a": "Java",
-   "b": "Microservices",
-   "postings": 26
-  },
-  {
-   "a": "Java",
-   "b": "SQL",
-   "postings": 26
-  },
-  {
-   "a": "Python",
-   "b": "REST APIs",
-   "postings": 26
-  },
-  {
-   "a": "Python",
-   "b": "Rust",
-   "postings": 26
-  },
-  {
-   "a": "TypeScript",
-   "b": "Vue",
-   "postings": 26
-  },
-  {
-   "a": "Angular",
-   "b": "TypeScript",
-   "postings": 25
-  },
-  {
-   "a": "C++",
-   "b": "CI/CD",
-   "postings": 25
-  },
-  {
-   "a": "CSS",
-   "b": "JavaScript",
-   "postings": 25
-  },
-  {
-   "a": "Go",
-   "b": "LLMs",
-   "postings": 25
-  },
-  {
-   "a": "GraphQL",
-   "b": "TypeScript",
-   "postings": 25
-  },
-  {
-   "a": "Kafka",
-   "b": "Scala",
-   "postings": 25
-  },
-  {
-   "a": "Machine Learning",
-   "b": "SQL",
-   "postings": 25
-  },
-  {
-   "a": "Microservices",
-   "b": "Scala",
-   "postings": 25
-  },
-  {
-   "a": "Agile",
-   "b": "Git",
-   "postings": 24
-  },
-  {
-   "a": "C++",
-   "b": "Machine Learning",
-   "postings": 24
-  },
-  {
-   "a": "Docker",
-   "b": "Machine Learning",
-   "postings": 24
-  },
-  {
-   "a": "GCP",
-   "b": "Go",
-   "postings": 24
-  },
-  {
-   "a": "GCP",
-   "b": "JavaScript",
-   "postings": 24
-  },
-  {
-   "a": "GCP",
-   "b": "Machine Learning",
-   "postings": 24
-  },
-  {
-   "a": "GCP",
-   "b": "React",
-   "postings": 24
-  },
-  {
-   "a": "Git",
-   "b": "Terraform",
-   "postings": 24
-  },
-  {
-   "a": "Go",
-   "b": "Terraform",
-   "postings": 24
-  },
-  {
-   "a": "JavaScript",
-   "b": "SQL",
-   "postings": 24
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Node.js",
-   "postings": 24
-  },
-  {
-   "a": "LLMs",
-   "b": "PyTorch",
-   "postings": 24
-  },
-  {
-   "a": "Microservices",
-   "b": "Python",
-   "postings": 24
-  },
-  {
-   "a": "AWS",
-   "b": "REST APIs",
-   "postings": 23
-  },
-  {
-   "a": "Airflow",
-   "b": "dbt",
-   "postings": 23
-  },
-  {
-   "a": "C#",
-   "b": "Java",
-   "postings": 23
-  },
-  {
-   "a": "CI/CD",
-   "b": "Kafka",
-   "postings": 23
-  },
-  {
-   "a": "CI/CD",
-   "b": "Kotlin",
-   "postings": 23
-  },
-  {
-   "a": "CI/CD",
-   "b": "REST APIs",
-   "postings": 23
-  },
-  {
-   "a": "Docker",
-   "b": "Microservices",
-   "postings": 23
-  },
-  {
-   "a": "Git",
-   "b": "LLMs",
-   "postings": 23
-  },
-  {
-   "a": "Git",
-   "b": "Scala",
-   "postings": 23
-  },
-  {
-   "a": "JavaScript",
-   "b": "Vue",
-   "postings": 23
-  },
-  {
-   "a": "Kafka",
-   "b": "SQL",
-   "postings": 23
-  },
-  {
-   "a": "LLMs",
-   "b": "dbt",
-   "postings": 23
-  },
-  {
-   "a": "React",
-   "b": "SQL",
-   "postings": 23
-  },
-  {
-   "a": "Scala",
-   "b": "Snowflake",
-   "postings": 23
-  },
-  {
-   "a": "Scala",
-   "b": "Testing",
-   "postings": 23
-  },
-  {
-   "a": "Testing",
-   "b": "TypeScript",
-   "postings": 23
-  },
-  {
-   "a": "Angular",
-   "b": "Java",
-   "postings": 22
-  },
-  {
-   "a": "Angular",
-   "b": "JavaScript",
-   "postings": 22
-  },
-  {
-   "a": "Angular",
-   "b": "Vue",
-   "postings": 22
-  },
-  {
-   "a": "GCP",
-   "b": "Microservices",
-   "postings": 22
-  },
-  {
-   "a": "Node.js",
-   "b": "PostgreSQL",
-   "postings": 22
-  },
-  {
-   "a": "Power BI",
-   "b": "Python",
-   "postings": 22
-  },
-  {
-   "a": "PyTorch",
-   "b": "TensorFlow",
-   "postings": 22
-  },
-  {
-   "a": "SQL",
-   "b": "Tableau",
-   "postings": 22
-  },
-  {
-   "a": "Agile",
-   "b": "JavaScript",
-   "postings": 21
-  },
-  {
-   "a": "Agile",
-   "b": "SQL",
-   "postings": 21
-  },
-  {
-   "a": "Airflow",
-   "b": "Snowflake",
-   "postings": 21
-  },
-  {
-   "a": "C++",
-   "b": "Java",
-   "postings": 21
-  },
-  {
-   "a": "CI/CD",
-   "b": "Redis",
-   "postings": 21
-  },
-  {
-   "a": "CI/CD",
-   "b": "Snowflake",
-   "postings": 21
-  },
-  {
-   "a": "GCP",
-   "b": "Java",
-   "postings": 21
-  },
-  {
-   "a": "Git",
-   "b": "JavaScript",
-   "postings": 21
-  },
-  {
-   "a": "Kotlin",
-   "b": "Python",
-   "postings": 21
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Redis",
-   "postings": 21
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Spring",
-   "postings": 21
-  },
-  {
-   "a": "LLMs",
-   "b": "Testing",
-   "postings": 21
-  },
-  {
-   "a": "Next.js",
-   "b": "React",
-   "postings": 21
-  },
-  {
-   "a": "Python",
-   "b": "TensorFlow",
-   "postings": 21
-  },
-  {
-   "a": "Agile",
-   "b": "Linux",
-   "postings": 20
-  },
-  {
-   "a": "Agile",
-   "b": "React",
-   "postings": 20
-  },
-  {
-   "a": "Agile",
-   "b": "Terraform",
-   "postings": 20
-  },
-  {
-   "a": "Angular",
-   "b": "Python",
-   "postings": 20
-  },
-  {
-   "a": "Azure",
-   "b": "Node.js",
-   "postings": 20
-  },
-  {
-   "a": "Azure",
-   "b": "PostgreSQL",
-   "postings": 20
-  },
-  {
-   "a": "Azure",
-   "b": "REST APIs",
-   "postings": 20
-  },
-  {
-   "a": "C#",
-   "b": "CI/CD",
-   "postings": 20
-  },
-  {
-   "a": "GCP",
-   "b": "PostgreSQL",
-   "postings": 20
-  },
-  {
-   "a": "Go",
-   "b": "JavaScript",
-   "postings": 20
-  },
-  {
-   "a": "Java",
-   "b": "Vue",
-   "postings": 20
-  },
-  {
-   "a": "JavaScript",
-   "b": "PostgreSQL",
-   "postings": 20
-  },
-  {
-   "a": "Kotlin",
-   "b": "TypeScript",
-   "postings": 20
-  },
-  {
-   "a": "PostgreSQL",
-   "b": "SQL",
-   "postings": 20
-  },
-  {
-   "a": "React",
-   "b": "Spring",
-   "postings": 20
-  },
-  {
-   "a": "React",
-   "b": "Terraform",
-   "postings": 20
-  },
-  {
-   "a": "React",
-   "b": "Testing",
-   "postings": 20
-  },
-  {
-   "a": "AWS",
-   "b": "Redis",
-   "postings": 19
-  },
-  {
-   "a": "C#",
-   "b": "JavaScript",
-   "postings": 19
+   "postings": 30
   },
   {
    "a": "C++",
    "b": "Rust",
-   "postings": 19
+   "postings": 30
   },
   {
    "a": "CSS",
-   "b": "React",
-   "postings": 19
+   "b": "JavaScript",
+   "postings": 30
   },
   {
-   "a": "Docker",
-   "b": "MySQL",
-   "postings": 19
+   "a": "GCP",
+   "b": "TypeScript",
+   "postings": 30
   },
   {
    "a": "Git",
-   "b": "Java",
-   "postings": 19
-  },
-  {
-   "a": "Java",
-   "b": "Node.js",
-   "postings": 19
-  },
-  {
-   "a": "LLMs",
-   "b": "Microservices",
-   "postings": 19
-  },
-  {
-   "a": "Linux",
-   "b": "PostgreSQL",
-   "postings": 19
-  },
-  {
-   "a": "Python",
-   "b": "Redis",
-   "postings": 19
-  },
-  {
-   "a": "REST APIs",
-   "b": "TypeScript",
-   "postings": 19
-  },
-  {
-   "a": "AWS",
-   "b": "MySQL",
-   "postings": 18
-  },
-  {
-   "a": "AWS",
-   "b": "Spring",
-   "postings": 18
-  },
-  {
-   "a": "Agile",
-   "b": "LLMs",
-   "postings": 18
-  },
-  {
-   "a": "Airflow",
-   "b": "CI/CD",
-   "postings": 18
-  },
-  {
-   "a": "Azure",
-   "b": "Go",
-   "postings": 18
-  },
-  {
-   "a": "C#",
-   "b": "TypeScript",
-   "postings": 18
-  },
-  {
-   "a": "C++",
-   "b": "Go",
-   "postings": 18
-  },
-  {
-   "a": "C++",
-   "b": "LLMs",
-   "postings": 18
-  },
-  {
-   "a": "CI/CD",
-   "b": "GraphQL",
-   "postings": 18
-  },
-  {
-   "a": "CI/CD",
-   "b": "dbt",
-   "postings": 18
-  },
-  {
-   "a": "Docker",
-   "b": "Node.js",
-   "postings": 18
-  },
-  {
-   "a": "Docker",
-   "b": "Redis",
-   "postings": 18
-  },
-  {
-   "a": "FastAPI",
-   "b": "TypeScript",
-   "postings": 18
-  },
-  {
-   "a": "GCP",
-   "b": "Kafka",
-   "postings": 18
-  },
-  {
-   "a": "GCP",
-   "b": "Linux",
-   "postings": 18
+   "b": "Terraform",
+   "postings": 30
   },
   {
    "a": "Go",
-   "b": "Machine Learning",
-   "postings": 18
-  },
-  {
-   "a": "GraphQL",
    "b": "React",
-   "postings": 18
+   "postings": 30
   },
   {
-   "a": "JavaScript",
-   "b": "PHP",
-   "postings": 18
-  },
-  {
-   "a": "Kafka",
-   "b": "Terraform",
-   "postings": 18
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Testing",
-   "postings": 18
-  },
-  {
-   "a": "Microservices",
-   "b": "Terraform",
-   "postings": 18
-  },
-  {
-   "a": "MySQL",
-   "b": "PostgreSQL",
-   "postings": 18
-  },
-  {
-   "a": "Node.js",
-   "b": "SQL",
-   "postings": 18
+   "a": "Java",
+   "b": "Microservices",
+   "postings": 30
   },
   {
    "a": "Python",
-   "b": "Tableau",
-   "postings": 18
+   "b": "REST APIs",
+   "postings": 30
   },
   {
    "a": "Rust",
    "b": "Scala",
+   "postings": 30
+  },
+  {
+   "a": "Agile",
+   "b": "GCP",
+   "postings": 29
+  },
+  {
+   "a": "GCP",
+   "b": "JavaScript",
+   "postings": 29
+  },
+  {
+   "a": "Git",
+   "b": "LLMs",
+   "postings": 29
+  },
+  {
+   "a": "Node.js",
+   "b": "PostgreSQL",
+   "postings": 29
+  },
+  {
+   "a": "PyTorch",
+   "b": "TensorFlow",
+   "postings": 29
+  },
+  {
+   "a": "Airflow",
+   "b": "SQL",
+   "postings": 28
+  },
+  {
+   "a": "Angular",
+   "b": "TypeScript",
+   "postings": 28
+  },
+  {
+   "a": "Azure",
+   "b": "Machine Learning",
+   "postings": 28
+  },
+  {
+   "a": "Azure",
+   "b": "React",
+   "postings": 28
+  },
+  {
+   "a": "C++",
+   "b": "Java",
+   "postings": 28
+  },
+  {
+   "a": "Docker",
+   "b": "Machine Learning",
+   "postings": 28
+  },
+  {
+   "a": "Git",
+   "b": "JavaScript",
+   "postings": 28
+  },
+  {
+   "a": "Go",
+   "b": "LLMs",
+   "postings": 28
+  },
+  {
+   "a": "Go",
+   "b": "Terraform",
+   "postings": 28
+  },
+  {
+   "a": "GraphQL",
+   "b": "TypeScript",
+   "postings": 28
+  },
+  {
+   "a": "JavaScript",
+   "b": "SQL",
+   "postings": 28
+  },
+  {
+   "a": "LLMs",
+   "b": "Snowflake",
+   "postings": 28
+  },
+  {
+   "a": "Scala",
+   "b": "Snowflake",
+   "postings": 28
+  },
+  {
+   "a": "Angular",
+   "b": "JavaScript",
+   "postings": 27
+  },
+  {
+   "a": "C#",
+   "b": "Java",
+   "postings": 27
+  },
+  {
+   "a": "JavaScript",
+   "b": "PostgreSQL",
+   "postings": 27
+  },
+  {
+   "a": "JavaScript",
+   "b": "Vue",
+   "postings": 27
+  },
+  {
+   "a": "Kafka",
+   "b": "SQL",
+   "postings": 27
+  },
+  {
+   "a": "Machine Learning",
+   "b": "SQL",
+   "postings": 27
+  },
+  {
+   "a": "Microservices",
+   "b": "Scala",
+   "postings": 27
+  },
+  {
+   "a": "Python",
+   "b": "TensorFlow",
+   "postings": 27
+  },
+  {
+   "a": "Testing",
+   "b": "TypeScript",
+   "postings": 27
+  },
+  {
+   "a": "TypeScript",
+   "b": "Vue",
+   "postings": 27
+  },
+  {
+   "a": "Agile",
+   "b": "JavaScript",
+   "postings": 26
+  },
+  {
+   "a": "Agile",
+   "b": "Linux",
+   "postings": 26
+  },
+  {
+   "a": "Agile",
+   "b": "Terraform",
+   "postings": 26
+  },
+  {
+   "a": "CI/CD",
+   "b": "Snowflake",
+   "postings": 26
+  },
+  {
+   "a": "GCP",
+   "b": "Java",
+   "postings": 26
+  },
+  {
+   "a": "GCP",
+   "b": "Machine Learning",
+   "postings": 26
+  },
+  {
+   "a": "Kafka",
+   "b": "PostgreSQL",
+   "postings": 26
+  },
+  {
+   "a": "MySQL",
+   "b": "PostgreSQL",
+   "postings": 26
+  },
+  {
+   "a": "Next.js",
+   "b": "React",
+   "postings": 26
+  },
+  {
+   "a": "React",
+   "b": "SQL",
+   "postings": 26
+  },
+  {
+   "a": "React",
+   "b": "Testing",
+   "postings": 26
+  },
+  {
+   "a": "SQL",
+   "b": "Tableau",
+   "postings": 26
+  },
+  {
+   "a": "Agile",
+   "b": "SQL",
+   "postings": 25
+  },
+  {
+   "a": "Angular",
+   "b": "Vue",
+   "postings": 25
+  },
+  {
+   "a": "Azure",
+   "b": "PostgreSQL",
+   "postings": 25
+  },
+  {
+   "a": "C++",
+   "b": "Go",
+   "postings": 25
+  },
+  {
+   "a": "C++",
+   "b": "Machine Learning",
+   "postings": 25
+  },
+  {
+   "a": "CI/CD",
+   "b": "Kotlin",
+   "postings": 25
+  },
+  {
+   "a": "CI/CD",
+   "b": "Redis",
+   "postings": 25
+  },
+  {
+   "a": "Docker",
+   "b": "Microservices",
+   "postings": 25
+  },
+  {
+   "a": "GCP",
+   "b": "React",
+   "postings": 25
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Spring",
+   "postings": 25
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Testing",
+   "postings": 25
+  },
+  {
+   "a": "LLMs",
+   "b": "dbt",
+   "postings": 25
+  },
+  {
+   "a": "Linux",
+   "b": "PostgreSQL",
+   "postings": 25
+  },
+  {
+   "a": "Microservices",
+   "b": "Python",
+   "postings": 25
+  },
+  {
+   "a": "Power BI",
+   "b": "Python",
+   "postings": 25
+  },
+  {
+   "a": "PyTorch",
+   "b": "Scala",
+   "postings": 25
+  },
+  {
+   "a": "Python",
+   "b": "Redis",
+   "postings": 25
+  },
+  {
+   "a": "REST APIs",
+   "b": "SQL",
+   "postings": 25
+  },
+  {
+   "a": "AWS",
+   "b": "REST APIs",
+   "postings": 24
+  },
+  {
+   "a": "Agile",
+   "b": "LLMs",
+   "postings": 24
+  },
+  {
+   "a": "Azure",
+   "b": "REST APIs",
+   "postings": 24
+  },
+  {
+   "a": "C++",
+   "b": "Kubernetes",
+   "postings": 24
+  },
+  {
+   "a": "CSS",
+   "b": "React",
+   "postings": 24
+  },
+  {
+   "a": "GCP",
+   "b": "Go",
+   "postings": 24
+  },
+  {
+   "a": "Java",
+   "b": "PostgreSQL",
+   "postings": 24
+  },
+  {
+   "a": "Kotlin",
+   "b": "TypeScript",
+   "postings": 24
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Redis",
+   "postings": 24
+  },
+  {
+   "a": "LLMs",
+   "b": "Testing",
+   "postings": 24
+  },
+  {
+   "a": "React",
+   "b": "Spring",
+   "postings": 24
+  },
+  {
+   "a": "AWS",
+   "b": "MySQL",
+   "postings": 23
+  },
+  {
+   "a": "Airflow",
+   "b": "dbt",
+   "postings": 23
+  },
+  {
+   "a": "Angular",
+   "b": "Java",
+   "postings": 23
+  },
+  {
+   "a": "Azure",
+   "b": "Java",
+   "postings": 23
+  },
+  {
+   "a": "C#",
+   "b": "CI/CD",
+   "postings": 23
+  },
+  {
+   "a": "GCP",
+   "b": "Microservices",
+   "postings": 23
+  },
+  {
+   "a": "GCP",
+   "b": "PostgreSQL",
+   "postings": 23
+  },
+  {
+   "a": "Git",
+   "b": "Java",
+   "postings": 23
+  },
+  {
+   "a": "Git",
+   "b": "PostgreSQL",
+   "postings": 23
+  },
+  {
+   "a": "JavaScript",
+   "b": "Testing",
+   "postings": 23
+  },
+  {
+   "a": "AWS",
+   "b": "Redis",
+   "postings": 22
+  },
+  {
+   "a": "Agile",
+   "b": "React",
+   "postings": 22
+  },
+  {
+   "a": "Airflow",
+   "b": "CI/CD",
+   "postings": 22
+  },
+  {
+   "a": "Airflow",
+   "b": "Snowflake",
+   "postings": 22
+  },
+  {
+   "a": "Angular",
+   "b": "Python",
+   "postings": 22
+  },
+  {
+   "a": "C++",
+   "b": "JavaScript",
+   "postings": 22
+  },
+  {
+   "a": "C++",
+   "b": "LLMs",
+   "postings": 22
+  },
+  {
+   "a": "Go",
+   "b": "JavaScript",
+   "postings": 22
+  },
+  {
+   "a": "Go",
+   "b": "Linux",
+   "postings": 22
+  },
+  {
+   "a": "Go",
+   "b": "Machine Learning",
+   "postings": 22
+  },
+  {
+   "a": "Go",
+   "b": "Rust",
+   "postings": 22
+  },
+  {
+   "a": "Java",
+   "b": "Kafka",
+   "postings": 22
+  },
+  {
+   "a": "Kafka",
+   "b": "Terraform",
+   "postings": 22
+  },
+  {
+   "a": "Kotlin",
+   "b": "Python",
+   "postings": 22
+  },
+  {
+   "a": "LLMs",
+   "b": "Linux",
+   "postings": 22
+  },
+  {
+   "a": "LLMs",
+   "b": "Microservices",
+   "postings": 22
+  },
+  {
+   "a": "PostgreSQL",
+   "b": "SQL",
+   "postings": 22
+  },
+  {
+   "a": "Power BI",
+   "b": "Tableau",
+   "postings": 22
+  },
+  {
+   "a": "Python",
+   "b": "Tableau",
+   "postings": 22
+  },
+  {
+   "a": "Scala",
+   "b": "dbt",
+   "postings": 22
+  },
+  {
+   "a": "AWS",
+   "b": "Spring",
+   "postings": 21
+  },
+  {
+   "a": "AWS",
+   "b": "Testing",
+   "postings": 21
+  },
+  {
+   "a": "Azure",
+   "b": "Node.js",
+   "postings": 21
+  },
+  {
+   "a": "Docker",
+   "b": "Kafka",
+   "postings": 21
+  },
+  {
+   "a": "Docker",
+   "b": "MySQL",
+   "postings": 21
+  },
+  {
+   "a": "Docker",
+   "b": "Node.js",
+   "postings": 21
+  },
+  {
+   "a": "GCP",
+   "b": "Git",
+   "postings": 21
+  },
+  {
+   "a": "GCP",
+   "b": "Linux",
+   "postings": 21
+  },
+  {
+   "a": "Java",
+   "b": "Node.js",
+   "postings": 21
+  },
+  {
+   "a": "Java",
+   "b": "Vue",
+   "postings": 21
+  },
+  {
+   "a": "Kotlin",
+   "b": "Scala",
+   "postings": 21
+  },
+  {
+   "a": "Microservices",
+   "b": "Terraform",
+   "postings": 21
+  },
+  {
+   "a": "Node.js",
+   "b": "SQL",
+   "postings": 21
+  },
+  {
+   "a": "Python",
+   "b": "Ruby",
+   "postings": 21
+  },
+  {
+   "a": "REST APIs",
+   "b": "TypeScript",
+   "postings": 21
+  },
+  {
+   "a": "React",
+   "b": "Terraform",
+   "postings": 21
+  },
+  {
+   "a": "Airflow",
+   "b": "GCP",
+   "postings": 20
+  },
+  {
+   "a": "C#",
+   "b": "JavaScript",
+   "postings": 20
+  },
+  {
+   "a": "CI/CD",
+   "b": "Spring",
+   "postings": 20
+  },
+  {
+   "a": "CI/CD",
+   "b": "dbt",
+   "postings": 20
+  },
+  {
+   "a": "CSS",
+   "b": "TypeScript",
+   "postings": 20
+  },
+  {
+   "a": "Docker",
+   "b": "Redis",
+   "postings": 20
+  },
+  {
+   "a": "Docker",
+   "b": "Testing",
+   "postings": 20
+  },
+  {
+   "a": "Elasticsearch",
+   "b": "Scala",
+   "postings": 20
+  },
+  {
+   "a": "FastAPI",
+   "b": "TypeScript",
+   "postings": 20
+  },
+  {
+   "a": "GCP",
+   "b": "Kafka",
+   "postings": 20
+  },
+  {
+   "a": "Java",
+   "b": "Terraform",
+   "postings": 20
+  },
+  {
+   "a": "Kafka",
+   "b": "LLMs",
+   "postings": 20
+  },
+  {
+   "a": "Agile",
+   "b": "C++",
+   "postings": 19
+  },
+  {
+   "a": "Airflow",
+   "b": "Scala",
+   "postings": 19
+  },
+  {
+   "a": "Android",
+   "b": "Scala",
+   "postings": 19
+  },
+  {
+   "a": "C#",
+   "b": "TypeScript",
+   "postings": 19
+  },
+  {
+   "a": "CI/CD",
+   "b": "GraphQL",
+   "postings": 19
+  },
+  {
+   "a": "CI/CD",
+   "b": "MySQL",
+   "postings": 19
+  },
+  {
+   "a": "Django",
+   "b": "Python",
+   "postings": 19
+  },
+  {
+   "a": "Git",
+   "b": "React",
+   "postings": 19
+  },
+  {
+   "a": "Go",
+   "b": "Microservices",
+   "postings": 19
+  },
+  {
+   "a": "GraphQL",
+   "b": "React",
+   "postings": 19
+  },
+  {
+   "a": "Java",
+   "b": "Machine Learning",
+   "postings": 19
+  },
+  {
+   "a": "JavaScript",
+   "b": "PHP",
+   "postings": 19
+  },
+  {
+   "a": "Kafka",
+   "b": "TypeScript",
+   "postings": 19
+  },
+  {
+   "a": "LLMs",
+   "b": "Rust",
+   "postings": 19
+  },
+  {
+   "a": "REST APIs",
+   "b": "Scala",
+   "postings": 19
+  },
+  {
+   "a": "SQL",
+   "b": "Terraform",
+   "postings": 19
+  },
+  {
+   "a": "Scala",
+   "b": "Vue",
+   "postings": 19
+  },
+  {
+   "a": "Spring",
+   "b": "TypeScript",
+   "postings": 19
+  },
+  {
+   "a": "Android",
+   "b": "Kotlin",
    "postings": 18
+  },
+  {
+   "a": "Azure",
+   "b": "Go",
+   "postings": 18
+  },
+  {
+   "a": "C#",
+   "b": "C++",
+   "postings": 18
+  },
+  {
+   "a": "C#",
+   "b": "Scala",
+   "postings": 18
+  },
+  {
+   "a": "Docker",
+   "b": "Spring",
+   "postings": 18
+  },
+  {
+   "a": "Elasticsearch",
+   "b": "Kubernetes",
+   "postings": 18
+  },
+  {
+   "a": "Elasticsearch",
+   "b": "Python",
+   "postings": 18
+  },
+  {
+   "a": "Go",
+   "b": "PostgreSQL",
+   "postings": 18
+  },
+  {
+   "a": "GraphQL",
+   "b": "PostgreSQL",
+   "postings": 18
+  },
+  {
+   "a": "Kafka",
+   "b": "Microservices",
+   "postings": 18
+  },
+  {
+   "a": "Laravel",
+   "b": "PHP",
+   "postings": 18
+  },
+  {
+   "a": "Machine Learning",
+   "b": "TensorFlow",
+   "postings": 18
+  },
+  {
+   "a": "Microservices",
+   "b": "React",
+   "postings": 18
+  },
+  {
+   "a": "MySQL",
+   "b": "Python",
+   "postings": 18
+  },
+  {
+   "a": "Node.js",
+   "b": "Terraform",
+   "postings": 18
+  },
+  {
+   "a": "PostgreSQL",
+   "b": "Testing",
+   "postings": 18
+  },
+  {
+   "a": "Redis",
+   "b": "Scala",
+   "postings": 18
+  },
+  {
+   "a": "AWS",
+   "b": "C#",
+   "postings": 17
+  },
+  {
+   "a": "AWS",
+   "b": "Elasticsearch",
+   "postings": 17
   },
   {
    "a": "AWS",
@@ -1832,33 +2127,43 @@
    "postings": 17
   },
   {
-   "a": "AWS",
-   "b": "Testing",
-   "postings": 17
-  },
-  {
    "a": "Airflow",
-   "b": "GCP",
+   "b": "LLMs",
    "postings": 17
   },
   {
-   "a": "C++",
-   "b": "JavaScript",
-   "postings": 17
-  },
-  {
-   "a": "C++",
-   "b": "Kubernetes",
-   "postings": 17
-  },
-  {
-   "a": "CI/CD",
+   "a": "Angular",
    "b": "Spring",
    "postings": 17
   },
   {
+   "a": "Azure",
+   "b": "C#",
+   "postings": 17
+  },
+  {
+   "a": "C#",
+   "b": "LLMs",
+   "postings": 17
+  },
+  {
+   "a": "C#",
+   "b": "SQL",
+   "postings": 17
+  },
+  {
    "a": "Docker",
-   "b": "Testing",
+   "b": "Elasticsearch",
+   "postings": 17
+  },
+  {
+   "a": "Docker",
+   "b": "FastAPI",
+   "postings": 17
+  },
+  {
+   "a": "FastAPI",
+   "b": "LLMs",
    "postings": 17
   },
   {
@@ -1867,188 +2172,223 @@
    "postings": 17
   },
   {
-   "a": "Git",
-   "b": "PostgreSQL",
+   "a": "Go",
+   "b": "Node.js",
    "postings": 17
   },
   {
    "a": "Go",
-   "b": "Linux",
+   "b": "SQL",
    "postings": 17
   },
   {
-   "a": "Go",
+   "a": "GraphQL",
+   "b": "Node.js",
+   "postings": 17
+  },
+  {
+   "a": "Kubernetes",
+   "b": "MySQL",
+   "postings": 17
+  },
+  {
+   "a": "Kubernetes",
    "b": "Rust",
    "postings": 17
   },
   {
-   "a": "Java",
-   "b": "Machine Learning",
+   "a": "Machine Learning",
+   "b": "TypeScript",
    "postings": 17
   },
   {
-   "a": "Java",
-   "b": "PostgreSQL",
-   "postings": 17
-  },
-  {
-   "a": "JavaScript",
-   "b": "Testing",
-   "postings": 17
-  },
-  {
-   "a": "Kafka",
-   "b": "LLMs",
-   "postings": 17
-  },
-  {
-   "a": "Laravel",
-   "b": "PHP",
-   "postings": 17
-  },
-  {
-   "a": "Power BI",
-   "b": "Tableau",
-   "postings": 17
-  },
-  {
-   "a": "PyTorch",
+   "a": "MySQL",
    "b": "Scala",
    "postings": 17
   },
   {
    "a": "REST APIs",
-   "b": "SQL",
+   "b": "React",
    "postings": 17
   },
   {
    "a": "Scala",
-   "b": "Vue",
+   "b": "iOS",
    "postings": 17
   },
   {
-   "a": "Scala",
-   "b": "dbt",
-   "postings": 17
-  },
-  {
-   "a": "AWS",
-   "b": "C#",
+   "a": ".NET",
+   "b": "Azure",
    "postings": 16
   },
   {
-   "a": "Airflow",
-   "b": "Scala",
-   "postings": 16
-  },
-  {
-   "a": "Angular",
-   "b": "Spring",
-   "postings": 16
-  },
-  {
-   "a": "Azure",
+   "a": ".NET",
    "b": "Java",
-   "postings": 16
-  },
-  {
-   "a": "C#",
-   "b": "Scala",
-   "postings": 16
-  },
-  {
-   "a": "CSS",
-   "b": "TypeScript",
-   "postings": 16
-  },
-  {
-   "a": "Docker",
-   "b": "Spring",
-   "postings": 16
-  },
-  {
-   "a": "FastAPI",
-   "b": "React",
-   "postings": 16
-  },
-  {
-   "a": "GCP",
-   "b": "Git",
-   "postings": 16
-  },
-  {
-   "a": "Git",
-   "b": "React",
-   "postings": 16
-  },
-  {
-   "a": "Go",
-   "b": "Microservices",
-   "postings": 16
-  },
-  {
-   "a": "GraphQL",
-   "b": "Node.js",
-   "postings": 16
-  },
-  {
-   "a": "GraphQL",
-   "b": "PostgreSQL",
-   "postings": 16
-  },
-  {
-   "a": "Java",
-   "b": "Kafka",
-   "postings": 16
-  },
-  {
-   "a": "Kafka",
-   "b": "Microservices",
-   "postings": 16
-  },
-  {
-   "a": "Kafka",
-   "b": "PostgreSQL",
-   "postings": 16
-  },
-  {
-   "a": "Machine Learning",
-   "b": "TypeScript",
-   "postings": 16
-  },
-  {
-   "a": "Next.js",
-   "b": "Node.js",
-   "postings": 16
-  },
-  {
-   "a": "Node.js",
-   "b": "Terraform",
-   "postings": 16
-  },
-  {
-   "a": "Spring",
-   "b": "TypeScript",
    "postings": 16
   },
   {
    "a": "AWS",
    "b": "Angular",
-   "postings": 15
-  },
-  {
-   "a": "AWS",
-   "b": "Elasticsearch",
-   "postings": 15
-  },
-  {
-   "a": "Agile",
-   "b": "C++",
-   "postings": 15
+   "postings": 16
   },
   {
    "a": "Agile",
    "b": "Microservices",
+   "postings": 16
+  },
+  {
+   "a": "Agile",
+   "b": "REST APIs",
+   "postings": 16
+  },
+  {
+   "a": "Airflow",
+   "b": "Machine Learning",
+   "postings": 16
+  },
+  {
+   "a": "Angular",
+   "b": "Scala",
+   "postings": 16
+  },
+  {
+   "a": "Azure",
+   "b": "Snowflake",
+   "postings": 16
+  },
+  {
+   "a": "C#",
+   "b": "Git",
+   "postings": 16
+  },
+  {
+   "a": "C++",
+   "b": "Git",
+   "postings": 16
+  },
+  {
+   "a": "CI/CD",
+   "b": "CSS",
+   "postings": 16
+  },
+  {
+   "a": "CI/CD",
+   "b": "Elasticsearch",
+   "postings": 16
+  },
+  {
+   "a": "Docker",
+   "b": "REST APIs",
+   "postings": 16
+  },
+  {
+   "a": "Elasticsearch",
+   "b": "PostgreSQL",
+   "postings": 16
+  },
+  {
+   "a": "FastAPI",
+   "b": "React",
+   "postings": 16
+  },
+  {
+   "a": "Git",
+   "b": "Machine Learning",
+   "postings": 16
+  },
+  {
+   "a": "Java",
+   "b": "Linux",
+   "postings": 16
+  },
+  {
+   "a": "JavaScript",
+   "b": "Machine Learning",
+   "postings": 16
+  },
+  {
+   "a": "Kotlin",
+   "b": "Kubernetes",
+   "postings": 16
+  },
+  {
+   "a": "Machine Learning",
+   "b": "React",
+   "postings": 16
+  },
+  {
+   "a": "Microservices",
+   "b": "Spring",
+   "postings": 16
+  },
+  {
+   "a": "Microservices",
+   "b": "TypeScript",
+   "postings": 16
+  },
+  {
+   "a": "Next.js",
+   "b": "Node.js",
+   "postings": 16
+  },
+  {
+   "a": "PostgreSQL",
+   "b": "Ruby",
+   "postings": 16
+  },
+  {
+   "a": "Python",
+   "b": "Vue",
+   "postings": 16
+  },
+  {
+   "a": "React Native",
+   "b": "TypeScript",
+   "postings": 16
+  },
+  {
+   "a": "Ruby",
+   "b": "Scala",
+   "postings": 16
+  },
+  {
+   "a": "Snowflake",
+   "b": "Terraform",
+   "postings": 16
+  },
+  {
+   "a": ".NET",
+   "b": "JavaScript",
+   "postings": 15
+  },
+  {
+   "a": ".NET",
+   "b": "SQL",
+   "postings": 15
+  },
+  {
+   "a": "AWS",
+   "b": "C++",
+   "postings": 15
+  },
+  {
+   "a": "AWS",
+   "b": "GraphQL",
+   "postings": 15
+  },
+  {
+   "a": "Agile",
+   "b": "C#",
+   "postings": 15
+  },
+  {
+   "a": "Agile",
+   "b": "Machine Learning",
+   "postings": 15
+  },
+  {
+   "a": "Agile",
+   "b": "PostgreSQL",
    "postings": 15
   },
   {
@@ -2057,88 +2397,88 @@
    "postings": 15
   },
   {
-   "a": "Android",
-   "b": "Kotlin",
+   "a": "Angular",
+   "b": "CI/CD",
    "postings": 15
   },
   {
-   "a": "C#",
-   "b": "C++",
+   "a": "Angular",
+   "b": "Docker",
    "postings": 15
   },
   {
-   "a": "C#",
-   "b": "Git",
-   "postings": 15
-  },
-  {
-   "a": "C#",
-   "b": "LLMs",
-   "postings": 15
-  },
-  {
-   "a": "Django",
-   "b": "Python",
-   "postings": 15
-  },
-  {
-   "a": "Docker",
-   "b": "FastAPI",
-   "postings": 15
-  },
-  {
-   "a": "Docker",
-   "b": "Kafka",
-   "postings": 15
-  },
-  {
-   "a": "Elasticsearch",
-   "b": "Scala",
-   "postings": 15
-  },
-  {
-   "a": "FastAPI",
-   "b": "LLMs",
-   "postings": 15
-  },
-  {
-   "a": "Go",
+   "a": "Angular",
    "b": "Node.js",
    "postings": 15
   },
   {
-   "a": "Go",
-   "b": "SQL",
+   "a": "C++",
+   "b": "Testing",
+   "postings": 15
+  },
+  {
+   "a": "CI/CD",
+   "b": "MongoDB",
+   "postings": 15
+  },
+  {
+   "a": "CI/CD",
+   "b": "Vue",
+   "postings": 15
+  },
+  {
+   "a": "CSS",
+   "b": "PostgreSQL",
+   "postings": 15
+  },
+  {
+   "a": "GCP",
+   "b": "REST APIs",
    "postings": 15
   },
   {
    "a": "JavaScript",
-   "b": "Machine Learning",
+   "b": "REST APIs",
    "postings": 15
   },
   {
-   "a": "Kotlin",
-   "b": "Kubernetes",
+   "a": "LLMs",
+   "b": "Next.js",
    "postings": 15
   },
   {
-   "a": "Kotlin",
-   "b": "Scala",
+   "a": "LLMs",
+   "b": "REST APIs",
    "postings": 15
   },
   {
-   "a": "Machine Learning",
-   "b": "React",
+   "a": "LLMs",
+   "b": "Spring",
+   "postings": 15
+  },
+  {
+   "a": "LLMs",
+   "b": "Vue",
    "postings": 15
   },
   {
    "a": "Microservices",
-   "b": "React",
+   "b": "PostgreSQL",
    "postings": 15
   },
   {
-   "a": "PostgreSQL",
-   "b": "Testing",
+   "a": "Next.js",
+   "b": "Python",
+   "postings": 15
+  },
+  {
+   "a": "Next.js",
+   "b": "Scala",
+   "postings": 15
+  },
+  {
+   "a": "Python",
+   "b": "Rails",
    "postings": 15
   },
   {
@@ -2148,22 +2488,7 @@
   },
   {
    "a": "Python",
-   "b": "Ruby",
-   "postings": 15
-  },
-  {
-   "a": "Python",
-   "b": "Vue",
-   "postings": 15
-  },
-  {
-   "a": "REST APIs",
-   "b": "React",
-   "postings": 15
-  },
-  {
-   "a": "REST APIs",
-   "b": "Scala",
+   "b": "Spring",
    "postings": 15
   },
   {
@@ -2172,28 +2497,28 @@
    "postings": 15
   },
   {
-   "a": "React Native",
-   "b": "TypeScript",
-   "postings": 15
-  },
-  {
    "a": "Redis",
-   "b": "Scala",
-   "postings": 15
-  },
-  {
-   "a": "SQL",
    "b": "Terraform",
    "postings": 15
   },
   {
+   "a": "Terraform",
+   "b": "dbt",
+   "postings": 15
+  },
+  {
    "a": ".NET",
-   "b": "Azure",
+   "b": "Python",
+   "postings": 14
+  },
+  {
+   "a": ".NET",
+   "b": "TypeScript",
    "postings": 14
   },
   {
    "a": "AWS",
-   "b": "GraphQL",
+   "b": "MongoDB",
    "postings": 14
   },
   {
@@ -2207,23 +2532,13 @@
    "postings": 14
   },
   {
-   "a": "Angular",
-   "b": "CI/CD",
+   "a": "Android",
+   "b": "Python",
    "postings": 14
   },
   {
    "a": "Angular",
    "b": "LLMs",
-   "postings": 14
-  },
-  {
-   "a": "Angular",
-   "b": "Scala",
-   "postings": 14
-  },
-  {
-   "a": "Azure",
-   "b": "C#",
    "postings": 14
   },
   {
@@ -2233,27 +2548,17 @@
   },
   {
    "a": "CI/CD",
-   "b": "Vue",
+   "b": "iOS",
    "postings": 14
   },
   {
-   "a": "Docker",
-   "b": "Elasticsearch",
-   "postings": 14
-  },
-  {
-   "a": "Docker",
-   "b": "REST APIs",
+   "a": "Django",
+   "b": "PostgreSQL",
    "postings": 14
   },
   {
    "a": "Elasticsearch",
-   "b": "Kubernetes",
-   "postings": 14
-  },
-  {
-   "a": "Elasticsearch",
-   "b": "Python",
+   "b": "Linux",
    "postings": 14
   },
   {
@@ -2263,71 +2568,51 @@
   },
   {
    "a": "GCP",
-   "b": "REST APIs",
+   "b": "Testing",
    "postings": 14
   },
   {
    "a": "Git",
-   "b": "Machine Learning",
+   "b": "Testing",
    "postings": 14
   },
   {
-   "a": "Java",
-   "b": "Terraform",
+   "a": "Go",
+   "b": "Kafka",
+   "postings": 14
+  },
+  {
+   "a": "GraphQL",
+   "b": "Scala",
    "postings": 14
   },
   {
    "a": "JavaScript",
-   "b": "REST APIs",
-   "postings": 14
-  },
-  {
-   "a": "Kafka",
-   "b": "TypeScript",
+   "b": "Next.js",
    "postings": 14
   },
   {
    "a": "Kubernetes",
+   "b": "PyTorch",
+   "postings": 14
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Snowflake",
+   "postings": 14
+  },
+  {
+   "a": "Linux",
    "b": "MySQL",
    "postings": 14
   },
   {
-   "a": "LLMs",
-   "b": "Linux",
+   "a": "PHP",
+   "b": "React",
    "postings": 14
   },
   {
-   "a": "LLMs",
-   "b": "Rust",
-   "postings": 14
-  },
-  {
-   "a": "LLMs",
-   "b": "Spring",
-   "postings": 14
-  },
-  {
-   "a": "LLMs",
-   "b": "Vue",
-   "postings": 14
-  },
-  {
-   "a": "Machine Learning",
-   "b": "TensorFlow",
-   "postings": 14
-  },
-  {
-   "a": "Microservices",
-   "b": "Spring",
-   "postings": 14
-  },
-  {
-   "a": "Microservices",
-   "b": "TypeScript",
-   "postings": 14
-  },
-  {
-   "a": "Next.js",
+   "a": "PHP",
    "b": "Scala",
    "postings": 14
   },
@@ -2337,13 +2622,18 @@
    "postings": 14
   },
   {
-   "a": "Snowflake",
-   "b": "Terraform",
+   "a": "Pandas",
+   "b": "Python",
    "postings": 14
   },
   {
-   "a": "Terraform",
-   "b": "dbt",
+   "a": "PostgreSQL",
+   "b": "REST APIs",
+   "postings": 14
+  },
+  {
+   "a": "Python",
+   "b": "Spark",
    "postings": 14
   },
   {
@@ -2353,22 +2643,12 @@
   },
   {
    "a": ".NET",
-   "b": "Java",
+   "b": "CI/CD",
    "postings": 13
   },
   {
-   "a": ".NET",
-   "b": "JavaScript",
-   "postings": 13
-  },
-  {
-   "a": ".NET",
-   "b": "Python",
-   "postings": 13
-  },
-  {
-   "a": ".NET",
-   "b": "TypeScript",
+   "a": "AWS",
+   "b": "Spark",
    "postings": 13
   },
   {
@@ -2378,67 +2658,62 @@
   },
   {
    "a": "Agile",
-   "b": "Machine Learning",
-   "postings": 13
-  },
-  {
-   "a": "Agile",
-   "b": "REST APIs",
-   "postings": 13
-  },
-  {
-   "a": "Airflow",
-   "b": "LLMs",
-   "postings": 13
-  },
-  {
-   "a": "Airflow",
-   "b": "Machine Learning",
-   "postings": 13
-  },
-  {
-   "a": "Angular",
-   "b": "Docker",
-   "postings": 13
-  },
-  {
-   "a": "Angular",
-   "b": "Node.js",
-   "postings": 13
-  },
-  {
-   "a": "C#",
-   "b": "SQL",
-   "postings": 13
-  },
-  {
-   "a": "C++",
-   "b": "Git",
-   "postings": 13
-  },
-  {
-   "a": "C++",
    "b": "Testing",
    "postings": 13
   },
   {
-   "a": "CI/CD",
-   "b": "CSS",
+   "a": "Airflow",
+   "b": "Docker",
+   "postings": 13
+  },
+  {
+   "a": "Airflow",
+   "b": "Kubernetes",
+   "postings": 13
+  },
+  {
+   "a": "Android",
+   "b": "Java",
+   "postings": 13
+  },
+  {
+   "a": "Angular",
+   "b": "Kubernetes",
+   "postings": 13
+  },
+  {
+   "a": "Azure",
+   "b": "Kafka",
+   "postings": 13
+  },
+  {
+   "a": "Azure",
+   "b": "Microservices",
+   "postings": 13
+  },
+  {
+   "a": "C#",
+   "b": "Go",
+   "postings": 13
+  },
+  {
+   "a": "C#",
+   "b": "Kubernetes",
+   "postings": 13
+  },
+  {
+   "a": "C++",
+   "b": "PyTorch",
    "postings": 13
   },
   {
    "a": "CI/CD",
-   "b": "Elasticsearch",
+   "b": "Rust",
    "postings": 13
   },
   {
-   "a": "CI/CD",
-   "b": "MySQL",
-   "postings": 13
-  },
-  {
-   "a": "Django",
-   "b": "PostgreSQL",
+   "a": "CSS",
+   "b": "Scala",
    "postings": 13
   },
   {
@@ -2452,243 +2727,303 @@
    "postings": 13
   },
   {
-   "a": "GCP",
+   "a": "Flutter",
+   "b": "Python",
+   "postings": 13
+  },
+  {
+   "a": "Flutter",
+   "b": "TypeScript",
+   "postings": 13
+  },
+  {
+   "a": "Go",
    "b": "Testing",
    "postings": 13
-  },
-  {
-   "a": "GraphQL",
-   "b": "Scala",
-   "postings": 13
-  },
-  {
-   "a": "Kafka",
-   "b": "Snowflake",
-   "postings": 13
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Snowflake",
-   "postings": 13
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Vue",
-   "postings": 13
-  },
-  {
-   "a": "LLMs",
-   "b": "Next.js",
-   "postings": 13
-  },
-  {
-   "a": "LLMs",
-   "b": "REST APIs",
-   "postings": 13
-  },
-  {
-   "a": "Microservices",
-   "b": "PostgreSQL",
-   "postings": 13
-  },
-  {
-   "a": "PHP",
-   "b": "React",
-   "postings": 13
-  },
-  {
-   "a": "PHP",
-   "b": "Scala",
-   "postings": 13
-  },
-  {
-   "a": "Python",
-   "b": "Rails",
-   "postings": 13
-  },
-  {
-   "a": "Python",
-   "b": "Spring",
-   "postings": 13
-  },
-  {
-   "a": "AWS",
-   "b": "C++",
-   "postings": 12
-  },
-  {
-   "a": "Agile",
-   "b": "C#",
-   "postings": 12
-  },
-  {
-   "a": "Agile",
-   "b": "PostgreSQL",
-   "postings": 12
-  },
-  {
-   "a": "Airflow",
-   "b": "Kubernetes",
-   "postings": 12
-  },
-  {
-   "a": "Android",
-   "b": "Node.js",
-   "postings": 12
-  },
-  {
-   "a": "Android",
-   "b": "Python",
-   "postings": 12
-  },
-  {
-   "a": "Android",
-   "b": "Scala",
-   "postings": 12
-  },
-  {
-   "a": "Angular",
-   "b": "Kubernetes",
-   "postings": 12
-  },
-  {
-   "a": "C#",
-   "b": "Go",
-   "postings": 12
-  },
-  {
-   "a": "C++",
-   "b": "React",
-   "postings": 12
-  },
-  {
-   "a": "C++",
-   "b": "TypeScript",
-   "postings": 12
-  },
-  {
-   "a": "CSS",
-   "b": "PostgreSQL",
-   "postings": 12
-  },
-  {
-   "a": "Docker",
-   "b": "Vue",
-   "postings": 12
-  },
-  {
-   "a": "Elasticsearch",
-   "b": "Terraform",
-   "postings": 12
-  },
-  {
-   "a": "Flutter",
-   "b": "Python",
-   "postings": 12
-  },
-  {
-   "a": "Flutter",
-   "b": "TypeScript",
-   "postings": 12
-  },
-  {
-   "a": "Go",
-   "b": "PostgreSQL",
-   "postings": 12
-  },
-  {
-   "a": "Go",
-   "b": "Vue",
-   "postings": 12
   },
   {
    "a": "Java",
    "b": "React Native",
-   "postings": 12
+   "postings": 13
+  },
+  {
+   "a": "Java",
+   "b": "Testing",
+   "postings": 13
   },
   {
    "a": "JavaScript",
    "b": "Laravel",
-   "postings": 12
+   "postings": 13
+  },
+  {
+   "a": "JavaScript",
+   "b": "Linux",
+   "postings": 13
+  },
+  {
+   "a": "JavaScript",
+   "b": "Spring",
+   "postings": 13
+  },
+  {
+   "a": "Kafka",
+   "b": "Snowflake",
+   "postings": 13
   },
   {
    "a": "Kotlin",
    "b": "iOS",
-   "postings": 12
+   "postings": 13
   },
   {
    "a": "Kubernetes",
-   "b": "Rust",
-   "postings": 12
+   "b": "MongoDB",
+   "postings": 13
+  },
+  {
+   "a": "Kubernetes",
+   "b": "REST APIs",
+   "postings": 13
+  },
+  {
+   "a": "Kubernetes",
+   "b": "Vue",
+   "postings": 13
   },
   {
    "a": "Linux",
-   "b": "MySQL",
-   "postings": 12
+   "b": "Rust",
+   "postings": 13
   },
   {
-   "a": "Next.js",
+   "a": "MongoDB",
+   "b": "PostgreSQL",
+   "postings": 13
+  },
+  {
+   "a": "MongoDB",
    "b": "Python",
-   "postings": 12
+   "postings": 13
+  },
+  {
+   "a": "MongoDB",
+   "b": "Scala",
+   "postings": 13
+  },
+  {
+   "a": "MySQL",
+   "b": "Redis",
+   "postings": 13
   },
   {
    "a": "Node.js",
-   "b": "Vue",
-   "postings": 12
+   "b": "Spring",
+   "postings": 13
   },
   {
-   "a": "Node.js",
-   "b": "iOS",
-   "postings": 12
-  },
-  {
-   "a": "Pandas",
-   "b": "Python",
-   "postings": 12
-  },
-  {
-   "a": "PostgreSQL",
-   "b": "REST APIs",
-   "postings": 12
-  },
-  {
-   "a": "PostgreSQL",
-   "b": "Ruby",
-   "postings": 12
-  },
-  {
-   "a": "Redis",
-   "b": "Terraform",
-   "postings": 12
-  },
-  {
-   "a": "Scala",
-   "b": "iOS",
-   "postings": 12
+   "a": "React",
+   "b": "Svelte",
+   "postings": 13
   },
   {
    "a": "Spring",
    "b": "Vue",
+   "postings": 13
+  },
+  {
+   "a": ".NET",
+   "b": "Agile",
    "postings": 12
   },
   {
    "a": ".NET",
-   "b": "CI/CD",
-   "postings": 11
-  },
-  {
-   "a": ".NET",
    "b": "React",
-   "postings": 11
+   "postings": 12
   },
   {
    "a": ".NET",
-   "b": "SQL",
-   "postings": 11
+   "b": "Scala",
+   "postings": 12
   },
   {
    "a": "AWS",
    "b": "Ruby",
+   "postings": 12
+  },
+  {
+   "a": "Agile",
+   "b": "Kafka",
+   "postings": 12
+  },
+  {
+   "a": "Agile",
+   "b": "Snowflake",
+   "postings": 12
+  },
+  {
+   "a": "Android",
+   "b": "CI/CD",
+   "postings": 12
+  },
+  {
+   "a": "Android",
+   "b": "LLMs",
+   "postings": 12
+  },
+  {
+   "a": "Android",
+   "b": "Node.js",
+   "postings": 12
+  },
+  {
+   "a": "Azure",
+   "b": "Power BI",
+   "postings": 12
+  },
+  {
+   "a": "Azure",
+   "b": "Spring",
+   "postings": 12
+  },
+  {
+   "a": "C#",
+   "b": "Docker",
+   "postings": 12
+  },
+  {
+   "a": "C++",
+   "b": "React",
+   "postings": 12
+  },
+  {
+   "a": "C++",
+   "b": "TypeScript",
+   "postings": 12
+  },
+  {
+   "a": "CI/CD",
+   "b": "PHP",
+   "postings": 12
+  },
+  {
+   "a": "Docker",
+   "b": "Vue",
+   "postings": 12
+  },
+  {
+   "a": "Elasticsearch",
+   "b": "MySQL",
+   "postings": 12
+  },
+  {
+   "a": "Elasticsearch",
+   "b": "Terraform",
+   "postings": 12
+  },
+  {
+   "a": "FastAPI",
+   "b": "SQL",
+   "postings": 12
+  },
+  {
+   "a": "Flutter",
+   "b": "Scala",
+   "postings": 12
+  },
+  {
+   "a": "GCP",
+   "b": "Spring",
+   "postings": 12
+  },
+  {
+   "a": "Git",
+   "b": "MySQL",
+   "postings": 12
+  },
+  {
+   "a": "Git",
+   "b": "REST APIs",
+   "postings": 12
+  },
+  {
+   "a": "Go",
+   "b": "Vue",
+   "postings": 12
+  },
+  {
+   "a": "GraphQL",
+   "b": "Python",
+   "postings": 12
+  },
+  {
+   "a": "JavaScript",
+   "b": "MySQL",
+   "postings": 12
+  },
+  {
+   "a": "JavaScript",
+   "b": "Rust",
+   "postings": 12
+  },
+  {
+   "a": "JavaScript",
+   "b": "Terraform",
+   "postings": 12
+  },
+  {
+   "a": "Kotlin",
+   "b": "React",
+   "postings": 12
+  },
+  {
+   "a": "LLMs",
+   "b": "TensorFlow",
+   "postings": 12
+  },
+  {
+   "a": "Microservices",
+   "b": "Testing",
+   "postings": 12
+  },
+  {
+   "a": "MongoDB",
+   "b": "Terraform",
+   "postings": 12
+  },
+  {
+   "a": "Node.js",
+   "b": "PHP",
+   "postings": 12
+  },
+  {
+   "a": "Node.js",
+   "b": "Vue",
+   "postings": 12
+  },
+  {
+   "a": "Node.js",
+   "b": "iOS",
+   "postings": 12
+  },
+  {
+   "a": "Python",
+   "b": "iOS",
+   "postings": 12
+  },
+  {
+   "a": "Rust",
+   "b": "TypeScript",
+   "postings": 12
+  },
+  {
+   "a": "Terraform",
+   "b": "Testing",
+   "postings": 12
+  },
+  {
+   "a": "AWS",
+   "b": "PyTorch",
    "postings": 11
   },
   {
@@ -2698,107 +3033,72 @@
   },
   {
    "a": "Agile",
-   "b": "Testing",
+   "b": "MySQL",
+   "postings": 11
+  },
+  {
+   "a": "Agile",
+   "b": "Vue",
    "postings": 11
   },
   {
    "a": "Android",
-   "b": "Java",
-   "postings": 11
-  },
-  {
-   "a": "Android",
-   "b": "LLMs",
+   "b": "TypeScript",
    "postings": 11
   },
   {
    "a": "Azure",
-   "b": "Power BI",
-   "postings": 11
-  },
-  {
-   "a": "Azure",
-   "b": "Snowflake",
-   "postings": 11
-  },
-  {
-   "a": "C#",
-   "b": "Docker",
-   "postings": 11
-  },
-  {
-   "a": "C++",
-   "b": "PyTorch",
+   "b": "MySQL",
    "postings": 11
   },
   {
    "a": "CI/CD",
-   "b": "MongoDB",
-   "postings": 11
-  },
-  {
-   "a": "CI/CD",
-   "b": "iOS",
+   "b": "FastAPI",
    "postings": 11
   },
   {
    "a": "CSS",
-   "b": "Scala",
+   "b": "REST APIs",
    "postings": 11
   },
   {
-   "a": "Elasticsearch",
-   "b": "Linux",
+   "a": "Django",
+   "b": "React",
+   "postings": 11
+  },
+  {
+   "a": "Docker",
+   "b": "PyTorch",
    "postings": 11
   },
   {
    "a": "GCP",
+   "b": "PyTorch",
+   "postings": 11
+  },
+  {
+   "a": "Git",
+   "b": "Go",
+   "postings": 11
+  },
+  {
+   "a": "Kafka",
+   "b": "Redis",
+   "postings": 11
+  },
+  {
+   "a": "Kafka",
    "b": "Spring",
    "postings": 11
   },
   {
-   "a": "Go",
-   "b": "Kafka",
-   "postings": 11
-  },
-  {
-   "a": "Go",
+   "a": "Kafka",
    "b": "Testing",
    "postings": 11
   },
   {
-   "a": "GraphQL",
-   "b": "Python",
-   "postings": 11
-  },
-  {
-   "a": "Java",
-   "b": "Linux",
-   "postings": 11
-  },
-  {
-   "a": "JavaScript",
-   "b": "Linux",
-   "postings": 11
-  },
-  {
-   "a": "JavaScript",
-   "b": "Next.js",
-   "postings": 11
-  },
-  {
-   "a": "JavaScript",
-   "b": "Spring",
-   "postings": 11
-  },
-  {
-   "a": "Kubernetes",
-   "b": "MongoDB",
-   "postings": 11
-  },
-  {
-   "a": "Kubernetes",
-   "b": "PyTorch",
+   "a": "Kafka",
+   "b": "dbt",
    "postings": 11
   },
   {
@@ -2812,8 +3112,23 @@
    "postings": 11
   },
   {
+   "a": "Linux",
+   "b": "SQL",
+   "postings": 11
+  },
+  {
+   "a": "Linux",
+   "b": "Testing",
+   "postings": 11
+  },
+  {
+   "a": "Microservices",
+   "b": "SQL",
+   "postings": 11
+  },
+  {
    "a": "MySQL",
-   "b": "Python",
+   "b": "PHP",
    "postings": 11
   },
   {
@@ -2822,13 +3137,8 @@
    "postings": 11
   },
   {
-   "a": "Node.js",
-   "b": "PHP",
-   "postings": 11
-  },
-  {
-   "a": "Node.js",
-   "b": "Spring",
+   "a": "PHP",
+   "b": "Python",
    "postings": 11
   },
   {
@@ -2837,43 +3147,63 @@
    "postings": 11
   },
   {
-   "a": "Python",
-   "b": "iOS",
+   "a": "PostgreSQL",
+   "b": "Spring",
    "postings": 11
   },
   {
-   "a": "Terraform",
+   "a": "React",
+   "b": "Rust",
+   "postings": 11
+  },
+  {
+   "a": "React Native",
+   "b": "Swift",
+   "postings": 11
+  },
+  {
+   "a": "Redis",
    "b": "Testing",
    "postings": 11
   },
   {
+   "a": "SQL",
+   "b": "Spark",
+   "postings": 11
+  },
+  {
+   "a": "Scala",
+   "b": "Spring",
+   "postings": 11
+  },
+  {
+   "a": "Spring",
+   "b": "Terraform",
+   "postings": 11
+  },
+  {
    "a": ".NET",
-   "b": "Scala",
+   "b": "C++",
    "postings": 10
   },
   {
-   "a": "AWS",
-   "b": "MongoDB",
-   "postings": 10
-  },
-  {
-   "a": "Agile",
-   "b": "Snowflake",
-   "postings": 10
-  },
-  {
-   "a": "Agile",
-   "b": "Vue",
-   "postings": 10
-  },
-  {
-   "a": "Airflow",
+   "a": ".NET",
    "b": "Docker",
    "postings": 10
   },
   {
-   "a": "Android",
-   "b": "CI/CD",
+   "a": ".NET",
+   "b": "Git",
+   "postings": 10
+  },
+  {
+   "a": ".NET",
+   "b": "Kubernetes",
+   "postings": 10
+  },
+  {
+   "a": "Agile",
+   "b": "CSS",
    "postings": 10
   },
   {
@@ -2882,23 +3212,38 @@
    "postings": 10
   },
   {
-   "a": "Azure",
-   "b": "Kafka",
+   "a": "Angular",
+   "b": "Go",
    "postings": 10
   },
   {
    "a": "Azure",
-   "b": "Microservices",
+   "b": "Elasticsearch",
    "postings": 10
   },
   {
    "a": "Azure",
-   "b": "Spring",
+   "b": "MongoDB",
+   "postings": 10
+  },
+  {
+   "a": "Azure",
+   "b": "Redis",
    "postings": 10
   },
   {
    "a": "C#",
-   "b": "Kubernetes",
+   "b": "Terraform",
+   "postings": 10
+  },
+  {
+   "a": "C++",
+   "b": "Docker",
+   "postings": 10
+  },
+  {
+   "a": "C++",
+   "b": "GCP",
    "postings": 10
   },
   {
@@ -2907,23 +3252,23 @@
    "postings": 10
   },
   {
-   "a": "CI/CD",
-   "b": "PHP",
+   "a": "C++",
+   "b": "SQL",
    "postings": 10
   },
   {
    "a": "CI/CD",
-   "b": "Rust",
+   "b": "Spark",
+   "postings": 10
+  },
+  {
+   "a": "CSS",
+   "b": "PHP",
    "postings": 10
   },
   {
    "a": "CSS",
    "b": "SQL",
-   "postings": 10
-  },
-  {
-   "a": "Django",
-   "b": "React",
    "postings": 10
   },
   {
@@ -2932,394 +3277,49 @@
    "postings": 10
   },
   {
-   "a": "Elasticsearch",
-   "b": "PostgreSQL",
-   "postings": 10
-  },
-  {
    "a": "FastAPI",
    "b": "Scala",
    "postings": 10
-  },
-  {
-   "a": "Flutter",
-   "b": "JavaScript",
-   "postings": 10
-  },
-  {
-   "a": "Flutter",
-   "b": "React",
-   "postings": 10
-  },
-  {
-   "a": "Flutter",
-   "b": "Scala",
-   "postings": 10
-  },
-  {
-   "a": "GCP",
-   "b": "PyTorch",
-   "postings": 10
-  },
-  {
-   "a": "Git",
-   "b": "REST APIs",
-   "postings": 10
-  },
-  {
-   "a": "GraphQL",
-   "b": "Testing",
-   "postings": 10
-  },
-  {
-   "a": "Java",
-   "b": "Swift",
-   "postings": 10
-  },
-  {
-   "a": "Java",
-   "b": "Testing",
-   "postings": 10
-  },
-  {
-   "a": "JavaScript",
-   "b": "Rust",
-   "postings": 10
-  },
-  {
-   "a": "Kafka",
-   "b": "dbt",
-   "postings": 10
-  },
-  {
-   "a": "Kubernetes",
-   "b": "REST APIs",
-   "postings": 10
-  },
-  {
-   "a": "Laravel",
-   "b": "Scala",
-   "postings": 10
-  },
-  {
-   "a": "MySQL",
-   "b": "Redis",
-   "postings": 10
-  },
-  {
-   "a": "MySQL",
-   "b": "Scala",
-   "postings": 10
-  },
-  {
-   "a": "Node.js",
-   "b": "REST APIs",
-   "postings": 10
-  },
-  {
-   "a": "PHP",
-   "b": "Python",
-   "postings": 10
-  },
-  {
-   "a": "Python",
-   "b": "Swift",
-   "postings": 10
-  },
-  {
-   "a": "Rails",
-   "b": "TypeScript",
-   "postings": 10
-  },
-  {
-   "a": "React",
-   "b": "Svelte",
-   "postings": 10
-  },
-  {
-   "a": "React Native",
-   "b": "Swift",
-   "postings": 10
-  },
-  {
-   "a": "Redis",
-   "b": "Testing",
-   "postings": 10
-  },
-  {
-   "a": "Redis",
-   "b": "TypeScript",
-   "postings": 10
-  },
-  {
-   "a": "Ruby",
-   "b": "Scala",
-   "postings": 10
-  },
-  {
-   "a": "Rust",
-   "b": "TypeScript",
-   "postings": 10
-  },
-  {
-   "a": "SQL",
-   "b": "Spark",
-   "postings": 10
-  },
-  {
-   "a": "SQL",
-   "b": "Testing",
-   "postings": 10
-  },
-  {
-   "a": "Scala",
-   "b": "Spring",
-   "postings": 10
-  },
-  {
-   "a": "Swift",
-   "b": "TypeScript",
-   "postings": 10
-  },
-  {
-   "a": ".NET",
-   "b": "Agile",
-   "postings": 9
-  },
-  {
-   "a": ".NET",
-   "b": "Docker",
-   "postings": 9
-  },
-  {
-   "a": ".NET",
-   "b": "Git",
-   "postings": 9
-  },
-  {
-   "a": "AWS",
-   "b": "Next.js",
-   "postings": 9
-  },
-  {
-   "a": "AWS",
-   "b": "PyTorch",
-   "postings": 9
-  },
-  {
-   "a": "AWS",
-   "b": "Spark",
-   "postings": 9
-  },
-  {
-   "a": "Agile",
-   "b": "CSS",
-   "postings": 9
-  },
-  {
-   "a": "Agile",
-   "b": "Kafka",
-   "postings": 9
-  },
-  {
-   "a": "Android",
-   "b": "C++",
-   "postings": 9
-  },
-  {
-   "a": "Angular",
-   "b": "Go",
-   "postings": 9
-  },
-  {
-   "a": "Angular",
-   "b": "Machine Learning",
-   "postings": 9
-  },
-  {
-   "a": "Azure",
-   "b": "MySQL",
-   "postings": 9
-  },
-  {
-   "a": "CSS",
-   "b": "PHP",
-   "postings": 9
-  },
-  {
-   "a": "CSS",
-   "b": "REST APIs",
-   "postings": 9
-  },
-  {
-   "a": "Docker",
-   "b": "GraphQL",
-   "postings": 9
-  },
-  {
-   "a": "Docker",
-   "b": "Next.js",
-   "postings": 9
-  },
-  {
-   "a": "Docker",
-   "b": "PyTorch",
-   "postings": 9
-  },
-  {
-   "a": "FastAPI",
-   "b": "SQL",
-   "postings": 9
-  },
-  {
-   "a": "Flutter",
-   "b": "Go",
-   "postings": 9
-  },
-  {
-   "a": "Flutter",
-   "b": "Java",
-   "postings": 9
-  },
-  {
-   "a": "Git",
-   "b": "Go",
-   "postings": 9
-  },
-  {
-   "a": "Git",
-   "b": "MySQL",
-   "postings": 9
-  },
-  {
-   "a": "Git",
-   "b": "Node.js",
-   "postings": 9
-  },
-  {
-   "a": "Git",
-   "b": "Testing",
-   "postings": 9
-  },
-  {
-   "a": "GraphQL",
-   "b": "JavaScript",
-   "postings": 9
-  },
-  {
-   "a": "GraphQL",
-   "b": "SQL",
-   "postings": 9
-  },
-  {
-   "a": "Java",
-   "b": "iOS",
-   "postings": 9
-  },
-  {
-   "a": "JavaScript",
-   "b": "Kotlin",
-   "postings": 9
-  },
-  {
-   "a": "JavaScript",
-   "b": "MySQL",
-   "postings": 9
-  },
-  {
-   "a": "JavaScript",
-   "b": "Terraform",
-   "postings": 9
-  },
-  {
-   "a": "Kafka",
-   "b": "Redis",
-   "postings": 9
-  },
-  {
-   "a": "Kafka",
-   "b": "Spring",
-   "postings": 9
-  },
-  {
-   "a": "Kotlin",
-   "b": "React",
-   "postings": 9
-  },
-  {
-   "a": "Kotlin",
-   "b": "Spring",
-   "postings": 9
-  },
-  {
-   "a": "Kubernetes",
-   "b": "Next.js",
-   "postings": 9
-  },
-  {
-   "a": "Linux",
-   "b": "Microservices",
-   "postings": 9
-  },
-  {
-   "a": "Linux",
-   "b": "Testing",
-   "postings": 9
-  },
-  {
-   "a": "Linux",
-   "b": "TypeScript",
-   "postings": 9
-  },
-  {
-   "a": "Machine Learning",
-   "b": "Pandas",
-   "postings": 9
-  },
-  {
-   "a": "Machine Learning",
-   "b": "Terraform",
-   "postings": 9
   }
  ],
  "seniority": [
   {
    "key": "senior",
-   "postings": 507
+   "postings": 627
   },
   {
    "key": "unknown",
-   "postings": 503
+   "postings": 573
   },
   {
    "key": "lead",
-   "postings": 235
+   "postings": 293
   },
   {
    "key": "mid",
-   "postings": 130
+   "postings": 170
   },
   {
    "key": "intern",
-   "postings": 73
+   "postings": 87
   },
   {
    "key": "junior",
-   "postings": 41
+   "postings": 59
   }
  ],
  "work_mode": [
   {
    "key": "onsite",
-   "postings": 838
+   "postings": 983
   },
   {
    "key": "hybrid",
-   "postings": 356
+   "postings": 461
   },
   {
    "key": "remote",
-   "postings": 295
+   "postings": 365
   }
  ],
  "companies": [
@@ -3329,18 +3329,34 @@
   },
   {
    "company": "Elevenlabs",
-   "postings": 31
+   "postings": 32
   },
   {
    "company": "Trusteq Gmbh",
    "postings": 24
   },
   {
+   "company": "Quantware",
+   "postings": 19
+  },
+  {
+   "company": "ElevenLabs",
+   "postings": 18
+  },
+  {
    "company": "MY Humancapital GmbH",
    "postings": 17
   },
   {
+   "company": "Jobgether",
+   "postings": 16
+  },
+  {
    "company": "Openai",
+   "postings": 14
+  },
+  {
+   "company": "databricks",
    "postings": 14
   },
   {
@@ -3354,28 +3370,12 @@
   {
    "company": "Quantum-Systems GmbH",
    "postings": 13
-  },
-  {
-   "company": "Jobgether",
-   "postings": 12
-  },
-  {
-   "company": "Workidentity",
-   "postings": 11
-  },
-  {
-   "company": "gitlab",
-   "postings": 11
-  },
-  {
-   "company": "Olo",
-   "postings": 10
   }
  ],
  "sources": [
   {
    "source": "arbeitnow",
-   "postings": 1475
+   "postings": 1795
   },
   {
    "source": "remotive",
@@ -3384,30 +3384,55 @@
  ],
  "salaries": {
   "EUR": {
-   "postings": 34,
-   "p25": 60875,
-   "median": 71250,
+   "postings": 50,
+   "p25": 63125,
+   "median": 74500,
    "p75": 87300,
    "by_skill": [
     {
-     "skill": "TypeScript",
+     "skill": "CSS",
      "postings": 3,
      "median": 87500
     },
     {
-     "skill": "React",
+     "skill": "Kafka",
      "postings": 4,
-     "median": 80000
+     "median": 82500
     },
     {
-     "skill": "CI/CD",
-     "postings": 4,
-     "median": 76750
+     "skill": "Kubernetes",
+     "postings": 7,
+     "median": 75000
+    },
+    {
+     "skill": "LLMs",
+     "postings": 5,
+     "median": 75000
+    },
+    {
+     "skill": "Linux",
+     "postings": 5,
+     "median": 75000
     },
     {
      "skill": "Python",
-     "postings": 8,
-     "median": 75750
+     "postings": 17,
+     "median": 75000
+    },
+    {
+     "skill": "SQL",
+     "postings": 11,
+     "median": 75000
+    },
+    {
+     "skill": "TypeScript",
+     "postings": 7,
+     "median": 75000
+    },
+    {
+     "skill": "dbt",
+     "postings": 3,
+     "median": 75000
     },
     {
      "skill": "Machine Learning",
@@ -3415,86 +3440,121 @@
      "median": 74000
     },
     {
-     "skill": "SQL",
-     "postings": 7,
+     "skill": "Scala",
+     "postings": 17,
      "median": 74000
     },
     {
-     "skill": "Linux",
-     "postings": 4,
+     "skill": "Azure",
+     "postings": 6,
      "median": 73750
     },
     {
-     "skill": "Scala",
-     "postings": 11,
+     "skill": "React",
+     "postings": 8,
+     "median": 73750
+    },
+    {
+     "skill": "Terraform",
+     "postings": 4,
      "median": 72500
     },
     {
-     "skill": "Azure",
-     "postings": 5,
-     "median": 70000
+     "skill": "Django",
+     "postings": 3,
+     "median": 72000
     },
     {
-     "skill": "AWS",
-     "postings": 8,
-     "median": 68750
-    },
-    {
-     "skill": "Kubernetes",
-     "postings": 5,
-     "median": 67500
-    },
-    {
-     "skill": "Agile",
-     "postings": 5,
-     "median": 66000
+     "skill": "REST APIs",
+     "postings": 3,
+     "median": 72000
     },
     {
      "skill": "Docker",
+     "postings": 6,
+     "median": 70500
+    },
+    {
+     "skill": "Node.js",
+     "postings": 4,
+     "median": 70500
+    },
+    {
+     "skill": "PostgreSQL",
+     "postings": 4,
+     "median": 70500
+    },
+    {
+     "skill": "AWS",
+     "postings": 11,
+     "median": 70000
+    },
+    {
+     "skill": "GCP",
      "postings": 3,
-     "median": 66000
+     "median": 70000
+    },
+    {
+     "skill": "CI/CD",
+     "postings": 10,
+     "median": 69000
+    },
+    {
+     "skill": "Agile",
+     "postings": 6,
+     "median": 66750
     },
     {
      "skill": "Java",
      "postings": 3,
      "median": 66000
+    },
+    {
+     "skill": "Git",
+     "postings": 3,
+     "median": 56000
     }
    ]
   },
   "GBP": {
-   "postings": 46,
-   "p25": 51250,
-   "median": 90000,
-   "p75": 120000,
+   "postings": 56,
+   "p25": 64375,
+   "median": 93100,
+   "p75": 129078,
    "by_skill": [
     {
-     "skill": "Rust",
+     "skill": "REST APIs",
      "postings": 3,
      "median": 137500
     },
     {
+     "skill": "Rust",
+     "postings": 4,
+     "median": 137500
+    },
+    {
      "skill": "LLMs",
-     "postings": 13,
-     "median": 128770
+     "postings": 17,
+     "median": 130000
     },
     {
      "skill": "SQL",
-     "postings": 11,
-     "median": 124000
+     "postings": 13,
+     "median": 130000
     },
     {
      "skill": "React",
-     "postings": 11,
-     "median": 118000
+     "postings": 14,
+     "median": 124000
     },
     {
      "skill": "TypeScript",
-     "postings": 12,
-     "median": 116500
+     "postings": 15,
+     "median": 118000
     },
     {
      "skill": "Node.js",
-     "postings": 6,
+     "postings": 7,
      "median": 115000
     },
     {
@@ -3504,38 +3564,38 @@
     },
     {
      "skill": "GCP",
-     "postings": 6,
-     "median": 112500
+     "postings": 7,
+     "median": 114200
     },
     {
-     "skill": "Docker",
+     "skill": "Scala",
+     "postings": 26,
+     "median": 112100
+    },
+    {
+     "skill": "AWS",
+     "postings": 17,
+     "median": 105000
+    },
+    {
+     "skill": "Azure",
      "postings": 5,
      "median": 105000
     },
     {
-     "skill": "AWS",
-     "postings": 14,
-     "median": 100000
-    },
-    {
-     "skill": "Azure",
-     "postings": 4,
-     "median": 100000
-    },
-    {
      "skill": "Kubernetes",
-     "postings": 8,
+     "postings": 9,
+     "median": 105000
+    },
+    {
+     "skill": "Docker",
+     "postings": 6,
      "median": 100000
     },
     {
-     "skill": "Machine Learning",
-     "postings": 5,
-     "median": 95000
-    },
-    {
-     "skill": "Scala",
-     "postings": 21,
-     "median": 95000
+     "skill": "Go",
+     "postings": 12,
+     "median": 92500
     },
     {
      "skill": "C++",
@@ -3544,12 +3604,7 @@
     },
     {
      "skill": "CI/CD",
-     "postings": 10,
-     "median": 90000
-    },
-    {
-     "skill": "Go",
-     "postings": 11,
+     "postings": 12,
      "median": 90000
     },
     {
@@ -3569,7 +3624,7 @@
     },
     {
      "skill": "Python",
-     "postings": 23,
+     "postings": 27,
      "median": 90000
     },
     {
@@ -3584,7 +3639,7 @@
     },
     {
      "skill": "Terraform",
-     "postings": 7,
+     "postings": 8,
      "median": 90000
     },
     {
@@ -3593,14 +3648,24 @@
      "median": 90000
     },
     {
-     "skill": "JavaScript",
-     "postings": 4,
-     "median": 65875
+     "skill": "Machine Learning",
+     "postings": 6,
+     "median": 88750
     },
     {
-     "skill": "Agile",
-     "postings": 4,
-     "median": 58250
+     "skill": "JavaScript",
+     "postings": 5,
+     "median": 81750
+    },
+    {
+     "skill": "Vue",
+     "postings": 3,
+     "median": 80000
+    },
+    {
+     "skill": "Spark",
+     "postings": 3,
+     "median": 69000
     },
     {
      "skill": "C#",
@@ -3611,15 +3676,50 @@
      "skill": "Git",
      "postings": 3,
      "median": 47586
+    },
+    {
+     "skill": "Agile",
+     "postings": 5,
+     "median": 45000
     }
    ]
   },
   "USD": {
-   "postings": 31,
-   "p25": 132500,
+   "postings": 44,
+   "p25": 143800,
    "median": 175200,
-   "p75": 178500,
+   "p75": 212500,
    "by_skill": [
+    {
+     "skill": "C++",
+     "postings": 8,
+     "median": 210000
+    },
+    {
+     "skill": "Rust",
+     "postings": 6,
+     "median": 210000
+    },
+    {
+     "skill": "Docker",
+     "postings": 3,
+     "median": 197500
+    },
+    {
+     "skill": "Git",
+     "postings": 4,
+     "median": 197500
+    },
+    {
+     "skill": "Go",
+     "postings": 11,
+     "median": 197500
+    },
+    {
+     "skill": "CI/CD",
+     "postings": 11,
+     "median": 195000
+    },
     {
      "skill": "Android",
      "postings": 4,
@@ -3632,7 +3732,7 @@
     },
     {
      "skill": "SQL",
-     "postings": 8,
+     "postings": 9,
      "median": 178500
     },
     {
@@ -3644,6 +3744,11 @@
      "skill": "iOS",
      "postings": 3,
      "median": 178500
+    },
+    {
+     "skill": "Scala",
+     "postings": 24,
+     "median": 175200
     },
     {
      "skill": "AWS",
@@ -3661,39 +3766,39 @@
      "median": 175000
     },
     {
-     "skill": "Git",
-     "postings": 3,
-     "median": 175000
-    },
-    {
      "skill": "Machine Learning",
-     "postings": 5,
-     "median": 175000
-    },
-    {
-     "skill": "Scala",
-     "postings": 17,
+     "postings": 7,
      "median": 175000
     },
     {
      "skill": "Python",
-     "postings": 12,
-     "median": 168750
+     "postings": 18,
+     "median": 172025
     },
     {
-     "skill": "CI/CD",
+     "skill": "Java",
+     "postings": 4,
+     "median": 170650
+    },
+    {
+     "skill": "Kubernetes",
      "postings": 5,
      "median": 162500
     },
     {
-     "skill": "Go",
+     "skill": "Linux",
+     "postings": 5,
+     "median": 162500
+    },
+    {
+     "skill": "Terraform",
      "postings": 3,
-     "median": 152800
+     "median": 162500
     },
     {
      "skill": "LLMs",
-     "postings": 7,
-     "median": 152800
+     "postings": 8,
+     "median": 160925
     },
     {
      "skill": "JavaScript",
